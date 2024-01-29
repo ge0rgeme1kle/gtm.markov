@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--If you edit this file, please place it in a safe place since future exports will overwrite this automatically generated reference file.-->
+<c74object name="gtm.markov">
+<metadatalist>
+<metadata name="author">George Meikle</metadata>
+<metadata name="tag">Markov chain</metadata>
+<metadata name="tag">algorithmic</metadata>
+<metadata name="tag">generative</metadata>
+</metadatalist>
+<methodlist>
+<method name="message"><digest>message input</digest><description>message input</description></method>
+<method name="in1"><digest>message input</digest><description>message input</description></method>
+<method name="in3"><digest>message input</digest><description>message input</description></method>
+<method name="in2"><digest>message input</digest><description>message input</description></method>
+</methodlist>
+<attributelist></attributelist>
+<description>An external for generating second-order Markov chains.</description>
+<digest>An external for generating second-order Markov chains.</digest>
+</c74object>

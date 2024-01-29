@@ -1,0 +1,36 @@
+{
+	"name" : "gtm.markov",
+	"displayname" : "",
+	"version" : "1.0.0",
+	"author" : "George Meikle",
+	"authors" : [  ],
+	"description" : "This package is built around two external objects for generating second-order Markov chains: gtm.markov and gtm.markov~.",
+	"tags" : [ "Markov chain", "algorithmic", "generative" ],
+	"website" : "https://linktr.ee/metrosync",
+	"extends" : "",
+	"extensible" : 0,
+	"max_version_min" : "8.3.0",
+	"max_version_max" : "none",
+	"os" : 	{
+		"macintosh" : 		{
+			"min_version" : "none",
+			"platform" : [ "x64", "aarch64" ]
+		}
+,
+		"windows" : 		{
+			"min_version" : "none",
+			"platform" : [ "x64" ]
+		}
+
+	}
+,
+	"homepatcher" : "gtm.markov home patcher.maxpat",
+	"filelist" : 	{
+		"examples" : [  ],
+		"patchers" : [ "gtm.markov home patcher.maxpat", "gtm.invert.maxpat" ],
+		"help" : [ "gtm.markov.maxhelp", "gtm.markov~.maxhelp" ],
+		"misc" : [  ],
+		"extras" : [ "gtm.markov example.maxpat", "gtm.markov example_RNBO.maxpat", "gtm.markov~ example.maxpat", "gtm.markov~ example_RNBO.maxpat", "gtm.markov~ vst~ example.maxpat" ]
+	}
+
+}
