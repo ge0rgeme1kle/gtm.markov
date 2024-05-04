@@ -1067,8 +1067,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 218.0, 47.0 ],
-									"text" : "gtm.markov~"
+									"patching_rect" : [ 0.0, 0.0, 197.0, 47.0 ],
+									"text" : "gtm.markov"
 								}
 
 							}
