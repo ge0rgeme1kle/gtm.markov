@@ -1,0 +1,2 @@
+<global> ampeg_attack=0 ampeg_decay=0 ampeg_sustain=100 ampeg_release=9
+<region> lokey=0 hikey=127 pitch_keycenter=24 sample=Analogue_Bass_C1.wav loop_mode=loop_continuous loop_type=alternate loop_start=32000 loop_end=100000 loop_crossfade=0.5 fil_type =lpf_2p cutoff=20 cutoff_cc74=9600 resonance=0 resonance_cc71=40

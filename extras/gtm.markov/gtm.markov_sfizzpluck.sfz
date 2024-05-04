@@ -1,0 +1,2 @@
+<global> ampeg_attack=0 ampeg_decay=0 ampeg_sustain=100 ampeg_release=0
+<region> lokey=0 hikey=127 pitch_keycenter=72 sample=PluckEko_c5.wav

@@ -1,4 +1,4 @@
-gtm.markov © 2023 by George Meikle is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
+gtm.markov © 2024 by George Meikle is licensed under CC BY-NC-SA 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 The above copyright notice and this license shall be included in all copies or
 substantial portions of the Software.

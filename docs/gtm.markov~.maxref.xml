@@ -1,18 +1,167 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--If you edit this file, please place it in a safe place since future exports will overwrite this automatically generated reference file.-->
 <c74object name="gtm.markov~">
-<metadatalist>
-<metadata name="author">George Meikle</metadata>
-<metadata name="tag">Markov chain</metadata>
-<metadata name="tag">algorithmic</metadata>
-<metadata name="tag">generative</metadata>
-</metadatalist>
-<methodlist>
-<method name="message"><digest>message input</digest><description>message input</description></method>
-<method name="in1"><digest>message input</digest><description>message input</description></method>
-<method name="in3"><digest>message input</digest><description>message input</description></method>
-</methodlist>
-<attributelist></attributelist>
-<description>An external for generating second-order Markov chains.</description>
 <digest>An external for generating second-order Markov chains.</digest>
+<description>Markovian processes work by deriving the result of the current calculation according to the outcome of those which have preceded it. First-order Markov chains produce results that are subject solely to the influence of the immediately preceding result - i.e., they have "short memories". Accordingly, the results of first-order Markovian generation can appear somewhat random at surface level, despite the underlying rules of generation. Second- and third-order Markov chains are more appropriate for use within algorithmic/generative music due to their longer "memories" and dependence on the previous two or three results respectively when generating new values. Second- and third-order Markovian processes both produce patterns that could be described as "self-similar" - i.e., they retain a clearly discernible connection to the source material from which the transition matrix is compiled. Oftentimes, however, third-order Markov chains can be conducive to limited variation in output relative to the source material, whereas second-order Markov chains tend to yield results that strike a pleasing balance between novelty and familiarity.</description>
+
+<!--METADATA-->
+<metadatalist>
+    <metadata name="author">George Meikle</metadata>
+    <metadata name="tag">Markov chain</metadata>
+    <metadata name="tag">algorithmic</metadata>
+    <metadata name="tag">generative</metadata>
+</metadatalist>
+
+<!--INLETS-->
+<inletlist>
+    <inlet id="0" type="INLET_TYPE">
+        <digest>Note/value list (int: 0-127, max length = 128).</digest>
+        <description>
+            The leftmost inlet receives a list of integers in the range of 0-127, up to 128 numbers in length. This could be a monophonic melody contained in a MIDI file or a series of automation values for a synthesis parameter, such filter cutoff frequency.
+            The data set arriving at the leftmost inlet is used to compile a transition matrix, in which each sequential value pair is stored alongside every value that follows on from it at any stage in the input list. A bang is outputted from the object's rightmost outlet once this process is complete.
+            A new list of integers sent into the leftmost inlet overwrites the previously stored transition matrix.
+        </description>
+    </inlet>
+    <inlet id="1" type="INLET_TYPE">
+        <digest>Phasor/ramp signal input.</digest>
+        <description>
+            A phasor/ramp signal received at the second inlet generates a new output value upon phase reset, based on the information stored in the internal transition matrix.
+            Generated values are outputted from the second outlet.
+        </description>
+    </inlet>
+    <inlet id="2" type="INLET_TYPE">
+        <digest>Bang to reset.</digest>
+        <description>
+            A bang received at the rightmost inlet resets the generation of values without clearing the internally stored transition matrix.
+        </description>
+    </inlet>
+</inletlist>
+
+<!--OUTLETS-->
+<outletlist>
+    <outlet id="0" type="OUTLET_TYPE">
+        <digest>Signal: input signal (single sample vector delay).</digest>
+        <description>
+            Due to the time taken for note/value generation, gtm.markov~ introduces a single sample vector of latency to the signal path. For convenience when combining gtm.markov~ with objects such as mc.midiplayer~, which requires both a MIDI note number and phasor/ramp input signal (with @triggermode 0) to generate note output, the phasor/ramp input signal sent to the second inlet of gtm.markov~ is subject to a single sample vector delay inside the object before being released from the leftmost outlet.
+        </description>
+    </outlet>
+    <outlet id="1" type="OUTLET_TYPE">
+        <digest>Signal: note/value output.</digest>
+        <description>
+            Generated values, each of which is dependent upon the two values immediately preceding it, are outputted from the second outlet.
+        </description>
+    </outlet>
+    <outlet id="2" type="OUTLET_TYPE">
+        <digest>Signal: next note/value pair (encoded).</digest>
+    </outlet>
+    <outlet id="3" type="OUTLET_TYPE">
+        <digest>Signal: transition matrix row count.</digest>
+    </outlet>
+    <outlet id="4" type="OUTLET_TYPE">
+        <digest>Bang when transition matrix finished compiling.</digest>
+        <description>
+            The data set arriving at the leftmost inlet is used to compile a transition matrix, in which each sequential value pair is stored alongside every value that follows on from it at any stage in the input list. A bang is outputted from the object's rightmost outlet once this process is complete.
+        </description>
+    </outlet>
+</outletlist>
+
+<!--MESSAGES-->
+<methodlist>
+<method name="list">
+    <digest>in1: note/value list (int: 0-127, max length = 128)</digest>
+    <description>
+        The leftmost inlet receives a list of integers in the range of 0-127, up to 128 numbers in length. This could be a monophonic melody contained in a MIDI file or a series of automation values for a synthesis parameter, such filter cutoff frequency.
+        The data set arriving at the leftmost inlet is used to compile a transition matrix, in which each sequential value pair is stored alongside every value that follows on from it at any stage in the input list. A bang is outputted from the object's rightmost outlet once this process is complete.
+        A new list of integers sent into the leftmost inlet overwrites the previously stored transition matrix.
+    </description>
+</method>
+<method name="signal">
+    <digest>in2: phasor/ramp signal input.</digest>
+    <description>
+        A phasor/ramp signal received at the second inlet generates a new output value upon phase reset, based on the information stored in the internal transition matrix.
+        Generated values are outputted from the second outlet.
+    </description>
+</method>
+<method name="bang">
+    <digest>in3: bang to reset</digest>
+    <description>
+        A bang received at the rightmost inlet resets the generation of values without clearing the internally stored transition matrix.
+    </description>
+</method>
+</methodlist>
+
+<attributelist></attributelist>
+
+<discussion></discussion>
+
+<seealsolist>
+    <seealso name="gtm.markov"/>
+</seealsolist>
+
+<misc name = "Input">
+		<entry name ="Inlet 1 (list)">
+			<description>
+                <p>
+                Note/value list (int: 0-127, max length = 128).
+                </p>
+				The leftmost inlet receives a list of integers in the range of 0-127, up to 128 numbers in length. This could be a monophonic melody contained in a MIDI file or a series of automation values for a synthesis parameter, such filter cutoff frequency.
+                The data set arriving at the leftmost inlet is used to compile a transition matrix, in which each sequential value pair is stored alongside every value that follows on from it at any stage in the input list. A bang is outputted from the object's rightmost outlet once this process is complete.
+                A new list of integers sent into the leftmost inlet overwrites the previously stored transition matrix.
+			</description>
+		</entry>
+        <entry name ="Inlet 2 (signal)">
+			<description>
+                <p>
+                Phasor/ramp signal.
+                </p>
+                A phasor/ramp signal received at the second inlet generates a new output value upon phase reset, based on the information stored in the internal transition matrix.
+                Generated values are outputted from the second outlet.
+        </description>
+		</entry>
+        <entry name ="Inlet 3 (bang)">
+			<description>
+                <p>
+                Bang to reset.
+                </p>
+                A bang received at the rightmost inlet resets the generation of values without clearing the internally stored transition matrix.
+            </description>
+		</entry>
+	</misc>
+
+	<misc name = "Output">
+        <entry name ="Outlet 1 (signal)">
+			<description>
+                <p>
+                Input signal (single sample vector delay).
+                </p>
+                Due to the time taken for note/value generation, gtm.markov~ introduces a single sample vector of latency to the signal path. For convenience when combining gtm.markov~ with objects such as mc.midiplayer~, which requires both a MIDI note number and phasor/ramp input signal (with @triggermode 0) to generate note output, the phasor/ramp input signal sent to the second inlet of gtm.markov~ is subject to a single sample vector delay inside the object before being released from the leftmost outlet.
+            </description>
+		</entry>
+		<entry name ="Outlet 2 (signal)">
+			<description>
+                <p>
+                Note/value output.
+                </p>
+                Generated values, each of which is dependent upon the two values immediately preceding it, are outputted from the second outlet.
+            </description>
+		</entry>
+        <entry name ="Outlet 3 (signal)">
+			<description>
+                Next note/value pair (encoded).
+            </description>
+		</entry>
+         <entry name ="Outlet 4 (signal)">
+			<description>
+                Transition matrix row count.
+            </description>
+		</entry>
+         <entry name ="Outlet 5 (bang)">
+			<description>
+                <p>
+                Bang when transition matrix finished compiling.
+                </p>
+                The data set arriving at the leftmost inlet is used to compile a transition matrix, in which each sequential value pair is stored alongside every value that follows on from it at any stage in the input list. A bang is outputted from the object's rightmost outlet once this process is complete.
+            </description>
+		</entry>
+	</misc>
 </c74object>
