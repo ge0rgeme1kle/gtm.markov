@@ -70,8 +70,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 925.0, 353.0, 202.0, 83.0 ],
-					"presentation_linecount" : 7,
+					"patching_rect" : [ 925.0, 353.0, 205.0, 83.0 ],
 					"text" : "makenote turns pitch values into MIDI notes, which are subsequently turned into MIDI event messages by midiformat before being passed to sfizz~."
 				}
 
@@ -86,8 +85,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1306.0, 269.0, 184.0, 54.0 ],
-					"presentation_linecount" : 4,
+					"patching_rect" : [ 1306.0, 269.0, 188.0, 54.0 ],
 					"text" : "The 32-note sequences are passed into the left inlet of gtm.markov as a list."
 				}
 
@@ -123,7 +121,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 715.0, 59.0, 171.0, 40.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Compile transition matrices."
 				}
 
@@ -156,8 +153,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.0, 3.0, 202.0, 84.0 ],
-					"presentation_linecount" : 6,
+					"patching_rect" : [ 26.0, 3.0, 206.0, 84.0 ],
 					"text" : "Choose whether the samples loaded into playlist~ are triggered in sequence (0) or according to Markovian generation (1)."
 				}
 
@@ -172,7 +168,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 50.0, 91.0, 40.0 ],
+					"patching_rect" : [ 336.0, 50.0, 95.0, 40.0 ],
 					"text" : "Randomise sequence."
 				}
 
@@ -209,7 +205,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 24.0, 284.0, 163.0, 69.0 ],
-					"presentation_linecount" : 5,
 					"text" : "Programme or generate a 16-step drum pattern. Make sure to use all 16 steps."
 				}
 
@@ -224,7 +219,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 306.0, 444.0, 168.0, 54.0 ],
+					"patching_rect" : [ 306.0, 444.0, 171.0, 54.0 ],
 					"text" : "The 16-step sequence is passed into the left inlet of gtm.markov as a list."
 				}
 
@@ -240,7 +235,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1259.0, 170.0, 243.0, 54.0 ],
+					"patching_rect" : [ 1259.0, 170.0, 244.0, 54.0 ],
 					"text" : "A random sequence of 32 notes in the chosen key/scale is generated for each melodic/harmonic part by drunk."
 				}
 
@@ -6883,7 +6878,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1224.0, 755.0, 30.0, 22.0 ],
+					"patching_rect" : [ 1224.0, 721.0, 30.0, 22.0 ],
 					"text" : "*~ 1"
 				}
 
@@ -6895,7 +6890,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1192.0, 755.0, 30.0, 22.0 ],
+					"patching_rect" : [ 1192.0, 721.0, 30.0, 22.0 ],
 					"text" : "*~ 1"
 				}
 
@@ -6906,7 +6901,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1268.0, 685.0, 35.0, 20.0 ],
+					"patching_rect" : [ 1268.0, 651.0, 35.0, 20.0 ],
 					"text" : "mute"
 				}
 
@@ -6918,7 +6913,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1242.0, 719.0, 81.0, 22.0 ],
+					"patching_rect" : [ 1242.0, 685.0, 81.0, 22.0 ],
 					"text" : "gtm.invert 1 0"
 				}
 
@@ -6931,7 +6926,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1242.0, 683.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1242.0, 649.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -6941,7 +6936,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1192.0, 789.0, 45.0, 45.0 ]
+					"patching_rect" : [ 1192.0, 755.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -11236,7 +11231,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1192.0, 528.0, 116.0, 23.0 ],
+					"patching_rect" : [ 1192.0, 494.0, 116.0, 23.0 ],
 					"text" : "gen~ @title gigaverb"
 				}
 
@@ -13093,7 +13088,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1192.0, 605.0, 48.0, 136.0 ],
+					"patching_rect" : [ 1192.0, 571.0, 48.0, 136.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -13120,68 +13115,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 1192.0, 567.0, 48.0, 22.0 ],
+					"patching_rect" : [ 1192.0, 533.0, 48.0, 22.0 ],
 					"text" : "limi~ 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-128",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1255.0, 363.0, 58.0, 22.0 ],
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-129",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1255.0, 403.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"data" : 					{
-						"global" : 						{
-							"ampeg_attack" : 0,
-							"ampeg_decay" : 0,
-							"ampeg_sustain" : 100,
-							"ampeg_release" : 0
-						}
-,
-						"regions" : [ 							{
-								"lokey" : 0,
-								"hikey" : 127,
-								"pitch_keycenter" : 72,
-								"sample" : "PluckEko_c5.wav"
-							}
- ]
-					}
-,
-					"id" : "obj-130",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 5,
-					"outlettype" : [ "dictionary", "", "", "", "" ],
-					"patching_rect" : [ 1255.0, 438.0, 89.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 1,
-						"legacy" : 0,
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "dict @embed 1"
 				}
 
 			}
@@ -13192,7 +13127,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 1192.0, 492.0, 183.0, 22.0 ],
+					"patching_rect" : [ 1192.0, 458.0, 183.0, 22.0 ],
 					"text" : "sfizz~ gtm.markov_sfizzpluck.sfz"
 				}
 
@@ -16740,7 +16675,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1129.0, 146.0, 246.0, 688.0 ],
+					"patching_rect" : [ 1129.0, 146.0, 246.0, 654.0 ],
 					"proportion" : 0.5
 				}
 
@@ -16983,20 +16918,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-224", 0 ],
 					"source" : [ "obj-126", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-129", 0 ],
-					"source" : [ "obj-128", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-130", 0 ],
-					"source" : [ "obj-129", 0 ]
 				}
 
 			}
@@ -18041,23 +17962,16 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "closed_hat.wav",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gtm.invert.maxpat",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/patchers",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gtm.markov samples example.maxsnap",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/data",
-				"patcherrelativepath" : "../data",
-				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
@@ -18066,42 +17980,42 @@
 			}
 , 			{
 				"name" : "kick-1.wav",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "kick-2.wav",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "live.scales-11.1.txt",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/data",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/data",
 				"patcherrelativepath" : "../data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "open_hat.wav",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "perc.wav",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "snare.wav",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "WAVE",
 				"implicit" : 1
