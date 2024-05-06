@@ -9,7 +9,7 @@
 	"website" : "https://linktr.ee/metrosync",
 	"extends" : "",
 	"extensible" : 0,
-	"max_version_min" : "8.6.0",
+	"max_version_min" : "8.5.0",
 	"max_version_max" : "none",
 	"os" : 	{
 		"macintosh" : 		{
