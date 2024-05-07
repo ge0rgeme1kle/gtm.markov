@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 849.0, 233.0, 378.0, 547.0 ],
+		"rect" : [ 849.0, 233.0, 373.0, 545.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -111,7 +111,7 @@
 					"patching_rect" : [ 0.0, 156.0, 370.0, 248.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 18,
-					"presentation_rect" : [ 0.0, 156.0, 370.0, 248.0 ],
+					"presentation_rect" : [ 0.0, 156.0, 366.0, 248.0 ],
 					"text" : "Markovian processes work by deriving the result of the current calculation according to the outcome of those which have preceded it. First-order Markov chains produce results that are subject solely to the influence of the immediately preceding result - i.e., they have \"short memories\". Accordingly, the results of first-order Markovian generation can appear somewhat random at surface level, despite the underlying rules of generation. Second- and third-order Markov chains are more appropriate for use within algorithmic/generative music due to their longer \"memories\" and dependence on the previous two or three results respectively when generating new values. Second- and third-order Markovian processes both produce patterns that could be described as \"self-similar\" - i.e., they retain a clearly discernible connection to the source material from which the transition matrix is compiled. Oftentimes, however, third-order Markov chains can be conducive to limited variation in output relative to the source material, whereas second-order Markov chains tend to yield results that strike a pleasing balance between novelty and familiarity."
 				}
 
@@ -126,7 +126,7 @@
 					"patching_rect" : [ 0.0, 0.0, 381.0, 154.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 11,
-					"presentation_rect" : [ 0.0, 0.0, 377.0, 154.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 366.0, 154.0 ],
 					"text" : "gtm.markov is an event-based object that calculates new output values upon receipt of a bang at its middle inlet, while gtm.markov~ is the signal-based counterpart to gtm.markov and calculates new output values upon phase reset of an incoming phasor/ramp signal arriving at its middle inlet. Both objects receive a list of integers in the range of 0-127 and up to 128 elements in length at their leftmost inlet, from which the internal transition matrix is compiled. Sending a new list of integers into the leftmost inlet overwrites the previously stored transition matrix. A bang received at the rightmost inlet of both objects resets the generation of values without clearing the internally stored transition matrix."
 				}
 
