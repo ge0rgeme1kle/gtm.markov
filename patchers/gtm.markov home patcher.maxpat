@@ -144,7 +144,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 424.00001049041748, 112.000003337860107, 45.0, 22.0 ],
+					"patching_rect" : [ 160.0, 80.0, 45.0, 22.0 ],
 					"text" : "r ---run"
 				}
 
@@ -1921,9 +1921,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2004,8 +2004,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"initialMode" : "monitor",
-										"displaymode" : "first"
+										"displaymode" : "first",
+										"initialMode" : "monitor"
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2030,8 +2030,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"initialMode" : "monitor",
-										"displaymode" : "first"
+										"displaymode" : "first",
+										"initialMode" : "monitor"
 									}
 ,
 									"rnbo_serial" : 2,
@@ -2056,8 +2056,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"initialMode" : "monitor",
-										"displaymode" : "first"
+										"displaymode" : "first",
+										"initialMode" : "monitor"
 									}
 ,
 									"rnbo_serial" : 3,
@@ -2433,9 +2433,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 2,
@@ -2610,8 +2610,8 @@
 									"patching_rect" : [ 387.066666762034117, 1093.5, 24.0, 24.0 ],
 									"rnbo_classname" : "toggle",
 									"rnbo_extra_attributes" : 									{
-										"preset" : 0,
-										"order" : ""
+										"order" : "",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -3080,9 +3080,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 3,
@@ -3104,9 +3104,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 4,
@@ -3316,9 +3316,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 5,
@@ -4118,10 +4118,10 @@
 									"patching_rect" : [ 698.733333428700803, 1203.5, 183.0, 23.0 ],
 									"rnbo_classname" : "data",
 									"rnbo_extra_attributes" : 									{
-										"fill" : "",
 										"samplerate" : 0.0,
-										"file" : "",
-										"type" : ""
+										"fill" : "",
+										"type" : "",
+										"file" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -5331,7 +5331,7 @@
 										"filename" : "untitled_20231119_1.maxsnap",
 										"filepath" : "~/Documents/Max 8.nosync/Projects/Arts for the Blues/data",
 										"filepos" : -1,
-										"snapshotfileid" : "46a5a4cf618ae4922c6b5eef95ba9b7f"
+										"snapshotfileid" : "b0b3fa703505539cfb6d10d7ba89f54c"
 									}
 
 								}
@@ -5347,9 +5347,9 @@
 									"fileref" : 									{
 										"name" : "gtm.markov~",
 										"filename" : "gtm.markov~.maxsnap",
-										"filepath" : "~/Documents/Max 8.nosync/Snapshots",
+										"filepath" : "~/Music/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "d51b10eb31aa518700ca5eb5a45406d3"
+										"snapshotfileid" : "c32acc195a238b4bf3c45e9d3934ddb7"
 									}
 
 								}
@@ -5954,9 +5954,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -5978,9 +5978,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 2,
@@ -6155,8 +6155,8 @@
 									"patching_rect" : [ 300.200000095367443, 1103.5, 24.0, 24.0 ],
 									"rnbo_classname" : "toggle",
 									"rnbo_extra_attributes" : 									{
-										"preset" : 0,
-										"order" : ""
+										"order" : "",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -6599,9 +6599,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 3,
@@ -6623,9 +6623,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 4,
@@ -6647,9 +6647,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 5,
@@ -6671,9 +6671,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 6,
@@ -6883,9 +6883,9 @@
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"preset" : 0,
 										"order" : "",
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 7,
@@ -7685,10 +7685,10 @@
 									"patching_rect" : [ 500.000000095367454, 1213.5, 183.0, 23.0 ],
 									"rnbo_classname" : "data",
 									"rnbo_extra_attributes" : 									{
-										"fill" : "",
 										"samplerate" : 0.0,
-										"file" : "",
-										"type" : ""
+										"fill" : "",
+										"type" : "",
+										"file" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -8928,7 +8928,7 @@
 										"filename" : "untitled.maxsnap",
 										"filepath" : "~/Documents/Max 8.nosync/Projects/Arts for the Blues/data",
 										"filepos" : -1,
-										"snapshotfileid" : "0f2f9d9191a210ab37ef5ff274bcfe48"
+										"snapshotfileid" : "c47d8f7a4328cfcd1ab76bb6e636b848"
 									}
 
 								}
@@ -9615,8 +9615,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"midpoints" : [ 433.50001049041748, 139.166670501232147, 361.50001049041748, 139.166670501232147 ],
+					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -9726,15 +9725,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-19", 1 ],
 					"midpoints" : [ 169.500004768371582, 206.33333945274353, 311.500008225440979, 206.33333945274353 ],
-					"order" : 1,
-					"source" : [ "obj-32", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"midpoints" : [ 169.500004768371582, 140.33333945274353, 361.50001049041748, 140.33333945274353 ],
 					"order" : 0,
 					"source" : [ "obj-32", 0 ]
 				}
@@ -9743,7 +9733,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-32", 0 ]
 				}
 
@@ -10097,14 +10087,14 @@
 			}
 , 			{
 				"name" : "gtm.markov_jsui.js",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/code",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gtm.markov~.maxsnap",
-				"bootpath" : "~/Documents/Max 8.nosync/Snapshots",
+				"bootpath" : "~/Music/Max 8/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
@@ -10114,22 +10104,8 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "untitled.maxsnap",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/Arts for the Blues/data",
-				"patcherrelativepath" : "../../Arts for the Blues/data",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "untitled_20231119_1.maxsnap",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/Arts for the Blues/data",
-				"patcherrelativepath" : "../../Arts for the Blues/data",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "youtube logo invert.png",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "PNG",
 				"implicit" : 1
