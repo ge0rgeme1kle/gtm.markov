@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 849.0, 233.0, 371.0, 542.0 ],
+		"rect" : [ 849.0, 233.0, 378.0, 547.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -126,7 +126,7 @@
 					"patching_rect" : [ 0.0, 0.0, 381.0, 154.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 11,
-					"presentation_rect" : [ 0.0, 0.0, 373.0, 154.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 377.0, 154.0 ],
 					"text" : "gtm.markov is an event-based object that calculates new output values upon receipt of a bang at its middle inlet, while gtm.markov~ is the signal-based counterpart to gtm.markov and calculates new output values upon phase reset of an incoming phasor/ramp signal arriving at its middle inlet. Both objects receive a list of integers in the range of 0-127 and up to 128 elements in length at their leftmost inlet, from which the internal transition matrix is compiled. Sending a new list of integers into the leftmost inlet overwrites the previously stored transition matrix. A bang received at the rightmost inlet of both objects resets the generation of values without clearing the internally stored transition matrix."
 				}
 
@@ -171,7 +171,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "youtube logo invert.png",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "PNG",
 				"implicit" : 1
