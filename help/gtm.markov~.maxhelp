@@ -1213,13 +1213,35 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"fontsize" : 36.0,
-									"id" : "obj-8",
+									"bgcolor" : [ 0.792156862745098, 0.0, 1.0, 1.0 ],
+									"bgcolor2" : [ 0.313725490196078, 0.0, 0.396078431372549, 1.0 ],
+									"bgfillcolor_angle" : 270.0,
+									"bgfillcolor_autogradient" : 0.0,
+									"bgfillcolor_color" : [ 0.313725490196078, 0.0, 0.396078431372549, 1.0 ],
+									"bgfillcolor_color1" : [ 0.792156862745098, 0.0, 1.0, 1.0 ],
+									"bgfillcolor_color2" : [ 0.313725490196078, 0.0, 0.396078431372549, 1.0 ],
+									"bgfillcolor_proportion" : 0.5,
+									"bgfillcolor_type" : "gradient",
+									"gradient" : 1,
+									"id" : "obj-7",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 0.0, 71.0, 414.0, 35.0 ],
+									"text" : ";\rmax launchbrowser https://youtu.be/cZu-Wfon8Qs?si=hE0qKXcWydraGgR3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 218.0, 47.0 ],
-									"text" : "gtm.markov~"
+									"patching_rect" : [ 0.0, 49.0, 357.0, 20.0 ],
+									"text" : "This video provides an overview of the gtm.markov Max package."
 								}
 
 							}
@@ -1230,7 +1252,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 121.0, 430.0, 33.0 ],
+									"patching_rect" : [ 0.0, 180.0, 430.0, 33.0 ],
 									"text" : "This video tutorial demonstrates how the gtm.markov~ external was developed using RNBO and codebox(~) and exported via the Max external export target."
 								}
 
@@ -1242,7 +1264,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 49.0, 423.0, 33.0 ],
+									"patching_rect" : [ 0.0, 108.0, 423.0, 33.0 ],
 									"text" : "This video tutorial demonstrates how the gtm.markov external was developed using RNBO and codebox and exported via the Max external export target."
 								}
 
@@ -1265,7 +1287,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 0.0, 156.0, 395.0, 35.0 ],
+									"patching_rect" : [ 0.0, 215.0, 395.0, 35.0 ],
 									"text" : ";\rmax launchbrowser https://youtu.be/kfrY_xvVII4?si=FungKdmIVRfINSnS"
 								}
 
@@ -1288,8 +1310,20 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 0.0, 84.0, 414.0, 35.0 ],
+									"patching_rect" : [ 0.0, 143.0, 414.0, 35.0 ],
 									"text" : ";\rmax launchbrowser https://youtu.be/t1Q0cw_aYgY?si=3Iv3g9hq8CGdZ_mG"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 36.0,
+									"id" : "obj-8",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 0.0, 0.0, 218.0, 47.0 ],
+									"text" : "gtm.markov~"
 								}
 
 							}
@@ -1297,7 +1331,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 108.931393, 5.0, 64.0, 22.0 ],
+					"patching_rect" : [ 108.931393, 5.0, 136.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1305,7 +1339,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p Tutorials"
+					"text" : "p \"Videos and Tutorials\""
 				}
 
 			}
