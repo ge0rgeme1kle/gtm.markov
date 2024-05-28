@@ -40,6 +40,48 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgcolor" : [ 0.623529411764706, 0.349019607843137, 1.0, 0.0 ],
+					"fontsize" : 16.0,
+					"id" : "obj-72",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 987.5, 642.5, 39.0, 24.0 ],
+					"text" : "lead",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.623529411764706, 0.349019607843137, 1.0, 0.0 ],
+					"fontsize" : 16.0,
+					"id" : "obj-71",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 554.5, 643.0, 42.0, 24.0 ],
+					"text" : "bass",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.623529411764706, 0.349019607843137, 1.0, 0.0 ],
+					"fontsize" : 16.0,
+					"id" : "obj-64",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 100.5, 643.0, 35.0, 24.0 ],
+					"text" : "pad",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
 					"fontface" : 1,
 					"hint" : "",
@@ -70,7 +112,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 257.0, 525.0, 203.0, 112.0 ],
-					"presentation_linecount" : 7,
 					"text" : "Note output from mc.midiplayer~ is triggered by phase reset of gtm.markov~'s input ramp signal (subject to a single sample vector delay to synchronise phase reset with note/value generation)."
 				}
 
@@ -192,8 +233,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 180.5, 172.0, 25.0 ],
-					"text" : "Compile transition matrix."
+					"patching_rect" : [ 40.0, 180.5, 186.0, 25.0 ],
+					"text" : "Compile transition matrices."
 				}
 
 			}
@@ -1092,7 +1133,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 92.0, 199.983418762683868, 32.0, 22.0 ],
-									"text" : "+ 60"
+									"text" : "+ 72"
 								}
 
 							}
@@ -2459,7 +2500,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 92.0, 199.983418762683868, 32.0, 22.0 ],
-									"text" : "+ 24"
+									"text" : "+ 48"
 								}
 
 							}
@@ -3479,7 +3520,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 409.0, 145.0, 640.0, 480.0 ],
+						"rect" : [ 627.0, 116.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3515,7 +3556,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 92.0, 199.983418762683868, 32.0, 22.0 ],
-									"text" : "+ 24"
+									"text" : "+ 60"
 								}
 
 							}
@@ -5085,8 +5126,8 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"grad1" : [ 0.376470588235294, 0.149019607843137, 0.686274509803922, 0.8 ],
-					"grad2" : [ 0.631372549019608, 0.113725490196078, 0.113725490196078, 0.4 ],
+					"grad1" : [ 0.0, 0.227450980392157, 1.0, 0.8 ],
+					"grad2" : [ 0.0, 0.627450980392157, 1.0, 0.2 ],
 					"id" : "obj-22",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -5100,14 +5141,14 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"grad1" : [ 0.376470588235294, 0.149019607843137, 0.686274509803922, 0.8 ],
-					"grad2" : [ 0.631372549019608, 0.113725490196078, 0.113725490196078, 0.4 ],
+					"grad1" : [ 0.0, 0.227450980392157, 1.0, 0.8 ],
+					"grad2" : [ 0.0, 0.627450980392157, 1.0, 0.2 ],
 					"id" : "obj-66",
 					"maxclass" : "panel",
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 460.0, 221.0, 325.931392937898863, 709.199824869632721 ],
+					"patching_rect" : [ 460.0, 221.0, 330.0, 709.0 ],
 					"proportion" : 0.5
 				}
 
@@ -5115,8 +5156,8 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"grad1" : [ 0.376470588235294, 0.149019607843137, 0.686274509803922, 0.8 ],
-					"grad2" : [ 0.631372549019608, 0.113725490196078, 0.113725490196078, 0.4 ],
+					"grad1" : [ 0.0, 0.227450980392157, 1.0, 0.8 ],
+					"grad2" : [ 0.0, 0.627450980392157, 1.0, 0.2 ],
 					"id" : "obj-67",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -5130,8 +5171,8 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"grad1" : [ 0.0, 1.0, 0.596078431372549, 0.4 ],
-					"grad2" : [ 0.243137254901961, 0.705882352941177, 0.980392156862745, 0.8 ],
+					"grad1" : [ 0.0, 0.627450980392157, 1.0, 0.2 ],
+					"grad2" : [ 0.0, 0.090196078431373, 0.396078431372549, 0.8 ],
 					"id" : "obj-34",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -5145,8 +5186,8 @@
 , 			{
 				"box" : 				{
 					"angle" : 270.0,
-					"grad1" : [ 0.0, 1.0, 0.596078431372549, 0.4 ],
-					"grad2" : [ 0.243137254901961, 0.705882352941177, 0.980392156862745, 0.8 ],
+					"grad1" : [ 0.0, 0.627450980392157, 1.0, 0.2 ],
+					"grad2" : [ 0.0, 0.090196078431373, 0.396078431372549, 0.8 ],
 					"id" : "obj-63",
 					"maxclass" : "panel",
 					"mode" : 1,
@@ -5171,7 +5212,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 214.0, 183.5, 20.0, 20.0 ],
+					"patching_rect" : [ 228.0, 183.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "1",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -6047,7 +6088,7 @@
 			}
 , 			{
 				"name" : "live.scales-11.1.txt",
-				"bootpath" : "~/Documents/Max 8.nosync/Projects/gtm.markov-dev/data",
+				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/data",
 				"patcherrelativepath" : "../data",
 				"type" : "TEXT",
 				"implicit" : 1
