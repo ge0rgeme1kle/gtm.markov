@@ -13,7 +13,7 @@
 	"max_version_max" : "none",
 	"os" : 	{
 		"macintosh" : 		{
-			"min_version" : "10.15, 11",
+			"min_version" : "10.15.x",
 			"platform" : [ "x64", "aarch64" ]
 		}
 ,
