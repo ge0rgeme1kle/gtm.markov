@@ -1,11 +1,11 @@
 {
 	"name" : "gtm.markov",
 	"displayname" : "",
-	"version" : "1.0.1",
+	"version" : "1.0.2",
 	"author" : "George Meikle",
 	"authors" : [  ],
 	"description" : "This package is built around two external objects for generating second-order Markov chains: gtm.markov and gtm.markov~. Markov chains derive the result of the current calculation according to the outcome of those which have preceded it, and have various applications in algorithmic/generative music.",
-	"tags" : [ "Markov chain", "algorithmic", "generative" ],
+	"tags" : [ "Markov chain", "algorithmic", "generative", "RNBO", "codebox", "example", "lesson", "tutorial" ],
 	"website" : "https://linktr.ee/metrosync",
 	"extends" : "",
 	"extensible" : 0,
