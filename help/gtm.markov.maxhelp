@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 100.0, 499.0, 749.0 ],
+		"rect" : [ -1264.0, 157.0, 499.0, 749.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -51,7 +51,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 6,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1025,7 +1025,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 6,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1062,6 +1062,43 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bgcolor" : [ 0.984313725490196, 0.819607843137255, 0.050980392156863, 1.0 ],
+									"bgcolor2" : [ 0.392156862745098, 0.325490196078431, 0.019607843137255, 1.0 ],
+									"bgfillcolor_angle" : 270.0,
+									"bgfillcolor_autogradient" : 0.0,
+									"bgfillcolor_color" : [ 0.392156862745098, 0.325490196078431, 0.019607843137255, 1.0 ],
+									"bgfillcolor_color1" : [ 0.984313725490196, 0.819607843137255, 0.050980392156863, 1.0 ],
+									"bgfillcolor_color2" : [ 0.392156862745098, 0.325490196078431, 0.019607843137255, 1.0 ],
+									"bgfillcolor_proportion" : 0.5,
+									"bgfillcolor_type" : "gradient",
+									"gradient" : 1,
+									"id" : "obj-9",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 0.0, 287.0, 417.0, 35.0 ],
+									"presentation_linecount" : 3,
+									"text" : ";\rmax launchbrowser https://youtu.be/vj_O3almWnw?si=TiMHaIUWMbusB8Vs"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 0.0, 252.0, 473.0, 33.0 ],
+									"presentation_linecount" : 3,
+									"text" : "This video demonstrates the functionality of the gtm.markov-transform Max for Live MIDI Transformation Tool for Ableton Live 12, which can be found in the package folder."
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"bgcolor" : [ 0.792156862745098, 0.0, 1.0, 1.0 ],
 									"bgcolor2" : [ 0.313725490196078, 0.0, 0.396078431372549, 1.0 ],
 									"bgfillcolor_angle" : 270.0,
@@ -1079,7 +1116,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 0.0, 71.0, 414.0, 35.0 ],
-									"presentation_linecount" : 2,
 									"text" : ";\rmax launchbrowser https://youtu.be/cZu-Wfon8Qs?si=hE0qKXcWydraGgR3"
 								}
 
@@ -1204,13 +1240,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 6,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 499.0, 723.0 ],
+						"rect" : [ -1264.0, 183.0, 499.0, 723.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,

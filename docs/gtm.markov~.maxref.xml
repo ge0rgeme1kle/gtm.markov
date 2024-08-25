@@ -26,7 +26,7 @@
         <digest>Phasor/ramp signal input.</digest>
         <description>
             A phasor/ramp signal received at the second inlet generates a new output value upon phase reset, based on the information stored in the internal transition matrix.
-            Generated values are outputted from the second outlet.
+            Generated values are outputted from the leftmost outlet.
         </description>
     </inlet>
     <inlet id="2" type="INLET_TYPE">
@@ -40,24 +40,18 @@
 <!--OUTLETS-->
 <outletlist>
     <outlet id="0" type="OUTLET_TYPE">
-        <digest>Signal: input signal (single sample vector delay).</digest>
+        <digest>Signal: note/value output.</digest>
         <description>
-            Due to the time taken for note/value generation, gtm.markov~ introduces a single sample vector of latency to the signal path. For convenience when combining gtm.markov~ with objects such as mc.midiplayer~, which requires both a MIDI note number and phasor/ramp input signal (with @triggermode 0) to generate note output, the phasor/ramp input signal sent to the second inlet of gtm.markov~ is subject to a single sample vector delay inside the object before being released from the leftmost outlet.
+            Generated values, each of which is dependent upon the two values immediately preceding it, are outputted from the leftmost outlet.
         </description>
     </outlet>
     <outlet id="1" type="OUTLET_TYPE">
-        <digest>Signal: note/value output.</digest>
-        <description>
-            Generated values, each of which is dependent upon the two values immediately preceding it, are outputted from the second outlet.
-        </description>
-    </outlet>
-    <outlet id="2" type="OUTLET_TYPE">
         <digest>Signal: next note/value pair (encoded).</digest>
     </outlet>
-    <outlet id="3" type="OUTLET_TYPE">
+    <outlet id="2" type="OUTLET_TYPE">
         <digest>Signal: transition matrix row count.</digest>
     </outlet>
-    <outlet id="4" type="OUTLET_TYPE">
+    <outlet id="3" type="OUTLET_TYPE">
         <digest>Bang when transition matrix finished compiling.</digest>
         <description>
             The data set arriving at the leftmost inlet is used to compile a transition matrix, in which each sequential value pair is stored alongside every value that follows on from it at any stage in the input list. A bang is outputted from the object's rightmost outlet once this process is complete.
@@ -79,7 +73,7 @@
     <digest>in2: phasor/ramp signal input.</digest>
     <description>
         A phasor/ramp signal received at the second inlet generates a new output value upon phase reset, based on the information stored in the internal transition matrix.
-        Generated values are outputted from the second outlet.
+        Generated values are outputted from the leftmost outlet.
     </description>
 </method>
 <method name="bang">
@@ -115,7 +109,7 @@
                 Phasor/ramp signal.
                 </p>
                 A phasor/ramp signal received at the second inlet generates a new output value upon phase reset, based on the information stored in the internal transition matrix.
-                Generated values are outputted from the second outlet.
+                Generated values are outputted from the leftmost outlet.
         </description>
 		</entry>
         <entry name ="Inlet 3 (bang)">
@@ -129,33 +123,25 @@
 	</misc>
 
 	<misc name = "Output">
-        <entry name ="Outlet 1 (signal)">
-			<description>
-                <p>
-                Input signal (single sample vector delay).
-                </p>
-                Due to the time taken for note/value generation, gtm.markov~ introduces a single sample vector of latency to the signal path. For convenience when combining gtm.markov~ with objects such as mc.midiplayer~, which requires both a MIDI note number and phasor/ramp input signal (with @triggermode 0) to generate note output, the phasor/ramp input signal sent to the second inlet of gtm.markov~ is subject to a single sample vector delay inside the object before being released from the leftmost outlet.
-            </description>
-		</entry>
-		<entry name ="Outlet 2 (signal)">
+		<entry name ="Outlet 1 (signal)">
 			<description>
                 <p>
                 Note/value output.
                 </p>
-                Generated values, each of which is dependent upon the two values immediately preceding it, are outputted from the second outlet.
+                Generated values, each of which is dependent upon the two values immediately preceding it, are outputted from the leftmost outlet.
             </description>
 		</entry>
-        <entry name ="Outlet 3 (signal)">
+        <entry name ="Outlet 2 (signal)">
 			<description>
                 Next note/value pair (encoded).
             </description>
 		</entry>
-         <entry name ="Outlet 4 (signal)">
+         <entry name ="Outlet 3 (signal)">
 			<description>
                 Transition matrix row count.
             </description>
 		</entry>
-         <entry name ="Outlet 5 (bang)">
+         <entry name ="Outlet 3 (bang)">
 			<description>
                 <p>
                 Bang when transition matrix finished compiling.

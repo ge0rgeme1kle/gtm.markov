@@ -1,7 +1,7 @@
 {
 	"name" : "gtm.markov",
 	"displayname" : "",
-	"version" : "1.0.2",
+	"version" : "1.0.3",
 	"author" : "George Meikle",
 	"authors" : [  ],
 	"description" : "This package is built around two external objects for generating second-order Markov chains: gtm.markov and gtm.markov~. Markov chains derive the result of the current calculation according to the outcome of those which have preceded it, and have various applications in algorithmic/generative music.",
@@ -26,11 +26,15 @@
 ,
 	"homepatcher" : "gtm.markov home patcher.maxpat",
 	"filelist" : 	{
-		"examples" : [  ],
-		"patchers" : [ "gtm.markov home patcher.maxpat", "gtm.invert.maxpat" ],
-		"help" : [ "gtm.markov.maxhelp", "gtm.markov~.maxhelp" ],
-		"misc" : [  ],
-		"extras" : [ "gtm.markov example.maxpat", "gtm.markov example_RNBO.maxpat", "gtm.markov~ example.maxpat", "gtm.markov~ example_RNBO.maxpat", "gtm.markov~ vst~ example.maxpat" ]
+		"ableton live 12 midi tools" : [ "gtm.markov-transform.amxd" ],
+		"code" : [ "gtm.markov_jsui.js" ],
+		"data" : [ "live.scales-11.1.txt" ],
+		"docs" : [ "gtm.markov.maxref.xml", "gtm.markov~.maxref.xml" ],
+		"externals" : [ "gtm.markov.mxe64", "gtm.markov~.mxe64", "gtm.markov.mxo", "gtm.markov~.mxo" ],
+		"extras" : [ "gtm.markov example.maxpat", "gtm.markov BEAP example.maxpat", "gtm.markov~ example.maxpat", "gtm.markov~ vst~ example.maxpat", "gtm.markov_sfizzbass.sfz", "gtm.markov_sfizzpad.sfz", "gtm.markov_sfizzpluck.sfz", "Analogue_Bass_C1.wav", "closed_hat.wav", "kick-1.wav", "kick-2.wav", "NG_AhhPad-C3.wav", "open_hat.wav", "perc.wav", "PluckEko_c5.wav", "snare.wav" ],
+		"help" : [ "gtm.markov.maxhelp", "gtm.markov~.maxhelp", "gtm.markov_test_MIDI.mid", "gtm.markov_help_sfizz.sfz", "bass_a1.wav" ],
+		"media" : [ "youtube logo invert.png" ],
+		"patchers" : [ "gtm.markov home patcher.maxpat", "gtm.markov vignette.maxpat", "gtm.markov.rnbopat", "gtm.markov~.rnbopat", "gtm.invert.maxpat" ]
 	}
 
 }
