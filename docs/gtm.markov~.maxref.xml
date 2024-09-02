@@ -141,7 +141,7 @@
                 Transition matrix row count.
             </description>
 		</entry>
-         <entry name ="Outlet 3 (bang)">
+         <entry name ="Outlet 4 (bang)">
 			<description>
                 <p>
                 Bang when transition matrix finished compiling.
