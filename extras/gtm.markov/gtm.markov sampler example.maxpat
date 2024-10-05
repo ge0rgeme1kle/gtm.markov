@@ -2,9 +2,9 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 6,
-			"revision" : 3,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,6 +38,7 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
+		"cluebar" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"bgcolor" : [ 1.0, 0.788235, 0.470588, 1.0 ],
@@ -61,6 +62,8 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bubblepoint" : 0.1,
 					"bubbleside" : 3,
 					"fontname" : "Arial",
@@ -71,13 +74,35 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 925.0, 353.0, 205.0, 83.0 ],
-					"text" : "makenote turns pitch values into MIDI notes, which are subsequently turned into MIDI event messages by midiformat before being passed to sfizz~."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "makenote turns pitch values into MIDI notes, which are subsequently turned into MIDI event messages by midiformat before being passed to sfizz~.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-110",
@@ -86,7 +111,27 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1306.0, 269.0, 188.0, 54.0 ],
-					"text" : "The 32-note sequences are passed into the left inlet of gtm.markov as a list."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "The 32-note sequences are passed into the left inlet of gtm.markov as a list.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -103,7 +148,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1504.0, 187.0, 20.0, 20.0 ],
+					"patching_rect" : [ 1509.0, 187.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "6",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -113,6 +158,8 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bubbleside" : 2,
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
@@ -121,13 +168,35 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 715.0, 59.0, 171.0, 40.0 ],
-					"text" : "Compile transition matrices."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Compile transition matrices.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bubblepoint" : 0.6,
 					"bubbleside" : 2,
 					"fontname" : "Arial",
@@ -137,13 +206,35 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 30.0, 151.75, 157.0, 40.0 ],
-					"text" : "Compile transition matrix."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Compile transition matrix.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bubblepoint" : 0.9,
 					"bubbleside" : 2,
 					"fontname" : "Arial",
@@ -154,13 +245,35 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 26.0, 3.0, 206.0, 84.0 ],
-					"text" : "Choose whether the samples loaded into playlist~ are triggered in sequence (0) or according to Markovian generation (1)."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Choose whether the samples loaded into playlist~ are triggered in sequence (0) or according to Markovian generation (1).",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-81",
@@ -169,7 +282,27 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 336.0, 50.0, 95.0, 40.0 ],
-					"text" : "Randomise sequence."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Randomise sequence.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -186,7 +319,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 2.0, 308.0, 20.0, 20.0 ],
+					"patching_rect" : [ 2.0, 308.5, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "1",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -196,6 +329,8 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bubbleside" : 3,
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
@@ -205,13 +340,35 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 24.0, 284.0, 163.0, 69.0 ],
-					"text" : "Programme or generate a 16-step drum pattern. Make sure to use all 16 steps."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Programme or generate a 16-step drum pattern. Make sure to use all 16 steps.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-59",
@@ -220,13 +377,35 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 306.0, 444.0, 171.0, 54.0 ],
-					"text" : "The 16-step sequence is passed into the left inlet of gtm.markov as a list."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "The 16-step sequence is passed into the left inlet of gtm.markov as a list.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bubblepoint" : 0.4,
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
@@ -236,49 +415,117 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1259.0, 170.0, 248.0, 54.0 ],
-					"text" : "A random sequence of 32 notes in the chosen key/scale is generated for each melodic/harmonic part by drunk."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "A random sequence of 32 notes in the chosen key/scale is generated for each melodic/harmonic part by drunk.",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.623529411764706, 0.349019607843137, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontsize" : 16.0,
 					"id" : "obj-50",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1229.0, 120.0, 46.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
 					"text" : "pluck",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.623529411764706, 0.349019607843137, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontsize" : 16.0,
 					"id" : "obj-44",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 931.0, 120.0, 35.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
 					"text" : "pad",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.623529411764706, 0.349019607843137, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontsize" : 16.0,
 					"id" : "obj-27",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 614.0, 120.0, 42.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
 					"text" : "bass",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -340,9 +587,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -376,6 +623,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-210",
@@ -603,7 +851,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-515"
 					}
 ,
 					"patching_rect" : [ 537.0, 424.0, 71.0, 22.0 ],
@@ -620,23 +869,59 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"id" : "obj-217",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 589.0, 390.0, 65.0, 20.0 ],
-					"text" : "resonance"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "resonance",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"id" : "obj-216",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 872.0, 459.0, 65.0, 20.0 ],
-					"text" : "resonance"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "resonance",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -650,9 +935,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -686,6 +971,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-211",
@@ -913,7 +1199,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-517"
 					}
 ,
 					"patching_rect" : [ 820.0, 492.0, 71.0, 22.0 ],
@@ -1067,7 +1354,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 897.0, 836.0, 24.0, 24.0 ]
+					"patching_rect" : [ 897.0, 836.0, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -1093,9 +1381,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1129,6 +1417,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Lato",
@@ -5310,7 +5599,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-521"
 					}
 ,
 					"patching_rect" : [ 847.0, 641.0, 175.0, 23.0 ],
@@ -5427,9 +5717,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -5463,6 +5753,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-30",
@@ -5578,9 +5869,9 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 3,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -5614,6 +5905,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"cluebar" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"color" : [ 0.969975590705872, 0.5833580493927, 0.331954032182693, 1.0 ],
@@ -6000,17 +6292,40 @@
 
 											}
  ],
-										"bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
-										"editing_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ]
+										"originid" : "pat-525",
+										"bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+										"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+										"saved_attribute_attributes" : 										{
+											"editing_bgcolor" : 											{
+												"expression" : "themecolor.theme_editing_bgcolor"
+											}
+,
+											"locked_bgcolor" : 											{
+												"expression" : "themecolor.theme_locked_bgcolor"
+											}
+
+										}
+
 									}
 ,
 									"patching_rect" : [ 92.0, 257.0, 65.0, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"editing_bgcolor" : 										{
+											"expression" : "themecolor.theme_editing_bgcolor"
+										}
+,
+										"locked_bgcolor" : 										{
+											"expression" : "themecolor.theme_locked_bgcolor"
+										}
+
+									}
+,
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
-										"editing_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
+										"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
 										"globalpatchername" : "",
-										"locked_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
+										"locked_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
 										"tags" : ""
 									}
 ,
@@ -6407,7 +6722,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-523"
 					}
 ,
 					"patching_rect" : [ 784.0, 180.0, 128.333333333333258, 22.0 ],
@@ -6589,9 +6905,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -6625,6 +6941,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-1",
@@ -6799,7 +7116,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-527"
 					}
 ,
 					"patching_rect" : [ 165.0, 787.0, 86.0, 22.0 ],
@@ -6828,12 +7146,30 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"id" : "obj-164",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 205.0, 904.0, 35.0, 20.0 ],
-					"text" : "mute"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "mute",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -6857,7 +7193,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 179.0, 902.0, 24.0, 24.0 ]
+					"patching_rect" : [ 179.0, 902.0, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -6897,12 +7234,30 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"id" : "obj-158",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1268.0, 651.0, 35.0, 20.0 ],
-					"text" : "mute"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "mute",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -6926,7 +7281,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1242.0, 649.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1242.0, 649.0, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -6966,12 +7322,30 @@
 			}
 , 			{
 				"box" : 				{
+					"bubble_bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"id" : "obj-152",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 640.0, 685.0, 35.0, 20.0 ],
-					"text" : "mute"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "mute",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -6995,7 +7369,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 614.0, 683.0, 24.0, 24.0 ]
+					"patching_rect" : [ 614.0, 683.0, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -7011,9 +7386,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -7047,6 +7422,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Lato",
@@ -11228,7 +11604,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-535"
 					}
 ,
 					"patching_rect" : [ 1192.0, 494.0, 116.0, 23.0 ],
@@ -11246,9 +11623,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -11282,6 +11659,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-90",
@@ -11292,9 +11670,9 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 3,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -11328,6 +11706,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"cluebar" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-53",
@@ -11719,7 +12098,8 @@
 												}
 
 											}
- ]
+ ],
+										"originid" : "pat-539"
 									}
 ,
 									"patching_rect" : [ 83.0, 266.400002479553223, 190.0, 22.0 ],
@@ -11894,7 +12274,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-537"
 					}
 ,
 					"patching_rect" : [ 1207.0, 216.0, 66.0, 22.0 ],
@@ -11991,9 +12372,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -12027,6 +12408,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-30",
@@ -12142,9 +12524,9 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 3,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -12178,6 +12560,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"cluebar" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"color" : [ 0.969975590705872, 0.5833580493927, 0.331954032182693, 1.0 ],
@@ -12564,17 +12947,40 @@
 
 											}
  ],
-										"bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
-										"editing_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ]
+										"originid" : "pat-543",
+										"bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+										"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+										"saved_attribute_attributes" : 										{
+											"editing_bgcolor" : 											{
+												"expression" : "themecolor.theme_editing_bgcolor"
+											}
+,
+											"locked_bgcolor" : 											{
+												"expression" : "themecolor.theme_locked_bgcolor"
+											}
+
+										}
+
 									}
 ,
 									"patching_rect" : [ 92.0, 257.0, 65.0, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"editing_bgcolor" : 										{
+											"expression" : "themecolor.theme_editing_bgcolor"
+										}
+,
+										"locked_bgcolor" : 										{
+											"expression" : "themecolor.theme_locked_bgcolor"
+										}
+
+									}
+,
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
-										"editing_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
+										"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
 										"globalpatchername" : "",
-										"locked_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
+										"locked_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
 										"tags" : ""
 									}
 ,
@@ -12971,7 +13377,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-541"
 					}
 ,
 					"patching_rect" : [ 1129.0, 180.0, 128.0, 22.0 ],
@@ -13328,9 +13735,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -13364,6 +13771,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-30",
@@ -13479,9 +13887,9 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 3,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -13515,6 +13923,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"cluebar" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"color" : [ 0.969975590705872, 0.5833580493927, 0.331954032182693, 1.0 ],
@@ -13901,17 +14310,40 @@
 
 											}
  ],
-										"bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
-										"editing_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ]
+										"originid" : "pat-547",
+										"bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+										"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+										"saved_attribute_attributes" : 										{
+											"editing_bgcolor" : 											{
+												"expression" : "themecolor.theme_editing_bgcolor"
+											}
+,
+											"locked_bgcolor" : 											{
+												"expression" : "themecolor.theme_locked_bgcolor"
+											}
+
+										}
+
 									}
 ,
 									"patching_rect" : [ 92.0, 257.0, 65.0, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"editing_bgcolor" : 										{
+											"expression" : "themecolor.theme_editing_bgcolor"
+										}
+,
+										"locked_bgcolor" : 										{
+											"expression" : "themecolor.theme_locked_bgcolor"
+										}
+
+									}
+,
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
-										"editing_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
+										"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
 										"globalpatchername" : "",
-										"locked_bgcolor" : [ 0.56078431372549, 0.56078431372549, 0.56078431372549, 1.0 ],
+										"locked_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
 										"tags" : ""
 									}
 ,
@@ -14308,7 +14740,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-545"
 					}
 ,
 					"patching_rect" : [ 501.0, 180.0, 129.0, 22.0 ],
@@ -14366,6 +14799,8 @@
 , 			{
 				"box" : 				{
 					"bubble" : 1,
+					"bubble_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+					"bubble_outlinecolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-9",
@@ -14373,7 +14808,27 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 664.0, 5.0, 105.0, 25.0 ],
-					"text" : "key and scale"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "key and scale",
+					"textcolor" : [ 0.25, 0.25, 0.25, 1.0 ]
 				}
 
 			}
@@ -14594,6 +15049,7 @@
 
 					}
 ,
+					"svg" : "",
 					"varname" : "toggle"
 				}
 
@@ -14608,9 +15064,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -14644,6 +15100,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-90",
@@ -14654,9 +15111,9 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 3,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -14690,6 +15147,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"cluebar" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-53",
@@ -15081,7 +15539,8 @@
 												}
 
 											}
- ]
+ ],
+										"originid" : "pat-551"
 									}
 ,
 									"patching_rect" : [ 83.0, 266.400002479553223, 190.0, 22.0 ],
@@ -15353,7 +15812,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-549"
 					}
 ,
 					"patching_rect" : [ 189.0, 129.0, 66.0, 22.0 ],
@@ -15378,9 +15838,9 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 3,
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -15414,6 +15874,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-29",
@@ -15424,9 +15885,9 @@
 									"patcher" : 									{
 										"fileversion" : 1,
 										"appversion" : 										{
-											"major" : 8,
-											"minor" : 6,
-											"revision" : 3,
+											"major" : 9,
+											"minor" : 0,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -15460,6 +15921,7 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
+										"cluebar" : 0,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-81",
@@ -15752,7 +16214,8 @@
 												}
 
 											}
- ]
+ ],
+										"originid" : "pat-555"
 									}
 ,
 									"patching_rect" : [ 105.0, 270.0, 99.0, 22.0 ],
@@ -16112,7 +16575,8 @@
 								}
 
 							}
- ]
+ ],
+						"originid" : "pat-553"
 					}
 ,
 					"patching_rect" : [ 129.0, 379.0, 199.0, 22.0 ],
@@ -16267,7 +16731,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 236.0, 93.0, 24.0, 24.0 ]
+					"patching_rect" : [ 236.0, 93.0, 24.0, 24.0 ],
+					"svg" : ""
 				}
 
 			}
@@ -16531,6 +16996,37 @@
 					"patching_rect" : [ 129.0, 599.0, 162.000004827976227, 137.333337426185608 ],
 					"pitchcorrection" : 0,
 					"quality" : "basic",
+					"saved_attribute_attributes" : 					{
+						"candicane2" : 						{
+							"expression" : ""
+						}
+,
+						"candicane3" : 						{
+							"expression" : ""
+						}
+,
+						"candicane4" : 						{
+							"expression" : ""
+						}
+,
+						"candicane5" : 						{
+							"expression" : ""
+						}
+,
+						"candicane6" : 						{
+							"expression" : ""
+						}
+,
+						"candicane7" : 						{
+							"expression" : ""
+						}
+,
+						"candicane8" : 						{
+							"expression" : ""
+						}
+
+					}
+,
 					"timestretch" : [ 0 ]
 				}
 
@@ -16686,7 +17182,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 693.0, 62.000001847743988, 20.0, 20.0 ],
+					"patching_rect" : [ 693.0, 59.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "5",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -16707,7 +17203,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1492.0, 286.0, 20.0, 20.0 ],
+					"patching_rect" : [ 1496.0, 286.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "7",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -16728,7 +17224,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 4.0, 26.75, 20.0, 20.0 ],
+					"patching_rect" : [ 4.25, 35.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "4",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -16749,7 +17245,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 476.0, 461.0, 20.0, 20.0 ],
+					"patching_rect" : [ 479.0, 461.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "3",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -16770,7 +17266,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 8.0, 155.00000461935997, 20.0, 20.0 ],
+					"patching_rect" : [ 8.0, 151.75, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "2",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -17888,6 +18384,7 @@
 
 			}
  ],
+		"originid" : "pat-513",
 		"parameters" : 		{
 			"obj-18" : [ "rootnote[1]", "rootnote", 0 ],
 			"obj-181" : [ "number[3]", "number[3]", 0 ],
@@ -18071,7 +18568,28 @@
 			}
 
 		}
+,
+		"bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+		"editing_bgcolor" : [ 0.9, 0.925, 0.95, 1.0 ],
+		"saved_attribute_attributes" : 		{
+			"editing_bgcolor" : 			{
+				"expression" : "themecolor.theme_editing_bgcolor"
+			}
+,
+			"locked_bgcolor" : 			{
+				"expression" : "themecolor.theme_locked_bgcolor"
+			}
 
+		}
+,
+		"oscsendmode" : 0,
+		"oscsendudpaddr" : "127.0.0.1",
+		"oscsendudpport" : 30337,
+		"oscreceivemode" : 0,
+		"oscreceiveudpport" : 30338,
+		"oscqueryenable" : 0,
+		"oscprefixmode" : 0,
+		"oscprefix" : ""
 	}
 
 }

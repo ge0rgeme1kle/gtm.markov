@@ -2,15 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 6,
-			"revision" : 2,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 849.0, 233.0, 373.0, 545.0 ],
+		"rect" : [ -1068.0, 264.0, 373.0, 545.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,8 +38,12 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
+		"cluebar" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-1",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -49,7 +53,27 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 0.0, 504.0, 366.0, 33.0 ],
-					"text" : "Use of the gtm.markov package, including the gtm.markov and gtm.markov~ external objects, is licensed under CC BY-NC-SA 4.0"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Use of the gtm.markov package, including the gtm.markov and gtm.markov~ external objects, is licensed under CC BY-NC-SA 4.0",
+					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
 				}
 
 			}
@@ -103,6 +127,9 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-12",
 					"linecount" : 18,
 					"maxclass" : "comment",
@@ -111,13 +138,36 @@
 					"patching_rect" : [ 0.0, 156.0, 370.0, 248.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 18,
-					"presentation_rect" : [ 0.0, 156.0, 366.0, 248.0 ],
-					"text" : "Markovian processes work by deriving the result of the current calculation according to the outcome of those which have preceded it. First-order Markov chains produce results that are subject solely to the influence of the immediately preceding result - i.e., they have \"short memories\". Accordingly, the results of first-order Markovian generation can appear somewhat random at surface level, despite the underlying rules of generation. Second- and third-order Markov chains are more appropriate for use within algorithmic/generative music due to their longer \"memories\" and dependence on the previous two or three results respectively when generating new values. Second- and third-order Markovian processes both produce patterns that could be described as \"self-similar\" - i.e., they retain a clearly discernible connection to the source material from which the transition matrix is compiled. Oftentimes, however, third-order Markov chains can be conducive to limited variation in output relative to the source material, whereas second-order Markov chains tend to yield results that strike a pleasing balance between novelty and familiarity."
+					"presentation_rect" : [ 0.0, 156.0, 369.0, 248.0 ],
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "Markovian processes work by deriving the result of the current calculation according to the outcome of those which have preceded it. First-order Markov chains produce results that are subject solely to the influence of the immediately preceding result - i.e., they have \"short memories\". Accordingly, the results of first-order Markovian generation can appear somewhat random at surface level, despite the underlying rules of generation. Second- and third-order Markov chains are more appropriate for use within algorithmic/generative music due to their longer \"memories\" and dependence on the previous two or three results respectively when generating new values. Second- and third-order Markovian processes both produce patterns that could be described as \"self-similar\" - i.e., they retain a clearly discernible connection to the source material from which the transition matrix is compiled. Oftentimes, however, third-order Markov chains can be conducive to limited variation in output relative to the source material, whereas second-order Markov chains tend to yield results that strike a pleasing balance between novelty and familiarity.",
+					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-2",
 					"linecount" : 11,
 					"maxclass" : "comment",
@@ -126,13 +176,36 @@
 					"patching_rect" : [ 0.0, 0.0, 381.0, 154.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 11,
-					"presentation_rect" : [ 0.0, 0.0, 366.0, 154.0 ],
-					"text" : "gtm.markov is an event-based object that calculates new output values upon receipt of a bang at its middle inlet, while gtm.markov~ is the signal-based counterpart to gtm.markov and calculates new output values upon phase reset of an incoming phasor/ramp signal arriving at its middle inlet. Both objects receive a list of integers in the range of 0-127 and up to 128 elements in length at their leftmost inlet, from which the internal transition matrix is compiled. Sending a new list of integers into the leftmost inlet overwrites the previously stored transition matrix. A bang received at the rightmost inlet of both objects resets the generation of values without clearing the internally stored transition matrix."
+					"presentation_rect" : [ 0.0, 0.0, 369.0, 154.0 ],
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "gtm.markov is an event-based object that calculates new output values upon receipt of a bang at its middle inlet, while gtm.markov~ is the signal-based counterpart to gtm.markov and calculates new output values upon phase reset of an incoming phasor/ramp signal arriving at its middle inlet. Both objects receive a list of integers in the range of 0-127 and up to 128 elements in length at their leftmost inlet, from which the internal transition matrix is compiled. Sending a new list of integers into the leftmost inlet overwrites the previously stored transition matrix. A bang received at the rightmost inlet of both objects resets the generation of values without clearing the internally stored transition matrix.",
+					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-4",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -140,12 +213,35 @@
 					"patching_rect" : [ 0.0, 482.0, 366.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 482.0, 366.0, 20.0 ],
-					"text" : "View the video tutorials here:"
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "View the video tutorials here:",
+					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-3",
 					"linecount" : 5,
 					"maxclass" : "comment",
@@ -155,7 +251,27 @@
 					"presentation" : 1,
 					"presentation_linecount" : 5,
 					"presentation_rect" : [ 0.0, 406.0, 366.0, 74.0 ],
-					"text" : "In addition to the external objects themselves, this package contains a number of example patchers, as well as RNBO-based versions of the external objects and accompanying video tutorials detailing how the externals were developed and compiled using RNBO and codebox."
+					"saved_attribute_attributes" : 					{
+						"bgcolor" : 						{
+							"expression" : "themecolor.theme_clearcolor"
+						}
+,
+						"bubble_bgcolor" : 						{
+							"expression" : "themecolor.theme_bubble_bgcolor"
+						}
+,
+						"bubble_outlinecolor" : 						{
+							"expression" : "themecolor.theme_bubble_outlinecolor"
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+
+					}
+,
+					"text" : "In addition to the external objects themselves, this package contains a number of example patchers, as well as RNBO-based versions of the external objects and accompanying video tutorials detailing how the externals were developed and compiled using RNBO and codebox.",
+					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
 				}
 
 			}
@@ -169,6 +285,7 @@
 
 			}
  ],
+		"originid" : "pat-283",
 		"dependency_cache" : [ 			{
 				"name" : "youtube logo invert.png",
 				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
@@ -181,7 +298,28 @@
 		"boxgroups" : [ 			{
 				"boxes" : [ "obj-6", "obj-27" ]
 			}
- ]
+ ],
+		"bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+		"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+		"saved_attribute_attributes" : 		{
+			"editing_bgcolor" : 			{
+				"expression" : "themecolor.theme_editing_bgcolor"
+			}
+,
+			"locked_bgcolor" : 			{
+				"expression" : "themecolor.theme_locked_bgcolor"
+			}
+
+		}
+,
+		"oscsendmode" : 0,
+		"oscsendudpaddr" : "127.0.0.1",
+		"oscsendudpport" : 30337,
+		"oscreceivemode" : 0,
+		"oscreceiveudpport" : 30338,
+		"oscqueryenable" : 0,
+		"oscprefixmode" : 0,
+		"oscprefix" : ""
 	}
 
 }
