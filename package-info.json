@@ -34,7 +34,9 @@
 		"extras" : [ "gtm.markov example.maxpat", "gtm.markov BEAP example.maxpat", "gtm.markov~ example.maxpat", "gtm.markov~ vst~ example.maxpat", "gtm.markov_sfizzbass.sfz", "gtm.markov_sfizzpad.sfz", "gtm.markov_sfizzpluck.sfz", "Analogue_Bass_C1.wav", "closed_hat.wav", "kick-1.wav", "kick-2.wav", "NG_AhhPad-C3.wav", "open_hat.wav", "perc.wav", "PluckEko_c5.wav", "snare.wav" ],
 		"help" : [ "gtm.markov.maxhelp", "gtm.markov~.maxhelp", "gtm.markov_test_MIDI.mid", "gtm.markov_help_sfizz.sfz", "bass_a1.wav" ],
 		"media" : [ "youtube logo invert.png" ],
-		"patchers" : [ "gtm.markov home patcher.maxpat", "gtm.markov vignette.maxpat", "gtm.markov.rnbopat", "gtm.markov~.rnbopat", "gtm.invert.maxpat" ]
+		"misc" : [ "gtm.markov_toolbar.svg" ],
+		"patchers" : [ "gtm.markov home patcher.maxpat", "gtm.markov vignette.maxpat", "gtm.markov.rnbopat", "gtm.markov~.rnbopat", "gtm.invert.maxpat" ],
+		"snippets" : [ "gtm.markov rnbo~ patcher.maxsnip", "gtm.markov~ rnbo~ patcher.maxsnip" ]
 	}
 
 }

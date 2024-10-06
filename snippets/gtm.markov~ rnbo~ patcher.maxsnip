@@ -1,0 +1,3719 @@
+{
+	"patcher" : 	{
+		"boxes" : [ 			{
+				"box" : 				{
+					"maxclass" : "newobj",
+					"varname" : "rnbo~[1]",
+					"text" : "rnbo~ @title gtm.markov~",
+					"patching_rect" : [ 10.0, 10.0, 147.0, 22.0 ],
+					"numinlets" : 3,
+					"numoutlets" : 5,
+					"id" : "obj-2",
+					"outlettype" : [ "signal", "signal", "signal", "", "list" ],
+					"rnboversion" : "1.3.3-beta.1",
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 0,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "rnbo",
+						"rect" : [ 34.0, 100.0, 1660.0, 983.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Lato",
+						"gridonopen" : 1,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
+						"cluebar" : 0,
+						"title" : "gtm.markov~",
+						"boxes" : [ 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "updates ActiveChans param in codebox~",
+									"linecount" : 2,
+									"patching_rect" : [ 857.0, 1088.0, 122.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-42"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "sets ActiveChans and LastTwoNotes params back to 0",
+									"linecount" : 2,
+									"patching_rect" : [ 1244.400000095367432, 404.0, 175.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-25"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "r activeChans",
+									"patching_rect" : [ 1149.400000095367432, 374.333334296941757, 79.0, 23.0 ],
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"id" : "obj-13",
+									"outlettype" : [ "" ],
+									"rnbo_uniqueid" : "r_obj-13",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "r"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "s activeChans",
+									"patching_rect" : [ 948.400000095367432, 1129.5, 80.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-9",
+									"rnbo_uniqueid" : "s_obj-9",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "s"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "-~ 1",
+									"patching_rect" : [ 1869.400000095367432, 1094.0, 30.0, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"id" : "obj-8",
+									"outlettype" : [ "signal" ],
+									"rnbo_uniqueid" : "-~_obj-8",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "-~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "codebox~",
+									"patching_rect" : [ 1030.400000095367432, 453.0, 858.0, 616.0 ],
+									"fontsize" : 12.0,
+									"fontname" : "<Monospaced>",
+									"numinlets" : 1,
+									"fontface" : 0,
+									"numoutlets" : 3,
+									"id" : "obj-71",
+									"outlettype" : [ "signal", "signal", "signal" ],
+									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
+									"rnbo_extra_attributes" : 									{
+										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
+										"expr" : "",
+										"safemath" : 1
+									}
+,
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"reset" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset all state and params to initial values",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bang"
+											}
+,
+											"in1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "in1",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number"
+											}
+,
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out1",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "signal"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out2",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "signal"
+											}
+,
+											"out3" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out3",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "signal"
+											}
+,
+											"ActiveChans" : 											{
+												"attrOrProp" : 1,
+												"digest" : "ActiveChans",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"LastTwoNotes" : 											{
+												"attrOrProp" : 1,
+												"digest" : "LastTwoNotes",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"expr" : 											{
+												"attrOrProp" : 2,
+												"digest" : "expr",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"safemath" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Use safe math expressions (e.g.: division by 0 will not crash).",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bool",
+												"defaultValue" : "true"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "in1",
+												"type" : "auto",
+												"digest" : "in1",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "signal",
+												"digest" : "out1",
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "signal",
+												"digest" : "out2",
+												"docked" : 0
+											}
+, 											{
+												"name" : "out3",
+												"type" : "signal",
+												"digest" : "out3",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "codebox~",
+										"aliasOf" : "expr~",
+										"classname" : "codebox~",
+										"operator" : 0,
+										"versionId" : 999733430,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "codebox~_obj-71",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "codebox~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number",
+									"patching_rect" : [ 978.400000095367432, 1094.0, 50.0, 23.0 ],
+									"format" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-64",
+									"parameter_enable" : 0,
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"maximum" : "<none>",
+										"minimum" : "<none>",
+										"order" : "",
+										"initialFormat" : "integer",
+										"preset" : 0
+									}
+,
+									"rnbo_uniqueid" : "number_obj-64",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "number"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "set ActiveChans",
+									"patching_rect" : [ 1149.400000095367432, 410.0, 93.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-62",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "set_obj-62",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number~",
+									"patching_rect" : [ 1869.400000095367432, 1130.0, 56.0, 23.0 ],
+									"fontsize" : 12.0,
+									"fontname" : "Lato",
+									"interval" : 100.0,
+									"sig" : 0.0,
+									"numinlets" : 2,
+									"mode" : 2,
+									"fontface" : 0,
+									"numoutlets" : 2,
+									"id" : "obj-38",
+									"outlettype" : [ "signal", "float" ],
+									"rnbo_extra_attributes" : 									{
+										"interval" : 100.0,
+										"initialMode" : "monitor",
+										"displaymode" : "first"
+									}
+,
+									"rnbo_uniqueid" : "number~_obj-38",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "number~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number~",
+									"patching_rect" : [ 1449.900000095367432, 1094.0, 63.0, 23.0 ],
+									"fontsize" : 12.0,
+									"fontname" : "Lato",
+									"interval" : 100.0,
+									"sig" : 0.0,
+									"numinlets" : 2,
+									"mode" : 2,
+									"fontface" : 0,
+									"numoutlets" : 2,
+									"id" : "obj-35",
+									"outlettype" : [ "signal", "float" ],
+									"rnbo_extra_attributes" : 									{
+										"interval" : 100.0,
+										"initialMode" : "monitor",
+										"displaymode" : "first"
+									}
+,
+									"rnbo_uniqueid" : "number~_obj-35",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "number~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number~",
+									"patching_rect" : [ 1030.400000095367432, 1094.0, 56.0, 23.0 ],
+									"fontsize" : 12.0,
+									"fontname" : "Lato",
+									"interval" : 100.0,
+									"sig" : 0.0,
+									"numinlets" : 2,
+									"mode" : 2,
+									"fontface" : 0,
+									"numoutlets" : 2,
+									"id" : "obj-33",
+									"outlettype" : [ "signal", "float" ],
+									"rnbo_extra_attributes" : 									{
+										"interval" : 100.0,
+										"initialMode" : "monitor",
+										"displaymode" : "first"
+									}
+,
+									"rnbo_uniqueid" : "number~_obj-33",
+									"rnbo_serial" : 3,
+									"rnbo_classname" : "number~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "bang every time new note added to transition matrix. Only bang after final note is outputted from rnbo~, with gate opened by counter max flag",
+									"linecount" : 4,
+									"patching_rect" : [ 177.066666762034117, 1129.5, 211.0, 64.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-18"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "reset rnbo~ output range to 0-127",
+									"linecount" : 2,
+									"patching_rect" : [ 1901.400000095367432, 1088.0, 111.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-51"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "list.len used to set counter maximum, which is used to release a single bang from the rnbo~ patcher once transition matrix compilation has finished. -2 is due to the fact that 3 note/value lists are inputted to codebox, so the first two discrete values from the input list are not counted",
+									"linecount" : 6,
+									"patching_rect" : [ 259.400000095367432, 136.0, 270.0, 93.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-48"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "compile 3-note/value lists for codebox input",
+									"linecount" : 2,
+									"patching_rect" : [ 3.400000095367432, 367.333334296941757, 125.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-44"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "+ 1 to each list element, as codebox portion of patch uses 1-128 range",
+									"linecount" : 3,
+									"patching_rect" : [ 3.400000095367432, 155.5, 137.0, 50.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-39"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "sets ActiveChans param back to 0",
+									"patching_rect" : [ 265.900000095367432, 410.0, 186.0, 21.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-36"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "same effect as zlclear message",
+									"linecount" : 2,
+									"patching_rect" : [ 225.900000095367432, 331.333334296941757, 90.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"hidden" : 1,
+									"id" : "obj-31"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "clears TransMat data object of all stored info and resets sample size to 2. Starting size of 2 is necessary as we first need to store a single note and preceding note pair in indices 1 and 0 of chan 0 respectively.",
+									"linecount" : 5,
+									"patching_rect" : [ 598.400000095367659, 108.5, 235.0, 78.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-24"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "keeps maximum input list length to 128 but also allows shorter lists through",
+									"linecount" : 2,
+									"patching_rect" : [ 214.400000095367432, 61.0, 219.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-15"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "clamp 0 127",
+									"patching_rect" : [ 139.400000095367432, 169.0, 74.0, 23.0 ],
+									"numinlets" : 3,
+									"numoutlets" : 1,
+									"id" : "obj-41",
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"hot" : 0
+									}
+,
+									"rnbo_uniqueid" : "clamp_obj-41",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "clamp"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "+ 1",
+									"patching_rect" : [ 139.400000095367432, 203.0, 29.5, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"id" : "obj-21",
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"hot" : 0
+									}
+,
+									"rnbo_uniqueid" : "+_obj-21",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "+"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "list.stream 1",
+									"patching_rect" : [ 139.400000095367432, 136.0, 72.0, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"id" : "obj-20",
+									"outlettype" : [ "", "" ],
+									"rnbo_uniqueid" : "list.stream_obj-20",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "list.stream"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "out~ 3 @comment \"transition matrix row count\"",
+									"patching_rect" : [ 1030.400000095367432, 1129.5, 260.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-11",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"in1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "signal sent to outlet with index 3",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "signal"
+											}
+,
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "outlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "in1",
+												"type" : "signal",
+												"digest" : "signal sent to outlet with index 3",
+												"displayName" : "transition matrix row count",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [  ],
+										"helpname" : "out~",
+										"aliasOf" : "out~",
+										"classname" : "out~",
+										"operator" : 0,
+										"versionId" : 374499139,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "out~_obj-11",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "out~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "out~ 2 @comment \"next note/value pair (encoded)\"",
+									"patching_rect" : [ 1449.900000095367432, 1130.0, 279.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-10",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"in1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "signal sent to outlet with index 2",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "signal"
+											}
+,
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "outlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "in1",
+												"type" : "signal",
+												"digest" : "signal sent to outlet with index 2",
+												"displayName" : "next note/value pair (encoded)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [  ],
+										"helpname" : "out~",
+										"aliasOf" : "out~",
+										"classname" : "out~",
+										"operator" : 0,
+										"versionId" : 374499139,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "out~_obj-10",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "out~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number",
+									"patching_rect" : [ 225.900000095367432, 235.0, 50.0, 23.0 ],
+									"format" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-37",
+									"parameter_enable" : 0,
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"maximum" : "<none>",
+										"minimum" : "<none>",
+										"order" : "",
+										"initialFormat" : "integer",
+										"preset" : 0
+									}
+,
+									"rnbo_uniqueid" : "number_obj-37",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "number"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t 0",
+									"patching_rect" : [ 1046.400000095367432, 374.333334296941757, 23.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-34",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "number",
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-34",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "in 3 @comment \"bang to reset\"",
+									"patching_rect" : [ 1046.400000095367432, 338.333334296941757, 172.0, 23.0 ],
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"id" : "obj-1",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "inlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [  ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "value from inlet with index 3",
+												"displayName" : "bang to reset",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "in",
+										"aliasOf" : "in",
+										"classname" : "in",
+										"operator" : 0,
+										"versionId" : 1219109108,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "in_obj-1",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "in"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "toggle",
+									"patching_rect" : [ 387.066666762034117, 1093.5, 24.0, 24.0 ],
+									"svg" : "",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-30",
+									"parameter_enable" : 0,
+									"outlettype" : [ "int" ],
+									"rnbo_extra_attributes" : 									{
+										"order" : "",
+										"preset" : 0
+									}
+,
+									"rnbo_uniqueid" : "toggle_obj-30",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "toggle"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "out~ 1 @comment \"note/value output\"",
+									"patching_rect" : [ 1869.400000095367432, 1167.0, 214.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-6",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"in1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "signal sent to outlet with index 1",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "signal"
+											}
+,
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "outlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "in1",
+												"type" : "signal",
+												"digest" : "signal sent to outlet with index 1",
+												"displayName" : "note/value output",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [  ],
+										"helpname" : "out~",
+										"aliasOf" : "out~",
+										"classname" : "out~",
+										"operator" : 0,
+										"versionId" : 374499139,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "out~_obj-6",
+									"rnbo_serial" : 3,
+									"rnbo_classname" : "out~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "in~ 2 @comment \"phasor/ramp signal input - next note/value on phase reset\"",
+									"linecount" : 2,
+									"patching_rect" : [ 1030.400000095367432, 287.0, 218.0, 37.0 ],
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"id" : "obj-4",
+									"outlettype" : [ "signal" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "signal from inlet with index 2",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "signal"
+											}
+,
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "inlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [  ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "signal",
+												"digest" : "signal from inlet with index 2",
+												"displayName" : "phasor/ramp signal input - next note/value on phase reset",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "in~",
+										"aliasOf" : "in~",
+										"classname" : "in~",
+										"operator" : 0,
+										"versionId" : -176007711,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "in~_obj-4",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "in~"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "gate 1 0",
+									"patching_rect" : [ 387.066666762034117, 1129.5, 51.0, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"id" : "obj-26",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"onoff" : 											{
+												"attrOrProp" : 1,
+												"digest" : "0 Closes gate, non-zero opens the corresponding gate outlet",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"outputs" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Number of outlets",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "1"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "onoff",
+												"type" : "number",
+												"digest" : "0 Closes gate, non-zero opens the corresponding gate outlet",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+, 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "Incoming gated message",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "Gated Output 1",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "gate",
+										"aliasOf" : "gate",
+										"classname" : "gate",
+										"operator" : 0,
+										"versionId" : 1220277655,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "gate_obj-26",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "gate"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "out 4 @comment \"bang when transition matrix finished compiling\"",
+									"linecount" : 2,
+									"patching_rect" : [ 387.066666762034117, 1165.5, 199.0, 37.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-88",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "outlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "in1",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "value sent to outlet with index 4",
+												"displayName" : "bang when transition matrix finished compiling",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [  ],
+										"helpname" : "out",
+										"aliasOf" : "out",
+										"classname" : "out",
+										"operator" : 0,
+										"versionId" : -735743983,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "out_obj-88",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "out"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t b i",
+									"patching_rect" : [ 419.066666762034117, 1094.0, 29.5, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"id" : "obj-22",
+									"outlettype" : [ "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "bang"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "bang",
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "number",
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-22",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number",
+									"patching_rect" : [ 440.066666762034117, 1129.5, 50.0, 23.0 ],
+									"format" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-97",
+									"parameter_enable" : 0,
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"maximum" : "<none>",
+										"minimum" : "<none>",
+										"order" : "",
+										"initialFormat" : "integer",
+										"preset" : 0
+									}
+,
+									"rnbo_uniqueid" : "number_obj-97",
+									"rnbo_serial" : 3,
+									"rnbo_classname" : "number"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number",
+									"patching_rect" : [ 139.400000095367432, 1094.0, 50.0, 23.0 ],
+									"format" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-94",
+									"parameter_enable" : 0,
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"maximum" : "<none>",
+										"minimum" : "<none>",
+										"order" : "",
+										"initialFormat" : "integer",
+										"preset" : 0
+									}
+,
+									"rnbo_uniqueid" : "number_obj-94",
+									"rnbo_serial" : 4,
+									"rnbo_classname" : "number"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t l b",
+									"patching_rect" : [ 139.400000095367432, 409.0, 29.5, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"id" : "obj-86",
+									"outlettype" : [ "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 2 (list).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "list"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (bang).",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "bang"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "list",
+												"digest" : "Output order 2 (list).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "bang",
+												"digest" : "Output order 1 (bang).",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-86",
+									"rnbo_serial" : 3,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t b i",
+									"patching_rect" : [ 215.400000095367432, 203.0, 29.5, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"id" : "obj-85",
+									"outlettype" : [ "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "bang"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "bang",
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "number",
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-85",
+									"rnbo_serial" : 4,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "number",
+									"patching_rect" : [ 151.400000095367488, 301.0, 50.0, 23.0 ],
+									"format" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-56",
+									"parameter_enable" : 0,
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"maximum" : "<none>",
+										"minimum" : "<none>",
+										"order" : "",
+										"initialFormat" : "integer",
+										"preset" : 0
+									}
+,
+									"rnbo_uniqueid" : "number_obj-56",
+									"rnbo_serial" : 5,
+									"rnbo_classname" : "number"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "counter 126",
+									"patching_rect" : [ 151.400000095367488, 267.0, 93.499999999999943, 23.0 ],
+									"numinlets" : 5,
+									"numoutlets" : 4,
+									"id" : "obj-27",
+									"outlettype" : [ "", "", "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"carryflag" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Set underflow/overflow output type",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"enum" : [ "numeric", "bang" ],
+												"type" : "enum",
+												"defaultValue" : "numeric"
+											}
+,
+											"input" : 											{
+												"attrOrProp" : 1,
+												"digest" : "numbers or bangs here are counted",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "bang"
+											}
+,
+											"direction" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Set Direction: 0 = Up, 1 = Down, 2 = UpDown",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"maximum" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Set Maximum",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "9999999"
+											}
+,
+											"output" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Current Count",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"carry" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Carry Count",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"minimum" : 											{
+												"attrOrProp" : 1,
+												"digest" : "minimum",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"inc" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Increment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "1"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : "bang",
+												"digest" : "numbers or bangs here are counted",
+												"hot" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "direction",
+												"type" : "number",
+												"digest" : "Set Direction: 0 = Up, 1 = Down, 2 = UpDown",
+												"docked" : 0
+											}
+, 											{
+												"name" : "resetnext",
+												"type" : [ "number", "bang" ],
+												"digest" : "Reset Counter to Number on Next Clock",
+												"docked" : 0
+											}
+, 											{
+												"name" : "resetnow",
+												"type" : [ "number", "bang" ],
+												"digest" : "Reset Counter to Number Immediately",
+												"hot" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "maximum",
+												"type" : "number",
+												"digest" : "Set Maximum",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : "number",
+												"digest" : "Current Count",
+												"docked" : 0
+											}
+, 											{
+												"name" : "underflow",
+												"type" : [ "bang", "number" ],
+												"digest" : "Underflow (Counter Hit Minimum)",
+												"docked" : 0
+											}
+, 											{
+												"name" : "overflow",
+												"type" : [ "bang", "number" ],
+												"digest" : "Overflow (Counter Hit Maximum)",
+												"docked" : 0
+											}
+, 											{
+												"name" : "carry",
+												"type" : "number",
+												"digest" : "Carry Count",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "counter",
+										"aliasOf" : "counter",
+										"classname" : "counter",
+										"operator" : 0,
+										"versionId" : -1448073941,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"inc" : 1.0
+									}
+,
+									"rnbo_uniqueid" : "counter_obj-27",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "counter"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "- 2",
+									"patching_rect" : [ 215.400000095367432, 169.0, 29.5, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"id" : "obj-14",
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"hot" : 0
+									}
+,
+									"rnbo_uniqueid" : "-_obj-14",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "-"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "next note pair",
+									"patching_rect" : [ 1514.900000095367432, 1095.0, 83.0, 21.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-19"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "active chans",
+									"patching_rect" : [ 1088.400000095367432, 1095.0, 73.0, 21.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-16"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "list.slice 128",
+									"patching_rect" : [ 139.400000095367432, 67.0, 73.0, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"id" : "obj-12",
+									"outlettype" : [ "", "" ],
+									"rnbo_extra_attributes" : 									{
+										"hot" : 0
+									}
+,
+									"rnbo_uniqueid" : "list.slice_obj-12",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "list.slice"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "in 1 @comment \"note/value list (int: 0-127, max length = 128)\"",
+									"patching_rect" : [ 139.400000095367432, 16.666668206453323, 338.0, 23.0 ],
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"id" : "obj-3",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"index" : 											{
+												"attrOrProp" : 2,
+												"digest" : "inlet number",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"mandatory" : 1
+											}
+,
+											"comment" : 											{
+												"attrOrProp" : 2,
+												"digest" : "mouse over comment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata",
+												"displayorder" : 3
+											}
+
+										}
+,
+										"inputs" : [  ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "value from inlet with index 1",
+												"displayName" : "note/value list (int: 0-127, max length = 128)",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "in",
+										"aliasOf" : "in",
+										"classname" : "in",
+										"operator" : 0,
+										"versionId" : 1219109108,
+										"changesPatcherIO" : 1
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"meta" : ""
+									}
+,
+									"rnbo_uniqueid" : "in_obj-3",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "in"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "list.len",
+									"patching_rect" : [ 215.400000095367432, 136.0, 42.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-2",
+									"outlettype" : [ "" ],
+									"rnbo_extra_attributes" : 									{
+										"hot" : 0
+									}
+,
+									"rnbo_uniqueid" : "list.len_obj-2",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "list.len"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "set LastTwoNotes",
+									"patching_rect" : [ 1046.400000095367432, 410.0, 101.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-87",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "set_obj-87",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t l l 0 0 b b",
+									"patching_rect" : [ 139.400000095367432, 101.500001549720764, 399.000000000000227, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 6,
+									"id" : "obj-112",
+									"outlettype" : [ "", "", "", "", "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 6 (list).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "list"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 5 (list).",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "list"
+											}
+,
+											"out3" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 4 (number).",
+												"defaultarg" : 3,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"out4" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 3 (number).",
+												"defaultarg" : 4,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"out5" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 5,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "bang"
+											}
+,
+											"out6" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (bang).",
+												"defaultarg" : 6,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "bang"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "list",
+												"digest" : "Output order 6 (list).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "list",
+												"digest" : "Output order 5 (list).",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out3",
+												"type" : "number",
+												"digest" : "Output order 4 (number).",
+												"defaultarg" : 3,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out4",
+												"type" : "number",
+												"digest" : "Output order 3 (number).",
+												"defaultarg" : 4,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out5",
+												"type" : "bang",
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 5,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out6",
+												"type" : "bang",
+												"digest" : "Output order 1 (bang).",
+												"defaultarg" : 6,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-112",
+									"rnbo_serial" : 5,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "r resetMatrix",
+									"patching_rect" : [ 747.733333428700803, 1094.0, 76.0, 23.0 ],
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"id" : "obj-5",
+									"outlettype" : [ "" ],
+									"rnbo_uniqueid" : "r_obj-5",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "r"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t b 2",
+									"patching_rect" : [ 747.733333428700803, 1129.5, 33.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"id" : "obj-96",
+									"outlettype" : [ "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "bang"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "bang",
+												"digest" : "Output order 2 (bang).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "number",
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-96",
+									"rnbo_serial" : 6,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "set ActiveChans",
+									"patching_rect" : [ 170.900000095367432, 409.0, 93.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-45",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "set_obj-45",
+									"rnbo_serial" : 3,
+									"rnbo_classname" : "set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "preceding two notes",
+									"linecount" : 2,
+									"patching_rect" : [ 191.400000095367432, 1088.0, 64.0, 35.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-46"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "comment",
+									"text" : "current note",
+									"patching_rect" : [ 450.566666762034117, 1095.0, 74.0, 21.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-49"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "data TransMat 2 128 @external 0",
+									"patching_rect" : [ 698.733333428700803, 1203.5, 183.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"id" : "obj-32",
+									"outlettype" : [ "", "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"info" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Bang to report buffer information.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "bang"
+											}
+,
+											"sizeout" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Samples",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"chanout" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Number of Channels",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"srout" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Sample rate",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"size" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Samples. Take care when setting, allocation might block audio processing.",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [ "samples" ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"samples" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Samples. Take care when setting, allocation might block audio processing.",
+												"defaultarg" : 2,
+												"isalias" : 1,
+												"aliasOf" : "size",
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"sizems" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Milliseconds. Take care when setting, allocation might block audio processing.",
+												"isalias" : 0,
+												"aliases" : [ "ms" ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"ms" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Size in Milliseconds. Take care when setting, allocation might block audio processing.",
+												"isalias" : 1,
+												"aliasOf" : "sizems",
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"clear" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Clear the contents of the buffer",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bang"
+											}
+,
+											"normalize" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Find Maximum and normalize to the value given.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0.995"
+											}
+,
+											"channels" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Change channel count. Take care when setting, allocation might block audio processing.",
+												"defaultarg" : 3,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "1"
+											}
+,
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Name of the data buffer",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+,
+											"file" : 											{
+												"attrOrProp" : 2,
+												"digest" : "File name/path or URL to load into buffer.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"url" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The name of an audio file to load",
+												"isalias" : 1,
+												"aliasOf" : "file",
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"type" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Type of Data (float32, float64)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"samplerate" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Sample rate",
+												"defaultarg" : 4,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"fill" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Fill expression, this could be a value, or a simple function like sin(x), where x will run from 0 to 1 to fill the buffer.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol"
+											}
+,
+											"external" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Await data from the outside world.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bool",
+												"doNotShowInMaxInspector" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "info",
+												"type" : "bang",
+												"digest" : "Bang to report buffer information.",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "sizeout",
+												"type" : "number",
+												"digest" : "Size in Samples",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+, 											{
+												"name" : "chanout",
+												"type" : "number",
+												"digest" : "Number of Channels",
+												"docked" : 0
+											}
+, 											{
+												"name" : "srout",
+												"type" : "number",
+												"digest" : "Sample rate",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "buffer~",
+										"aliasOf" : "data",
+										"classname" : "data",
+										"operator" : 0,
+										"versionId" : 51756089,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"fill" : "",
+										"samplerate" : 0.0,
+										"type" : "",
+										"file" : ""
+									}
+,
+									"rnbo_uniqueid" : "data_obj-32",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "data"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "t 3 1",
+									"patching_rect" : [ 192.400000095367432, 337.333334296941757, 33.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"id" : "obj-54",
+									"outlettype" : [ "", "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 2 (number).",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"triggers" : 											{
+												"attrOrProp" : 2,
+												"digest" : "The number of arguments determines the number of outlets. \t\t\t\t\t\tEach outlet sends out either a whole number, float, bang or list, \t\t\t\t\t\tas identified by symbol arguments (i, f, b, l). \t\t\t\t\t\tIf there are no arguments, there are two outlets, both of which send a float.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "list"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list" ],
+												"digest" : "input to distribute",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "number",
+												"digest" : "Output order 2 (number).",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "number",
+												"digest" : "Output order 1 (number).",
+												"defaultarg" : 2,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "trigger",
+										"aliasOf" : "trigger",
+										"classname" : "t",
+										"operator" : 0,
+										"versionId" : -1133428571,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_extra_attributes" : 									{
+										"triggers" : ""
+									}
+,
+									"rnbo_uniqueid" : "t_obj-54",
+									"rnbo_serial" : 7,
+									"rnbo_classname" : "t"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "list.stream 3",
+									"patching_rect" : [ 139.400000095367432, 373.333334296941757, 72.0, 23.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"id" : "obj-29",
+									"outlettype" : [ "", "" ],
+									"rnbo_uniqueid" : "list.stream_obj-29",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "list.stream"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "codebox",
+									"patching_rect" : [ 139.400000095367432, 453.0, 858.0, 616.0 ],
+									"fontsize" : 12.0,
+									"fontname" : "<Monospaced>",
+									"numinlets" : 1,
+									"fontface" : 0,
+									"numoutlets" : 4,
+									"id" : "obj-28",
+									"outlettype" : [ "", "", "", "" ],
+									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\tout4 = ActiveChans; //For signal-based version, additional output reporting ActiveChans is added in order to update\r\n\t\t\t\t\t\t//the corresponding @param in codebox~ (used for generation).\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.",
+									"rnbo_extra_attributes" : 									{
+										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\tout4 = ActiveChans; //For signal-based version, additional output reporting ActiveChans is added in order to update\r\n\t\t\t\t\t\t//the corresponding @param in codebox~ (used for generation).\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.",
+										"hot" : 0,
+										"safemath" : 1
+									}
+,
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"reset" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset all state and params to initial values",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bang"
+											}
+,
+											"in1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "in1",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "list"
+											}
+,
+											"out1" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out1",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"out2" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out2",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"out3" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out3",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"out4" : 											{
+												"attrOrProp" : 1,
+												"digest" : "out4",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"ActiveChans" : 											{
+												"attrOrProp" : 1,
+												"digest" : "ActiveChans",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"expr" : 											{
+												"attrOrProp" : 2,
+												"digest" : "expr",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"doNotShowInMaxInspector" : 1
+											}
+,
+											"hot" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Trigger computation on all inlets.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bool",
+												"defaultValue" : "false"
+											}
+,
+											"safemath" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Use safe math expressions (e.g.: division by 0 will not crash).",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bool",
+												"defaultValue" : "true"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "in1",
+												"type" : "list",
+												"digest" : "in1",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "out1",
+												"type" : "number",
+												"digest" : "out1",
+												"docked" : 0
+											}
+, 											{
+												"name" : "out2",
+												"type" : "number",
+												"digest" : "out2",
+												"docked" : 0
+											}
+, 											{
+												"name" : "out3",
+												"type" : "number",
+												"digest" : "out3",
+												"docked" : 0
+											}
+, 											{
+												"name" : "out4",
+												"type" : "number",
+												"digest" : "out4",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "codebox",
+										"aliasOf" : "expr",
+										"classname" : "codebox",
+										"operator" : 0,
+										"versionId" : -1920135016,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "codebox_obj-28",
+									"rnbo_serial" : 1,
+									"rnbo_classname" : "codebox"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "s resetMatrix",
+									"patching_rect" : [ 519.400000095367659, 136.0, 77.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"id" : "obj-23",
+									"rnbo_uniqueid" : "s_obj-23",
+									"rnbo_serial" : 2,
+									"rnbo_classname" : "s"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "set size",
+									"patching_rect" : [ 698.733333428700803, 1165.5, 47.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-80",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "set_obj-80",
+									"rnbo_serial" : 4,
+									"rnbo_classname" : "set"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"maxclass" : "newobj",
+									"text" : "set clear",
+									"patching_rect" : [ 747.733333428700803, 1165.5, 53.0, 23.0 ],
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"id" : "obj-93",
+									"outlettype" : [ "" ],
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"name" : 											{
+												"attrOrProp" : 2,
+												"digest" : "attribute/param to control",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "symbol",
+												"mandatory" : 1
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "attribute or parameter value (bang, number, list)",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : [ "bang", "number", "list", "signal" ],
+												"digest" : "connect to first inlet of gen or subpatcher",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "set",
+										"aliasOf" : "set",
+										"classname" : "set",
+										"operator" : 0,
+										"versionId" : 2121358407,
+										"changesPatcherIO" : 0
+									}
+,
+									"rnbo_uniqueid" : "set_obj-93",
+									"rnbo_serial" : 5,
+									"rnbo_classname" : "set"
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"source" : [ "obj-1", 0 ],
+									"destination" : [ "obj-34", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 1 ],
+									"destination" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 0 ],
+									"destination" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 5 ],
+									"destination" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 3 ],
+									"destination" : [ "obj-45", 0 ],
+									"midpoints" : [ 376.900000095367545, 402.250000774860382, 180.400000095367432, 402.250000774860382 ],
+									"order" : 1
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 4 ],
+									"destination" : [ "obj-54", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 3 ],
+									"destination" : [ "obj-62", 0 ],
+									"midpoints" : [ 376.900000095367545, 402.583338171243668, 1158.900000095367432, 402.583338171243668 ],
+									"order" : 0
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-112", 2 ],
+									"destination" : [ "obj-87", 0 ],
+									"midpoints" : [ 300.900000095367545, 402.250000774860382, 1055.900000095367432, 402.250000774860382 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-12", 0 ],
+									"destination" : [ "obj-112", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-13", 0 ],
+									"destination" : [ "obj-62", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-14", 0 ],
+									"destination" : [ "obj-85", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-2", 0 ],
+									"destination" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-20", 0 ],
+									"destination" : [ "obj-41", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-21", 0 ],
+									"destination" : [ "obj-29", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-22", 0 ],
+									"destination" : [ "obj-26", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-22", 1 ],
+									"destination" : [ "obj-97", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-26", 0 ],
+									"destination" : [ "obj-88", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-27", 2 ],
+									"destination" : [ "obj-30", 0 ],
+									"midpoints" : [ 210.566666762034117, 295.0, 132.999999999999943, 295.0, 132.999999999999943, 1080.0, 396.566666762034117, 1080.0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-27", 0 ],
+									"destination" : [ "obj-56", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-28", 1 ],
+									"destination" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-28", 3 ],
+									"destination" : [ "obj-64", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-28", 2 ],
+									"destination" : [ "obj-80", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-28", 0 ],
+									"destination" : [ "obj-94", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-29", 0 ],
+									"destination" : [ "obj-86", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-3", 0 ],
+									"destination" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-30", 0 ],
+									"destination" : [ "obj-26", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-33", 0 ],
+									"destination" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-34", 0 ],
+									"destination" : [ "obj-87", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-35", 0 ],
+									"destination" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-37", 0 ],
+									"destination" : [ "obj-27", 4 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-38", 0 ],
+									"destination" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-4", 0 ],
+									"destination" : [ "obj-71", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-41", 0 ],
+									"destination" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-45", 0 ],
+									"destination" : [ "obj-28", 0 ],
+									"midpoints" : [ 180.400000095367432, 442.0, 148.900000095367432, 442.0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-5", 0 ],
+									"destination" : [ "obj-96", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-54", 1 ],
+									"destination" : [ "obj-29", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-54", 0 ],
+									"destination" : [ "obj-29", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-62", 0 ],
+									"destination" : [ "obj-71", 0 ],
+									"midpoints" : [ 1158.900000095367432, 442.0, 1039.900000095367432, 442.0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-64", 0 ],
+									"destination" : [ "obj-9", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-71", 0 ],
+									"destination" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-71", 1 ],
+									"destination" : [ "obj-35", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-71", 2 ],
+									"destination" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-8", 0 ],
+									"destination" : [ "obj-38", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-80", 0 ],
+									"destination" : [ "obj-32", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-85", 0 ],
+									"destination" : [ "obj-27", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-85", 1 ],
+									"destination" : [ "obj-37", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-86", 1 ],
+									"destination" : [ "obj-27", 0 ],
+									"midpoints" : [ 159.400000095367432, 442.0, 132.150000095367403, 442.0, 132.150000095367403, 256.0, 160.900000095367488, 256.0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-86", 0 ],
+									"destination" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-87", 0 ],
+									"destination" : [ "obj-71", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-93", 0 ],
+									"destination" : [ "obj-32", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-96", 1 ],
+									"destination" : [ "obj-80", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"source" : [ "obj-96", 0 ],
+									"destination" : [ "obj-93", 0 ]
+								}
+
+							}
+ ],
+						"originid" : "pat-354",
+						"oscsendmode" : 0,
+						"oscsendudpaddr" : "127.0.0.1",
+						"oscsendudpport" : 30337,
+						"oscreceivemode" : 0,
+						"oscreceiveudpport" : 30338,
+						"oscqueryenable" : 0,
+						"oscprefixmode" : 0,
+						"oscprefix" : ""
+					}
+,
+					"inletInfo" : 					{
+						"IOInfo" : [ 							{
+								"type" : "event",
+								"index" : 1,
+								"tag" : "in1",
+								"comment" : "note/value list (int: 0-127, max length = 128)"
+							}
+, 							{
+								"type" : "signal",
+								"index" : 2,
+								"tag" : "in2",
+								"comment" : "phasor/ramp signal input - next note/value on phase reset"
+							}
+, 							{
+								"type" : "event",
+								"index" : 3,
+								"tag" : "in3",
+								"comment" : "bang to reset"
+							}
+ ]
+					}
+,
+					"outletInfo" : 					{
+						"IOInfo" : [ 							{
+								"type" : "signal",
+								"index" : 1,
+								"tag" : "out1",
+								"comment" : "note/value output"
+							}
+, 							{
+								"type" : "signal",
+								"index" : 2,
+								"tag" : "out2",
+								"comment" : "next note/value pair (encoded)"
+							}
+, 							{
+								"type" : "signal",
+								"index" : 3,
+								"tag" : "out3",
+								"comment" : "transition matrix row count"
+							}
+, 							{
+								"type" : "event",
+								"index" : 4,
+								"tag" : "out4",
+								"comment" : "bang when transition matrix finished compiling"
+							}
+ ]
+					}
+,
+					"rnboattrcache" : 					{
+
+					}
+,
+					"autosave" : 1,
+					"saved_object_attributes" : 					{
+						"optimization" : "O1",
+						"parameter_enable" : 1,
+						"uuid" : "6108aea3-8402-11ef-aea3-86d9bf5032bd"
+					}
+,
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 1,
+							"parameter_longname" : "rnbo~[1]",
+							"parameter_modmode" : 0,
+							"parameter_shortname" : "rnbo~[1]",
+							"parameter_type" : 3
+						}
+
+					}
+
+				}
+
+			}
+ ],
+		"appversion" : 		{
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 0,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "box",
+		"description" : "147 x 22, containing 1 object",
+		"tags" : "audio",
+		"snippetinfo" : 		{
+			"name" : "gtm.markov~ rnbo~ patcher",
+			"objects" : "rnbo~",
+			"tags" : "audio",
+			"description" : "147 x 22, containing 1 object",
+			"image" : "iVBORw0KGgoAAAANSUhEUgAAAKcAAAAqCAYAAADWOEvqAAAABHNCSVQICAgIfAhkiAAADHZJREFUeJztnHlcVOX+x98zw77MIOswDAiCgCACiiaKqJiW2i+3UtRcKm25ZdvPLPP+zPKmvl4ttzJvarfMq7fFcM20myuBWy7IIiKyyCYiizMIwzAbvz9IdES8IFhjnfdfc77nPN/lnM95nuc857xGFBcX14SAgAUi/r0TEBBoC0GcAhaLIE4Bi0UQp4DFIohTwGIRxClgsQjiFLBYBHEKWCyCOAUsFqv2HhgbG3tLe3R0NBKJpJXdaDSSlpZ255ndIwj1d7z+I0eOtMt3p3tOlUrVIfsfDaH+u1d/p8VZUlJCQ0ODmU2j0VBSUtJZ1/cEQv13r/52D+ttYTAYyM7OxsXFBTs7O7RaLSqViqamP8f3JEL9d6/+dovzu+++63QwAQEApVLZruOEp3UBi6XTw3p7WDC9DwajiQ++ybqrcVwVQcSMmoNvaCzOrt7UqyooyztJYcYBzh7d3nKcvEcUtvbOFJ1JYejkNwBI3rTMzD582pvoGzWkbn6303lZSyTMfWgUW1OOUl5zpdP+ugJriYSUlctZsGY9P6ef+b3TuSW/Sc/p7eaAu8zursaIiE9kxps7sXd2JW3vl3yzYjIHvn6benUl8Y8uZPSc95FY2QAwcuY7KAL7AqCqLKa6PK+VXeauxFHq0SW5+Xt78crkcXRzduoSf12BSCTCXSbF2d7+906lTe645xwSKecvE3ohEomQOlhzOq8aiViE0tMRPy8ncopUvL76ONXqRgB69+jG5nfux01qy9Ezl3lr3SkaGo2E+Ml4/bFIgpRSKlVa1v2Qy/eHijuUizLkPhKmLyHp/Zk0GQ0MmvAKMQ/O5cyhJJTB/Tnw9dvEjnuRviOfQCyxwk0RhIuHH3pdA44yD0SIuO+h583sN9JN3oOEaW/i6RdGfW0Vx75fxbnjO1vl0S84kJcffZggH2/S8y8QqJCz4qvN/O/kcQCsnf8Xnv/oM957dhZZhcVEBQVgMJr4fNce+of0JDY8hKzCYv62YRNFFZVmvv9v5hT85Z54yKR4uEhJTj/D2aJSZj4wnPoGLat3/MiuYydRerixZHYiIb5K7G1tOF96kVdXf0mVupady/9KebWKIB856/9zoMW3nY01K194Cs9uMh575+/4yz15Y/oj9FDIqVbXsu7H/Xx38BBJb73G/rQM/rFtNwBPjrmfsQNjmLh4RYeuV3u5457Tyd6KiEBXdAYjv+RU4mhnxdhBfmQVXGHVlmxiQj2YNjKw5fgeCimZ+TV8vTefETEKnp3QC4CFMyJxk9myMukMF6s0LH+mP5FBrkgdrXlmfC8+fimWqSMDcXawRuHuwKRh/q1yiU6YSebP31JbWcK4eWvRaes5+v0nRI+YhTwgEtXlInKO7cA3dCB5aT9RX1tFfvo+CjL24+zqjYPMvZX9GiKxhPHz1uLsqiBl87uoKi4weu772NiZ94JO9nZ88uJTeLrI+PLH/fTw9sJf7omTvR2bDh4C4Kt9P1NeXY2/3IuHYvuzcU8yWp2OpU9MJ9BHzue79jKgV0/Gx93XqkZfDzeGRoZzOq+QlMxsHhk6iPlTxrM15SiNej0vTHoIgAVTJ9IvOIhPt+/mi9176RscyOMPjkAsEuMv9yI2PITUzLMUXCwHwMbKilUvPUNseAjLNiZxVdPA249PQ+Hmyrrd+1DVaVg+dwax4SEUlleQOHxIS06JCUMoqriMu0zKK5PH8dn853hyzP24OjsR4O3FzFHD7kxcv9LpOefC1ccpq9Twwbz7SM+rZvmGdABG9FMgd3VoOa6ssp4lX5wCIMRPxv39fNiRWkxMqAfPvJtKakYF21KKOLz6YR4cqMTJ3pr4SDlNTZDQT8GCaX2wkojYllLE5oMXzHLwCuhD8qZl9B31BCaTkZ2fPo/JqMezexi94x6lquwcTt28iBo+g+qyXLR1Kq5cKqTmYl6Lj7bsXv4RuHoHkvztMi7mn+JSQTo9IhMIiBhm1ntGBgbg4SJjwer1pGRmk1lQxPqFLwKQmnkWgINpWajqNACs3LKTf/6wh3qtlqVPTGfZxiSOnc2lf2hPInp0v+W5zisrZ/G6r3BxcmTikFi2pBzhk60/UFpZxXvPPo6djTUH0jLZcegX0s4X0DugO1XqWlyl12+kjzfv5OMtO7Gxar70K56eiUQs5vEVH3PsbC6Rgf5E9OjOcx+u4T/H09jw0wFOrPmAsQNj2JZ6jAlDBhIVFIBObyDA24ulGzax6LFHGBYVAcDw6AhemzoRsVjMziMn+NdPB9svppvolDgNRhNllZqW7Rt/X9XokYhFLduZBdcfBLIKrzAkUk6YvwsAabnVAOj0JrIvXMGrmz1bki+wfEM6Gq2BmFB34qPkXK3X8+3+ArMc7BxlyNyVlOedYsDop8k9sQuTUd+cn76RypIcTEYDbopg1NWlHa5R6qoAYOiUNxg65Y0Wu1/YIDNx+ss9m+ssLAIgPb/wtn6vDdvqX8WaUXABAI1Wi9TR8bZtVHX1v8ZoblOvbZ46iUVi1HX1vDkrER8PN5qamhCJRIhE1wfIwksVZj4l4uZ9vp7uAIT6NS/znMzNb/GdW1qGVzcXjpzJ4fIVNWMHxqA3GKhW13Io8yy2VlYs+fIbrmoaGNInnPg+YdQ1aNmw5+Btz8F/o5PiNF9oNZnaXnh1cbJp+R2okFKtbkRdpwMgSCklPa8Gkah53+nz1aRmXD+JJ3KqOJFT1Ybn5hvA2s4RO0cXRKLmbbHEmqDoUVzISsbWQUrksGmcOby5wzU21DXfVJv/PpvSc78A4Bs6EHWV+RuQa+IK8/flcFZOy0VuC53eYLZ97dxdy/9W6A3mbZpuOt8ikYh3n51NcUUVf/3832QUXODrxfO50eXNcZf/O4n4yHBeTZzAvlMZqOubb5ZgXwVV6lqsJRIC5F6czM3H1NTEjsO/MGZgP0wmEzuPnMBoMrHnZHqLv+T0LJLTu2ZV5jdb54zq6caAMA8GR3gRHyXncFYFGfk1aLQG5j4cSrCvlKfH9ULmZENmfvuXW7T1Kmqry1AGD6C84DSB0SPx7x3P6DnvI3NXYmsvZfwL/0QkEnF891oADDotropAHKTuZr5uZb9clIVWU0vMqDnI3JX07PcAE1/6Ag+fULO2mQVFVKrULEicSGLCEBY99mjLvkZd8004OKIXDra27a5t8rDBTB42uN3HS8RixCIx5dU15JdfYlJ8LMFKBbbW1m22uVSjYvEXX2FjZcWS2YmknS9Aq9Px/PixDAwL4fVpk3Cws+X0+eaRYFvqMRRurig93Nmaeqzdud0JdyzOpqbWPaXxNj2nuk7HmlfjWLMgjvyyWlYmneHKVR2L1p4gKsiVLctGMntMTz7dms2e42UdyqXs/AnC4x7hyPaPqFddZty8tRgNOqrLzhPUdxR6bT27PnuZ4JjR2Ng5UXLuKKED/oeE6UsAMBmbe5NWdpOBxoar7P7sZdyVIcz+208kTH+LtH3rb/m0vmD1ehxsbVg8a0qLTW8wcKlGRWF5Ba9NnciIvn0wGI1m+40mEyaTqZW/B/pHM3l4XMv2zb3ezT4a9XpWbdtFbHgoP3+0jCfHjuRsUQlh3X0xmIwYb4hhajK15FFUUcmq7bsYGRNFkI83r635FyF+CjYueplJQwexeseP7DjcPGrkFJdyrriM/IuXyPp1CnO3ELX3TxVKSzs+X7sZW2sxjvbW1NQ2ttrn1c2eSlUDt9F3mzjKPJix5Ac0tVVs/+Rp1JXXh1yRWEL3sMGMeepDLuadYtvKudDUhI29MwZdQ4swr9GWHcDJxYv62iqaTMZW+1ydnfho3hze2ZhETnEpCdERrJ3/HFOXvsfxnOYHLGcHe65qGlq17WqsJGLcpFIqrtz5l0EikQh5Nxcuq9Rmou4K2vv68jcV593ETdGToVMWERAxlKs15VSWnMXa1gHP7uFYWdtxau86Dm/7EIPu7olj69KF+Ms9KSi/RKifktN5hcxa/iEGY9de3HudP504r+HuE4KbT09cPLtj1OuouVTA5aIs6lQV/71xJ3Gyt2NQ71CClT6cKy4lJTMbrU5/1+Pea3S5ONv6Eh6ah4Df85MxIf69Fb+9X8J3ehHeysqKkJAQ7G94R6vRaMjNzcVguPUEvisR4v9x43d6KcnX19csMQAHBwd8fX0761qI/yeP32lxuri4dMje1Qjx/7jx2z3nFBD4rRG+hBewWARxClgsgjgFLBZBnAIWiyBOAYtFEKeAxSKIU8BiEcQpYLEI4hSwWP4fjaJrk7vllWoAAAAASUVORK5CYII="
+		}
+
+	}
+
+}
