@@ -127,7 +127,7 @@ function reset(transMatRows) {
     ColorArray = [];
 // Random rgb arrays are generated for each possible block, as determined by the transMatRows argument provided to the reset() function.
     for (count = 0; count < transMatRows; count++) {
-        rgb = [(Math.random() / 2) + 0.5, (Math.random() / 2) + 0.5, (Math.random() / 2) + 0.5];
+        rgb = [(Math.random() / 2) + 0.25, (Math.random() / 2) + 0.25, (Math.random() / 2) + 0.25];
         ColorArray.push(rgb);
     }
 // The global BlockArgs.scale, scaleOver10, and scaleOver100 variables are recalculated using the reset() function's transMatRows argument.
