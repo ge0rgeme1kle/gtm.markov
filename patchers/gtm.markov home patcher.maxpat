@@ -4,56 +4,44 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -952.0, 257.0, 262.0, 530.0 ],
-		"bglocked" : 0,
+		"openrect" : [ 100.0, 100.0, 257.0, 525.0 ],
 		"openinpresentation" : 1,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
-		"cluebar" : 0,
+		"enablehscroll" : 0,
+		"enablevscroll" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1017.0, 111.500006079673767, 54.0, 22.0 ],
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-3",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -130,6 +118,7 @@
 							"parameter_longname" : "live.text[10]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -137,8 +126,8 @@
 					}
 ,
 					"text" : "Run",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"texton" : "Stop",
 					"transition" : 1,
 					"varname" : "live.text[2]"
@@ -176,7 +165,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 80.0, 45.0, 22.0 ],
+					"patching_rect" : [ 160.0, 78.0, 45.0, 22.0 ],
 					"text" : "r ---run"
 				}
 
@@ -350,7 +339,7 @@
 				"box" : 				{
 					"id" : "obj-43",
 					"justification" : 1,
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -371,17 +360,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-38",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -457,6 +446,7 @@
 							"parameter_longname" : "live.text[9]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -464,8 +454,8 @@
 					}
 ,
 					"text" : "Recompile",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[9]"
 				}
@@ -475,17 +465,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-28",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -561,6 +551,7 @@
 							"parameter_longname" : "live.text[8]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -568,8 +559,8 @@
 					}
 ,
 					"text" : "Reset",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[8]"
 				}
@@ -579,17 +570,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-70",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -665,6 +656,7 @@
 							"parameter_longname" : "live.text[5]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -672,8 +664,8 @@
 					}
 ,
 					"text" : "Plugin Example",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[5]"
 				}
@@ -683,17 +675,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-69",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -769,6 +761,7 @@
 							"parameter_longname" : "live.text[4]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -776,8 +769,8 @@
 					}
 ,
 					"text" : "Signal Example",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[4]"
 				}
@@ -785,10 +778,8 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bubble" : 1,
 					"bubble_bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-96",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -818,17 +809,14 @@
 					}
 ,
 					"text" : "double-click to reveal",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"textjustification" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bubble" : 1,
 					"bubble_bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-92",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -858,7 +846,6 @@
 					}
 ,
 					"text" : "click me for help",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"textjustification" : 1
 				}
 
@@ -908,7 +895,7 @@
 
 					}
 ,
-					"textcolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"textcolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"tricolor" : [ 0.501960784313725, 0.501960784313725, 0.501960784313725, 0.0 ]
 				}
 
@@ -935,7 +922,7 @@
 
 					}
 ,
-					"textcolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"textcolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"tricolor" : [ 0.501960784313725, 0.501960784313725, 0.501960784313725, 0.0 ]
 				}
 
@@ -979,7 +966,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-87",
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -999,7 +986,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-82",
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1019,7 +1006,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1039,7 +1026,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-80",
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1060,17 +1047,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-59",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -1146,6 +1133,7 @@
 							"parameter_longname" : "live.text[7]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -1153,8 +1141,8 @@
 					}
 ,
 					"text" : "Learn more.",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[7]"
 				}
@@ -1164,17 +1152,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-47",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -1250,6 +1238,7 @@
 							"parameter_longname" : "live.text[6]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -1257,8 +1246,8 @@
 					}
 ,
 					"text" : "Sampler Example",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[6]"
 				}
@@ -1276,41 +1265,14 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 450.0, 123.0, 640.0, 480.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
-						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -1634,15 +1596,12 @@
 
 							}
  ],
-						"originid" : "pat-91"
+						"originid" : "pat-93"
 					}
 ,
 					"patching_rect" : [ 124.000003695487976, 313.333342671394348, 56.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p display"
@@ -1668,8 +1627,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 266.333338141441345, 413.333345651626587, 83.0, 22.0 ],
-					"text" : "prepend reset"
+					"patching_rect" : [ 266.333338141441345, 413.333345651626587, 108.0, 22.0 ],
+					"text" : "prepend recompile"
 				}
 
 			}
@@ -1725,7 +1684,7 @@
 				"box" : 				{
 					"id" : "obj-52",
 					"justification" : 1,
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1805,47 +1764,17 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "rnbo",
 						"rect" : [ 34.0, 100.0, 1660.0, 983.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Lato",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
-						"cluebar" : 0,
 						"title" : "gtm.markov~",
 						"boxes" : [ 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-42",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -1871,16 +1800,12 @@
 
 									}
 ,
-									"text" : "updates ActiveChans param in codebox~",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "updates ActiveChans param in codebox~"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-25",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -1906,14 +1831,14 @@
 
 									}
 ,
-									"text" : "sets ActiveChans and LastTwoNotes params back to 0",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "sets ActiveChans and LastTwoNotes params back to 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-13",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
@@ -1970,8 +1895,8 @@
 									"rnbo_classname" : "codebox~",
 									"rnbo_extra_attributes" : 									{
 										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
-										"safemath" : 1,
-										"expr" : ""
+										"expr" : "",
+										"safemath" : 1
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2146,8 +2071,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2228,8 +2153,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"initialMode" : "monitor",
-										"displaymode" : "first"
+										"displaymode" : "first",
+										"initialMode" : "monitor"
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2254,8 +2179,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"initialMode" : "monitor",
-										"displaymode" : "first"
+										"displaymode" : "first",
+										"initialMode" : "monitor"
 									}
 ,
 									"rnbo_serial" : 2,
@@ -2280,8 +2205,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"initialMode" : "monitor",
-										"displaymode" : "first"
+										"displaymode" : "first",
+										"initialMode" : "monitor"
 									}
 ,
 									"rnbo_serial" : 3,
@@ -2292,9 +2217,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-18",
 									"linecount" : 4,
 									"maxclass" : "comment",
@@ -2320,16 +2242,12 @@
 
 									}
 ,
-									"text" : "bang every time new note added to transition matrix. Only bang after final note is outputted from rnbo~, with gate opened by counter max flag",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "bang every time new note added to transition matrix. Only bang after final note is outputted from rnbo~, with gate opened by counter max flag"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-51",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -2355,16 +2273,12 @@
 
 									}
 ,
-									"text" : "reset rnbo~ output range to 0-127",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "reset rnbo~ output range to 0-127"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-48",
 									"linecount" : 6,
 									"maxclass" : "comment",
@@ -2390,16 +2304,12 @@
 
 									}
 ,
-									"text" : "list.len used to set counter maximum, which is used to release a single bang from the rnbo~ patcher once transition matrix compilation has finished. -2 is due to the fact that 3 note/value lists are inputted to codebox, so the first two discrete values from the input list are not counted",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "list.len used to set counter maximum, which is used to release a single bang from the rnbo~ patcher once transition matrix compilation has finished. -2 is due to the fact that 3 note/value lists are inputted to codebox, so the first two discrete values from the input list are not counted"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-44",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -2425,16 +2335,12 @@
 
 									}
 ,
-									"text" : "compile 3-note/value lists for codebox input",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "compile 3-note/value lists for codebox input"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-39",
 									"linecount" : 3,
 									"maxclass" : "comment",
@@ -2460,16 +2366,12 @@
 
 									}
 ,
-									"text" : "+ 1 to each list element, as codebox portion of patch uses 1-128 range",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "+ 1 to each list element, as codebox portion of patch uses 1-128 range"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-36",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -2494,16 +2396,12 @@
 
 									}
 ,
-									"text" : "sets ActiveChans param back to 0",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "sets ActiveChans param back to 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"hidden" : 1,
 									"id" : "obj-31",
 									"linecount" : 2,
@@ -2530,16 +2428,12 @@
 
 									}
 ,
-									"text" : "same effect as zlclear message",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "same effect as zlclear message"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-24",
 									"linecount" : 5,
 									"maxclass" : "comment",
@@ -2565,16 +2459,12 @@
 
 									}
 ,
-									"text" : "clears TransMat data object of all stored info and resets sample size to 2. Starting size of 2 is necessary as we first need to store a single note and preceding note pair in indices 1 and 0 of chan 0 respectively.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "clears TransMat data object of all stored info and resets sample size to 2. Starting size of 2 is necessary as we first need to store a single note and preceding note pair in indices 1 and 0 of chan 0 respectively."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-15",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -2600,8 +2490,7 @@
 
 									}
 ,
-									"text" : "keeps maximum input list length to 128 but also allows shorter lists through",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "keeps maximum input list length to 128 but also allows shorter lists through"
 								}
 
 							}
@@ -2863,8 +2752,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 2,
@@ -3503,8 +3392,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 3,
@@ -3527,8 +3416,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 4,
@@ -3731,8 +3620,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 5,
@@ -3962,9 +3851,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-19",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -3989,16 +3875,12 @@
 
 									}
 ,
-									"text" : "next note pair",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "next note pair"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-16",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -4023,8 +3905,7 @@
 
 									}
 ,
-									"text" : "active chans",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "active chans"
 								}
 
 							}
@@ -4378,6 +4259,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
@@ -4539,9 +4421,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-46",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -4567,16 +4446,12 @@
 
 									}
 ,
-									"text" : "preceding two notes",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "preceding two notes"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-49",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -4601,8 +4476,7 @@
 
 									}
 ,
-									"text" : "current note",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "current note"
 								}
 
 							}
@@ -4616,10 +4490,10 @@
 									"patching_rect" : [ 698.733333428700803, 1203.5, 183.0, 23.0 ],
 									"rnbo_classname" : "data",
 									"rnbo_extra_attributes" : 									{
-										"file" : "",
-										"samplerate" : 0.0,
 										"type" : "",
-										"fill" : ""
+										"samplerate" : 0.0,
+										"fill" : "",
+										"file" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -5714,9 +5588,7 @@
 
 							}
  ],
-						"originid" : "pat-93",
-						"bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+						"originid" : "pat-95",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -5769,12 +5641,13 @@
 
 					}
 ,
-					"rnboversion" : "1.3.3-beta.1",
+					"rnboversion" : "1.3.3",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[1]",
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "rnbo~",
 							"parameter_type" : 3
 						}
@@ -5817,10 +5690,10 @@
 ,
 									"fileref" : 									{
 										"name" : "untitled",
-										"filename" : "untitled_20241005.maxsnap",
-										"filepath" : "~/Music/Max 8/Projects/gtm.markov-dev/data",
+										"filename" : "untitled_20241028.maxsnap",
+										"filepath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 										"filepos" : -1,
-										"snapshotfileid" : "f6796bfaf3462fd0b6edfd2a1bdf2435"
+										"snapshotfileid" : "fca82b4a3fae87c533ebe2496390f7c6"
 									}
 
 								}
@@ -5836,9 +5709,9 @@
 									"fileref" : 									{
 										"name" : "gtm.markov~",
 										"filename" : "gtm.markov~.maxsnap",
-										"filepath" : "~/Music/Max 8/Snapshots",
+										"filepath" : "~/Music/Max 9/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "c32acc195a238b4bf3c45e9d3934ddb7"
+										"snapshotfileid" : "ee7265f4d8f1b7e766820676715dfc85"
 									}
 
 								}
@@ -5854,10 +5727,8 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bubble" : 1,
 					"bubble_bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-35",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -5887,7 +5758,6 @@
 					}
 ,
 					"text" : "double-click to reveal",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"textjustification" : 1
 				}
 
@@ -5913,7 +5783,7 @@
 
 					}
 ,
-					"textcolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"textcolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"tricolor" : [ 0.501960784313725, 0.501960784313725, 0.501960784313725, 0.0 ]
 				}
 
@@ -5981,41 +5851,14 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "rnbo",
 						"rect" : [ 111.0, 100.0, 1255.0, 983.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Lato",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
-						"cluebar" : 0,
 						"title" : "gtm.markov",
 						"boxes" : [ 							{
 								"box" : 								{
@@ -6089,9 +5932,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-18",
 									"linecount" : 4,
 									"maxclass" : "comment",
@@ -6117,16 +5957,12 @@
 
 									}
 ,
-									"text" : "bang every time new note added to transition matrix. Only bang after final note is outputted from rnbo~, with gate opened by counter max flag",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "bang every time new note added to transition matrix. Only bang after final note is outputted from rnbo~, with gate opened by counter max flag"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-51",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -6152,16 +5988,12 @@
 
 									}
 ,
-									"text" : "reset rnbo~ output range to 0-127",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "reset rnbo~ output range to 0-127"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-48",
 									"linecount" : 6,
 									"maxclass" : "comment",
@@ -6187,16 +6019,12 @@
 
 									}
 ,
-									"text" : "list.len used to set counter maximum, which is used to release a single bang from the rnbo~ patcher once transition matrix compilation has finished. -2 is due to the fact that 3 note/value lists are inputted to codebox, so the first two discrete values from the input list are not counted",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "list.len used to set counter maximum, which is used to release a single bang from the rnbo~ patcher once transition matrix compilation has finished. -2 is due to the fact that 3 note/value lists are inputted to codebox, so the first two discrete values from the input list are not counted"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-44",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -6222,16 +6050,12 @@
 
 									}
 ,
-									"text" : "compile 3-note/value lists for codebox input",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "compile 3-note/value lists for codebox input"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-39",
 									"linecount" : 3,
 									"maxclass" : "comment",
@@ -6257,16 +6081,12 @@
 
 									}
 ,
-									"text" : "+ 1 to each list element, as codebox portion of patch uses 1-128 range",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "+ 1 to each list element, as codebox portion of patch uses 1-128 range"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-36",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -6292,16 +6112,12 @@
 
 									}
 ,
-									"text" : "sets ActiveChans and LastTwoNotes params back to 0",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "sets ActiveChans and LastTwoNotes params back to 0"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"hidden" : 1,
 									"id" : "obj-31",
 									"linecount" : 2,
@@ -6328,16 +6144,12 @@
 
 									}
 ,
-									"text" : "same effect as zlclear message",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "same effect as zlclear message"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-24",
 									"linecount" : 5,
 									"maxclass" : "comment",
@@ -6363,16 +6175,12 @@
 
 									}
 ,
-									"text" : "clears TransMat data object of all stored info and resets sample size to 2. Starting size of 2 is necessary as we first need to store a single note and preceding note pair in indices 1 and 0 of chan 0 respectively.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "clears TransMat data object of all stored info and resets sample size to 2. Starting size of 2 is necessary as we first need to store a single note and preceding note pair in indices 1 and 0 of chan 0 respectively."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-15",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -6398,8 +6206,7 @@
 
 									}
 ,
-									"text" : "keeps maximum input list length to 128 but also allows shorter lists through",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "keeps maximum input list length to 128 but also allows shorter lists through"
 								}
 
 							}
@@ -6656,8 +6463,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -6680,8 +6487,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 2,
@@ -7294,8 +7101,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 3,
@@ -7318,8 +7125,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 4,
@@ -7342,8 +7149,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 5,
@@ -7366,8 +7173,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 6,
@@ -7570,8 +7377,8 @@
 										"maximum" : "<none>",
 										"minimum" : "<none>",
 										"order" : "",
-										"preset" : 0,
-										"initialFormat" : "integer"
+										"initialFormat" : "integer",
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 7,
@@ -7801,9 +7608,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-19",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -7828,16 +7632,12 @@
 
 									}
 ,
-									"text" : "next note pair",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "next note pair"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-16",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -7862,8 +7662,7 @@
 
 									}
 ,
-									"text" : "active chans",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "active chans"
 								}
 
 							}
@@ -8217,6 +8016,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
@@ -8378,9 +8178,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-46",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -8406,16 +8203,12 @@
 
 									}
 ,
-									"text" : "preceding two notes",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "preceding two notes"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-49",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -8440,8 +8233,7 @@
 
 									}
 ,
-									"text" : "current note",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "current note"
 								}
 
 							}
@@ -8455,10 +8247,10 @@
 									"patching_rect" : [ 500.000000095367454, 1213.5, 183.0, 23.0 ],
 									"rnbo_classname" : "data",
 									"rnbo_extra_attributes" : 									{
-										"file" : "",
-										"samplerate" : 0.0,
 										"type" : "",
-										"fill" : ""
+										"samplerate" : 0.0,
+										"fill" : "",
+										"file" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -9590,9 +9382,7 @@
 
 							}
  ],
-						"originid" : "pat-95",
-						"bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+						"originid" : "pat-97",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -9645,12 +9435,13 @@
 
 					}
 ,
-					"rnboversion" : "1.3.3-beta.1",
+					"rnboversion" : "1.3.3",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~",
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "rnbo~",
 							"parameter_type" : 3
 						}
@@ -9693,10 +9484,10 @@
 ,
 									"fileref" : 									{
 										"name" : "untitled",
-										"filename" : "untitled_20241005_1.maxsnap",
-										"filepath" : "~/Music/Max 8/Projects/gtm.markov-dev/data",
+										"filename" : "untitled_20241028_1.maxsnap",
+										"filepath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 										"filepos" : -1,
-										"snapshotfileid" : "dea75e485923435c24db50e9b7491515"
+										"snapshotfileid" : "c278c9e0fdd0716c0bf4ee1c916f786c"
 									}
 
 								}
@@ -9714,17 +9505,17 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-64",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -9800,6 +9591,7 @@
 							"parameter_longname" : "live.text[1]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -9807,8 +9599,8 @@
 					}
 ,
 					"text" : "BEAP Example",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text[1]"
 				}
@@ -9817,7 +9609,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-58",
-					"linecolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"linecolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -9836,10 +9628,8 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bubble" : 1,
 					"bubble_bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"id" : "obj-24",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -9869,7 +9659,6 @@
 					}
 ,
 					"text" : "click me for help",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"textjustification" : 1
 				}
 
@@ -9886,7 +9675,7 @@
 					"parameter_mappable" : 0,
 					"patching_rect" : [ 514.766659617424011, -0.683333500000003, 39.366666612029121, 39.366667000000007 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 217.733335137367249, 0.316666424274445, 39.366667151451111, 39.366667151451111 ]
+					"presentation_rect" : [ 218.033335864543915, 0.316666424274445, 39.366667151451111, 39.366667151451111 ]
 				}
 
 			}
@@ -9984,15 +9773,12 @@
 					"patching_rect" : [ 514.766659617424011, -0.683333500000003, 39.366667, 39.366667 ],
 					"pic" : "Macintosh HD:/Users/georgemeikle/Documents/Max 8.nosync/Projects/gtm.markov-dev/media/youtube logo invert.png",
 					"presentation" : 1,
-					"presentation_rect" : [ 217.733335137367249, 0.316666424274445, 39.366667151451111, 39.366667151451111 ]
+					"presentation_rect" : [ 218.033335864543915, 0.316666424274445, 39.366667151451111, 39.366667151451111 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -10022,8 +9808,7 @@
 
 					}
 ,
-					"text" : "(2024)",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+					"text" : "(2024)"
 				}
 
 			}
@@ -10085,7 +9870,7 @@
 
 					}
 ,
-					"textcolor" : [ 0.57636836783545, 0.576368229540612, 0.576368265679262, 1.0 ],
+					"textcolor" : [ 0.53926766494125, 0.539267534772943, 0.539267568788001, 1.0 ],
 					"tricolor" : [ 0.501960784313725, 0.501960784313725, 0.501960784313725, 0.0 ]
 				}
 
@@ -10097,7 +9882,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1017.0, 113.500006079673767, 58.0, 22.0 ],
+					"patching_rect" : [ 1017.0, 78.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -10207,14 +9992,15 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 832.000024795532227, 421.333345890045166, 70.0, 22.0 ],
-					"text" : "loadmess 1"
+					"patching_rect" : [ 832.000024795532227, 421.333345890045166, 127.0, 22.0 ],
+					"text" : "loadmess startwindow"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-26",
+					"local" : 1,
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
@@ -10226,18 +10012,18 @@
 				"box" : 				{
 					"activebgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"activebgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"activetextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"activetextoncolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"activetextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"activetextoncolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bgoncolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"focusbordercolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"bordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"focusbordercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"fontface" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
 					"id" : "obj-25",
 					"inactivelcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"labeltextcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"labeltextcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"lcdbgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"lcdcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"maxclass" : "live.text",
@@ -10313,6 +10099,7 @@
 							"parameter_longname" : "live.text",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
+							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -10320,8 +10107,8 @@
 					}
 ,
 					"text" : "George Meikle",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
-					"textoffcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
+					"textoffcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"transition" : 1,
 					"varname" : "live.text"
 				}
@@ -10343,9 +10130,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
@@ -10375,8 +10159,7 @@
 
 					}
 ,
-					"text" : "Created by",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+					"text" : "Created by"
 				}
 
 			}
@@ -10422,9 +10205,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"fontface" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 30.0,
@@ -10454,16 +10234,12 @@
 
 					}
 ,
-					"text" : "gtm.markov",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+					"text" : "gtm.markov"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-					"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -10496,23 +10272,29 @@
 					}
 ,
 					"text" : "This package is built around two external objects for generating second-order Markov chains: gtm.markov and gtm.markov~. Markov chains derive the result of the current calculation according to the outcome of those which have preceded it, and have various applications in algorithmic/generative music.",
-					"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 					"textjustification" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"filename" : "gtm.markov_jsui.js",
-					"id" : "obj-7",
-					"maxclass" : "jsui",
+					"filename" : "gtm.markov_v8ui.js",
+					"id" : "obj-39",
+					"maxclass" : "v8ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 161.333338141441345, 482.666681051254272, 257.0, 525.0 ],
+					"patching_rect" : [ 161.333337999999998, 482.666680999999983, 257.0, 525.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 257.0, 525.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 257.0, 525.0 ],
+					"textfile" : 					{
+						"filename" : "gtm.markov_v8ui.js",
+						"flags" : 0,
+						"embed" : 0,
+						"autowatch" : 1
+					}
+
 				}
 
 			}
@@ -10569,6 +10351,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-19", 0 ]
 				}
@@ -10583,16 +10372,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-49", 0 ],
-					"source" : [ "obj-218", 1 ]
+					"destination" : [ "obj-39", 0 ],
+					"midpoints" : [ 133.500003695487976, 473.960949335697137, 170.833337999999998, 473.960949335697137 ],
+					"source" : [ "obj-218", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 133.500003695487976, 474.333345651626587, 170.833338141441345, 474.333345651626587 ],
-					"source" : [ "obj-218", 0 ]
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-218", 1 ]
 				}
 
 			}
@@ -10690,7 +10479,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-38", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-37", 0 ]
 				}
 
@@ -10704,15 +10493,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-40", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 275.833338141441345, 474.833345651626587, 170.833338141441345, 474.833345651626587 ],
+					"destination" : [ "obj-39", 0 ],
+					"midpoints" : [ 275.833338141441345, 473.761732075813256, 170.833337999999998, 473.761732075813256 ],
 					"source" : [ "obj-41", 0 ]
 				}
 
@@ -10975,7 +10764,7 @@
 
 			}
  ],
-		"originid" : "pat-89",
+		"originid" : "pat-91",
 		"parameters" : 		{
 			"obj-25" : [ "live.text", "live.text", 0 ],
 			"obj-28" : [ "live.text[8]", "live.text", 0 ],
@@ -11005,15 +10794,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "gtm.markov_jsui.js",
-				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/code",
+				"name" : "gtm.markov_v8ui.js",
+				"bootpath" : "~/Music/Max 9/Projects/gtm.markov-dev/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gtm.markov~.maxsnap",
-				"bootpath" : "~/Music/Max 8/Snapshots",
+				"bootpath" : "~/Music/Max 9/Snapshots",
 				"patcherrelativepath" : "../../../Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
@@ -11023,22 +10812,22 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "untitled_20241005.maxsnap",
-				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/data",
+				"name" : "untitled_20241028.maxsnap",
+				"bootpath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 				"patcherrelativepath" : "../data",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "untitled_20241005_1.maxsnap",
-				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/data",
+				"name" : "untitled_20241028_1.maxsnap",
+				"bootpath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 				"patcherrelativepath" : "../data",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "youtube logo invert.png",
-				"bootpath" : "~/Music/Max 8/Projects/gtm.markov-dev/media",
+				"bootpath" : "~/Music/Max 9/Projects/gtm.markov-dev/media",
 				"patcherrelativepath" : "../media",
 				"type" : "PNG",
 				"implicit" : 1
@@ -11059,8 +10848,6 @@
 			}
  ],
 		"toolbaradditions" : [ "audiomute" ],
-		"bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-		"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
 		"saved_attribute_attributes" : 		{
 			"editing_bgcolor" : 			{
 				"expression" : "themecolor.theme_editing_bgcolor"
@@ -11071,15 +10858,7 @@
 			}
 
 		}
-,
-		"oscsendmode" : 0,
-		"oscsendudpaddr" : "127.0.0.1",
-		"oscsendudpport" : 30337,
-		"oscreceivemode" : 0,
-		"oscreceiveudpport" : 30338,
-		"oscqueryenable" : 0,
-		"oscprefixmode" : 0,
-		"oscprefix" : ""
+
 	}
 
 }

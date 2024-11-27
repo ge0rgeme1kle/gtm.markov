@@ -4,43 +4,16 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
 		"rect" : [ 724.0, 195.0, 506.0, 749.0 ],
-		"bglocked" : 0,
-		"openinpresentation" : 0,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
-		"assistshowspatchername" : 0,
-		"cluebar" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-2",
@@ -52,42 +25,17 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 0.0, 26.0, 506.0, 723.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
+						"enablehscroll" : 0,
+						"enablevscroll" : 0,
 						"showontab" : 2,
-						"assistshowspatchername" : 0,
-						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-10",
@@ -117,6 +65,7 @@
 											"parameter_mmax" : 6.0,
 											"parameter_mmin" : -70.0,
 											"parameter_modmode" : 3,
+											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "live.gain~",
 											"parameter_type" : 0,
 											"parameter_unitstyle" : 4
@@ -131,6 +80,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-3",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -140,10 +90,7 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-5",
@@ -170,8 +117,7 @@
 
 									}
 ,
-									"text" : "enable audio",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "enable audio"
 								}
 
 							}
@@ -201,10 +147,7 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-92",
@@ -232,16 +175,12 @@
 
 									}
 ,
-									"text" : "start note generation after transition matrix finished compiling",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "start note generation after transition matrix finished compiling"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-91",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -266,16 +205,12 @@
 
 									}
 ,
-									"text" : "velocity",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "velocity"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-90",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -300,17 +235,13 @@
 
 									}
 ,
-									"text" : "pitch",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "pitch"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"bubbleside" : 3,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
@@ -339,8 +270,7 @@
 
 									}
 ,
-									"text" : "replace MIDI file",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "replace MIDI file"
 								}
 
 							}
@@ -681,9 +611,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontsize" : 36.0,
 									"id" : "obj-8",
 									"maxclass" : "comment",
@@ -709,16 +636,12 @@
 
 									}
 ,
-									"text" : "gtm.markov",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "gtm.markov"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-2",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -743,17 +666,13 @@
 
 									}
 ,
-									"text" : "Basic MIDI usage.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "Basic MIDI usage."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"bubbleside" : 3,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
@@ -782,17 +701,13 @@
 
 									}
 ,
-									"text" : "filter out note-off messages",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "filter out note-off messages"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-31",
@@ -820,8 +735,7 @@
 
 									}
 ,
-									"text" : "compile transition matrix!",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "compile transition matrix!"
 								}
 
 							}
@@ -1210,9 +1124,7 @@
 
 							}
  ],
-						"originid" : "pat-91",
-						"bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+						"originid" : "pat-461",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -1239,12 +1151,7 @@
 					}
 ,
 					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"globalpatchername" : "",
-						"locked_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"tags" : ""
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p MIDI"
@@ -1262,42 +1169,17 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 0.0, 26.0, 506.0, 723.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
+						"enablehscroll" : 0,
+						"enablevscroll" : 0,
 						"showontab" : 2,
-						"assistshowspatchername" : 0,
-						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"bgcolor" : [ 0.984313725490196, 0.819607843137255, 0.050980392156863, 1.0 ],
@@ -1324,16 +1206,12 @@
 
 									}
 ,
-									"text" : ";\rmax launchbrowser https://youtu.be/vj_O3almWnw?si=TiMHaIUWMbusB8Vs",
-									"textcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
+									"text" : ";\rmax launchbrowser https://youtu.be/vj_O3almWnw?si=TiMHaIUWMbusB8Vs"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-1",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -1359,8 +1237,7 @@
 
 									}
 ,
-									"text" : "This video demonstrates the functionality of the gtm.markov-transform Max for Live MIDI Transformation Tool for Ableton Live 12, which can be found in the package folder.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "This video demonstrates the functionality of the gtm.markov-transform Max for Live MIDI Transformation Tool for Ableton Live 12, which can be found in the package folder."
 								}
 
 							}
@@ -1390,16 +1267,12 @@
 
 									}
 ,
-									"text" : ";\rmax launchbrowser https://youtu.be/cZu-Wfon8Qs?si=hE0qKXcWydraGgR3",
-									"textcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
+									"text" : ";\rmax launchbrowser https://youtu.be/cZu-Wfon8Qs?si=hE0qKXcWydraGgR3"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-6",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -1424,16 +1297,12 @@
 
 									}
 ,
-									"text" : "This video provides an overview of the gtm.markov Max package.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "This video provides an overview of the gtm.markov Max package."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontsize" : 36.0,
 									"id" : "obj-8",
 									"maxclass" : "comment",
@@ -1459,16 +1328,12 @@
 
 									}
 ,
-									"text" : "gtm.markov",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "gtm.markov"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-3",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -1494,16 +1359,12 @@
 
 									}
 ,
-									"text" : "This video tutorial demonstrates how the gtm.markov~ external was developed using RNBO and codebox(~) and exported via the Max external export target.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "This video tutorial demonstrates how the gtm.markov~ external was developed using RNBO and codebox(~) and exported via the Max external export target."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-2",
 									"linecount" : 2,
 									"maxclass" : "comment",
@@ -1529,8 +1390,7 @@
 
 									}
 ,
-									"text" : "This video tutorial demonstrates how the gtm.markov external was developed using RNBO and codebox and exported via the Max external export target.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "This video tutorial demonstrates how the gtm.markov external was developed using RNBO and codebox and exported via the Max external export target."
 								}
 
 							}
@@ -1560,8 +1420,7 @@
 
 									}
 ,
-									"text" : ";\rmax launchbrowser https://youtu.be/kfrY_xvVII4?si=FungKdmIVRfINSnS",
-									"textcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
+									"text" : ";\rmax launchbrowser https://youtu.be/kfrY_xvVII4?si=FungKdmIVRfINSnS"
 								}
 
 							}
@@ -1591,22 +1450,18 @@
 
 									}
 ,
-									"text" : ";\rmax launchbrowser https://youtu.be/t1Q0cw_aYgY?si=3Iv3g9hq8CGdZ_mG",
-									"textcolor" : [ 0.9, 0.9, 0.9, 1.0 ]
+									"text" : ";\rmax launchbrowser https://youtu.be/t1Q0cw_aYgY?si=3Iv3g9hq8CGdZ_mG"
 								}
 
 							}
  ],
 						"lines" : [  ],
-						"originid" : "pat-93"
+						"originid" : "pat-463"
 					}
 ,
 					"patching_rect" : [ 108.931393, 5.0, 136.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p \"Videos and Tutorials\""
@@ -1624,48 +1479,20 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
 						"rect" : [ 724.0, 221.0, 506.0, 723.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
+						"enablehscroll" : 0,
+						"enablevscroll" : 0,
 						"showontab" : 2,
-						"assistshowspatchername" : 0,
-						"cluebar" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-28",
@@ -1693,17 +1520,13 @@
 
 									}
 ,
-									"text" : "A bang received at the rightmost inlet resets the generation of values without clearing the internally stored transition matrix.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "A bang received at the rightmost inlet resets the generation of values without clearing the internally stored transition matrix."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"bubbleside" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
@@ -1731,17 +1554,13 @@
 
 									}
 ,
-									"text" : "generated values",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "generated values"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-20",
@@ -1769,17 +1588,13 @@
 
 									}
 ,
-									"text" : "A bang received at the second inlet generates a new output value based on the information stored in the internal transition matrix.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "A bang received at the second inlet generates a new output value based on the information stored in the internal transition matrix."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-17",
@@ -1807,17 +1622,13 @@
 
 									}
 ,
-									"text" : "bang when transition matrix finished compiling",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "bang when transition matrix finished compiling"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"bubble" : 1,
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-12",
@@ -1845,16 +1656,12 @@
 
 									}
 ,
-									"text" : "A list of integers in the range of 0-127, up to 128 numbers in length, should first be sent into the object's leftmost inlet.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "A list of integers in the range of 0-127, up to 128 numbers in length, should first be sent into the object's leftmost inlet."
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"fontsize" : 36.0,
 									"id" : "obj-8",
 									"maxclass" : "comment",
@@ -1880,16 +1687,12 @@
 
 									}
 ,
-									"text" : "gtm.markov",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "gtm.markov"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-									"bubble_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-									"bubble_outlinecolor" : [ 0.85, 0.85, 0.85, 1.0 ],
 									"id" : "obj-2",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -1914,8 +1717,7 @@
 
 									}
 ,
-									"text" : "A Max external for generating second-order Markov chains.",
-									"textcolor" : [ 0.85, 0.85, 0.85, 1.0 ]
+									"text" : "A Max external for generating second-order Markov chains."
 								}
 
 							}
@@ -2327,9 +2129,7 @@
 
 							}
  ],
-						"originid" : "pat-95",
-						"bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
+						"originid" : "pat-465",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -2356,12 +2156,7 @@
 					}
 ,
 					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"editing_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"globalpatchername" : "",
-						"locked_bgcolor" : [ 0.235, 0.235, 0.235, 1.0 ],
-						"tags" : ""
+						"globalpatchername" : ""
 					}
 ,
 					"text" : "p Basic"
@@ -2370,7 +2165,7 @@
 			}
  ],
 		"lines" : [  ],
-		"originid" : "pat-89",
+		"originid" : "pat-459",
 		"parameters" : 		{
 			"obj-2::obj-9" : [ "live.gain~", "live.gain~", 0 ],
 			"parameterbanks" : 			{
@@ -2390,15 +2185,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0,
-		"oscsendmode" : 0,
-		"oscsendudpaddr" : "127.0.0.1",
-		"oscsendudpport" : 30337,
-		"oscreceivemode" : 0,
-		"oscreceiveudpport" : 30338,
-		"oscqueryenable" : 0,
-		"oscprefixmode" : 0,
-		"oscprefix" : ""
+		"autosave" : 0
 	}
 
 }
