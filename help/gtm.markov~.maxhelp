@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -25,7 +25,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -44,8 +44,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 364.0, 617.0, 24.0, 24.0 ],
-									"svg" : ""
+									"patching_rect" : [ 364.0, 617.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -194,7 +193,6 @@
 											"parameter_invisible" : 1,
 											"parameter_longname" : "vst~",
 											"parameter_modmode" : 0,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "vst~",
 											"parameter_type" : 3
 										}
@@ -295,7 +293,6 @@
 											"parameter_mmax" : 6.0,
 											"parameter_mmin" : -70.0,
 											"parameter_modmode" : 3,
-											"parameter_osc_name" : "<default>",
 											"parameter_shortname" : "live.gain~",
 											"parameter_type" : 0,
 											"parameter_unitstyle" : 4
@@ -579,8 +576,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 301.0, 546.0, 24.0, 24.0 ],
-									"svg" : ""
+									"patching_rect" : [ 301.0, 546.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -1321,15 +1317,10 @@
 								}
 
 							}
- ],
-						"originid" : "pat-142"
+ ]
 					}
 ,
 					"patching_rect" : [ 62.931393, 5.0, 44.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p MIDI"
 				}
 
@@ -1345,7 +1336,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1631,15 +1622,10 @@
 
 							}
  ],
-						"lines" : [  ],
-						"originid" : "pat-144"
+						"lines" : [  ]
 					}
 ,
 					"patching_rect" : [ 108.931393, 5.0, 136.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p \"Videos and Tutorials\""
 				}
 
@@ -1655,7 +1641,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2152,7 +2138,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 384.0, 199.0, 20.0, 20.0 ],
+									"patching_rect" : [ 332.0, 88.0, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"text" : "1",
 									"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -2215,7 +2201,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 332.0, 88.0, 20.0, 20.0 ],
+									"patching_rect" : [ 384.0, 198.5, 20.0, 20.0 ],
 									"rounded" : 60.0,
 									"text" : "2",
 									"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -2343,7 +2329,6 @@
 
 							}
  ],
-						"originid" : "pat-146",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -2369,17 +2354,12 @@
 
 					}
 ,
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p Basic"
 				}
 
 			}
  ],
 		"lines" : [  ],
-		"originid" : "pat-140",
 		"parameters" : 		{
 			"obj-2::obj-19" : [ "vst~", "vst~", 0 ],
 			"obj-2::obj-9" : [ "live.gain~", "live.gain~", 0 ],

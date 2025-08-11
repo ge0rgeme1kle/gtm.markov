@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 9,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 7,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -17,12 +17,48 @@
 		"enablevscroll" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "int" ],
+					"patching_rect" : [ 1057.200002312660217, 176.500006079673767, 29.5, 22.0 ],
+					"text" : "t b i"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "int" ],
+					"patching_rect" : [ 951.600000739097595, 176.500006079673767, 29.5, 22.0 ],
+					"text" : "t b i"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "int" ],
+					"patching_rect" : [ 986.5, 211.500006079673767, 29.5, 22.0 ],
+					"text" : "t b i"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-51",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 162.000002980232239, 74.0, 45.0, 22.0 ],
+					"patching_rect" : [ 160.5, 74.0, 45.0, 22.0 ],
 					"text" : "r ---run"
 				}
 
@@ -34,7 +70,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 905.0, 211.000006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 902.0, 211.500006079673767, 29.5, 22.0 ],
 					"text" : "&&"
 				}
 
@@ -46,7 +82,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1012.0, 176.500006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 1009.20000159740448, 176.500006079673767, 29.5, 22.0 ],
 					"text" : "&&"
 				}
 
@@ -58,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 905.0, 176.500006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 902.0, 176.500006079673767, 29.5, 22.0 ],
 					"text" : "&&"
 				}
 
@@ -70,7 +106,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 905.0, 144.500006079673767, 48.0, 22.0 ],
+					"patching_rect" : [ 902.0, 144.500006079673767, 48.0, 22.0 ],
 					"text" : "r ---four"
 				}
 
@@ -82,7 +118,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 955.0, 144.500006079673767, 55.0, 22.0 ],
+					"patching_rect" : [ 951.600000739097595, 144.500006079673767, 55.0, 22.0 ],
 					"text" : "r ---three"
 				}
 
@@ -94,7 +130,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1012.0, 144.500006079673767, 46.0, 22.0 ],
+					"patching_rect" : [ 1009.20000159740448, 144.500006079673767, 46.0, 22.0 ],
 					"text" : "r ---two"
 				}
 
@@ -106,7 +142,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1060.0, 144.500006079673767, 48.0, 22.0 ],
+					"patching_rect" : [ 1057.200002312660217, 144.500006079673767, 48.0, 22.0 ],
 					"text" : "r ---one"
 				}
 
@@ -117,7 +153,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 193.000002980232239, 281.333341717720032, 50.0, 22.0 ],
+					"patching_rect" : [ 190.75, 281.333341717720032, 50.0, 22.0 ],
 					"text" : "s ---four"
 				}
 
@@ -128,7 +164,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 332.000002980232239, 280.500006079673767, 57.0, 22.0 ],
+					"patching_rect" : [ 329.0, 280.500006079673767, 57.0, 22.0 ],
 					"text" : "s ---three"
 				}
 
@@ -139,7 +175,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 617.000002980232239, 280.500006079673767, 48.0, 22.0 ],
+					"patching_rect" : [ 614.0, 280.500006079673767, 48.0, 22.0 ],
 					"text" : "s ---two"
 				}
 
@@ -150,7 +186,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 788.000002980232239, 280.500006079673767, 50.0, 22.0 ],
+					"patching_rect" : [ 785.0, 280.500006079673767, 50.0, 22.0 ],
 					"text" : "s ---one"
 				}
 
@@ -162,7 +198,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 788.000002980232239, 246.500006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 785.0, 246.500006079673767, 29.5, 22.0 ],
 					"text" : "1"
 				}
 
@@ -174,7 +210,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 617.000002980232239, 246.500006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 614.0, 246.500006079673767, 29.5, 22.0 ],
 					"text" : "2"
 				}
 
@@ -186,7 +222,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 332.000002980232239, 246.500006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 329.0, 246.500006079673767, 29.5, 22.0 ],
 					"text" : "3"
 				}
 
@@ -198,7 +234,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 193.000002980232239, 244.500006079673767, 29.5, 22.0 ],
+					"patching_rect" : [ 190.75, 246.666674017906189, 29.5, 22.0 ],
 					"text" : "4"
 				}
 
@@ -226,7 +262,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 905.0, 248.333339079673749, 56.0, 18.333334000000001 ],
+					"patching_rect" : [ 902.0, 248.500006079673767, 56.0, 18.333334000000001 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 163.5, 502.5, 56.0, 18.333333879709244 ],
 					"saved_attribute_attributes" : 					{
@@ -293,7 +329,6 @@
 							"parameter_longname" : "live.text[10]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -315,7 +350,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 905.0, 280.500006079673767, 47.0, 22.0 ],
+					"patching_rect" : [ 902.0, 280.500006079673767, 47.0, 22.0 ],
 					"text" : "s ---run"
 				}
 
@@ -327,7 +362,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 764.000002980232239, 176.500006079673767, 54.0, 22.0 ],
+					"patching_rect" : [ 761.0, 176.500006079673767, 54.0, 22.0 ],
 					"text" : "r ---reset"
 				}
 
@@ -339,7 +374,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 332.000002980232239, 176.500006079673767, 54.0, 22.0 ],
+					"patching_rect" : [ 329.0, 176.500006079673767, 54.0, 22.0 ],
 					"text" : "r ---reset"
 				}
 
@@ -351,7 +386,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.000002980232239, 176.500006079673767, 54.0, 22.0 ],
+					"patching_rect" : [ 221.0, 176.500006079673767, 54.0, 22.0 ],
 					"text" : "r ---reset"
 				}
 
@@ -363,7 +398,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 649.000002980232239, 176.500006079673767, 54.0, 22.0 ],
+					"patching_rect" : [ 646.0, 176.500006079673767, 54.0, 22.0 ],
 					"text" : "r ---reset"
 				}
 
@@ -374,7 +409,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 963.0, 280.500006079673767, 56.0, 22.0 ],
+					"patching_rect" : [ 960.0, 280.500006079673767, 56.0, 22.0 ],
 					"text" : "s ---reset"
 				}
 
@@ -386,7 +421,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 280.000002980232239, 176.500006079673767, 42.0, 22.0 ],
+					"patching_rect" : [ 277.0, 176.500006079673767, 42.0, 22.0 ],
 					"text" : "r ---list"
 				}
 
@@ -410,7 +445,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 521.000002980232239, 176.500006079673767, 42.0, 22.0 ],
+					"patching_rect" : [ 518.0, 176.500006079673767, 42.0, 22.0 ],
 					"text" : "r ---list"
 				}
 
@@ -434,7 +469,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 705.000002980232239, 176.500006079673767, 42.0, 22.0 ],
+					"patching_rect" : [ 702.0, 176.500006079673767, 42.0, 22.0 ],
 					"text" : "r ---list"
 				}
 
@@ -445,7 +480,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1021.0, 451.500006079673767, 44.0, 22.0 ],
+					"patching_rect" : [ 1018.0, 451.500006079673767, 44.0, 22.0 ],
 					"text" : "s ---list"
 				}
 
@@ -469,7 +504,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.666681528091431, 470.666680693626404, 217.0, 22.0 ],
+					"patching_rect" : [ 496.0, 471.500006079673767, 217.0, 22.0 ],
 					"text" : "\"gtm.markov sampler example.maxpat\""
 				}
 
@@ -519,7 +554,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 1021.0, 248.333339079673749, 56.0, 18.333334000000001 ],
+					"patching_rect" : [ 1018.0, 248.500006079673767, 56.0, 18.333334000000001 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 100.5, 502.5, 56.0, 18.333333879709244 ],
 					"saved_attribute_attributes" : 					{
@@ -585,7 +620,6 @@
 							"parameter_longname" : "live.text[9]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -624,7 +658,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 963.0, 248.333339079673749, 56.0, 18.333334000000001 ],
+					"patching_rect" : [ 960.0, 248.500006079673767, 56.0, 18.333334000000001 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 38.70000022649765, 502.5, 56.0, 18.333333879709244 ],
 					"saved_attribute_attributes" : 					{
@@ -690,7 +724,6 @@
 							"parameter_longname" : "live.text[8]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -729,7 +762,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 498.666681528091431, 597.333351135253906, 119.400003433227539, 24.5 ],
+					"patching_rect" : [ 496.0, 597.500006079673767, 119.400003433227539, 24.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 140.0, 465.0, 103.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
@@ -795,7 +828,6 @@
 							"parameter_longname" : "live.text[5]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -834,7 +866,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 498.666681528091431, 546.666682958602905, 119.400003433227539, 24.5 ],
+					"patching_rect" : [ 496.0, 547.500006079673767, 119.400003433227539, 24.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.20000022649765, 465.400001347064972, 103.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
@@ -900,7 +932,6 @@
 							"parameter_longname" : "live.text[4]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -924,10 +955,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 427.000002980232239, 203.500006079673767, 92.0, 37.0 ],
+					"patching_rect" : [ 424.0, 203.500006079673767, 92.0, 37.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 176.800002634525299, 405.4000004529953, 67.599997460842133, 51.0 ],
+					"presentation_rect" : [ 177.000000417232513, 405.300000667572021, 67.599997460842133, 51.0 ],
 					"saved_attribute_attributes" : 					{
 						"bgcolor" : 						{
 							"expression" : "themecolor.theme_clearcolor"
@@ -961,7 +992,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 788.000002980232239, 203.500006079673767, 73.0, 37.0 ],
+					"patching_rect" : [ 785.0, 203.500006079673767, 73.0, 37.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 108.000001609325409, 367.799999892711639, 73.0, 37.0 ],
@@ -996,7 +1027,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 705.000002980232239, 246.500006079673767, 81.0, 22.0 ],
+					"patching_rect" : [ 702.0, 246.500006079673767, 81.0, 22.0 ],
 					"text" : "snapshot~ 50"
 				}
 
@@ -1008,7 +1039,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 521.000002980232239, 246.500006079673767, 81.0, 22.0 ],
+					"patching_rect" : [ 518.0, 246.500006079673767, 81.0, 22.0 ],
 					"text" : "snapshot~ 50"
 				}
 
@@ -1024,7 +1055,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 521.000002980232239, 280.500006079673767, 26.0, 22.0 ],
+					"patching_rect" : [ 518.0, 280.500006079673767, 26.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 419.800000667572021, 26.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
@@ -1051,7 +1082,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 705.000002980232239, 280.500006079673767, 26.0, 22.0 ],
+					"patching_rect" : [ 702.0, 280.500006079673767, 26.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 375.0, 26.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
@@ -1097,7 +1128,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.666681528091431, 421.333345890045166, 168.0, 22.0 ],
+					"patching_rect" : [ 496.0, 421.500006079673767, 168.0, 22.0 ],
 					"text" : "\"gtm.markov vignette.maxpat\""
 				}
 
@@ -1206,7 +1237,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 498.666681528091431, 398.666678547859192, 81.0, 20.316666000000001 ],
+					"patching_rect" : [ 496.0, 399.183340079673769, 81.0, 20.316666000000001 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 87.900000780820847, 177.0, 81.0, 20.316666424274445 ],
 					"saved_attribute_attributes" : 					{
@@ -1272,7 +1303,6 @@
 							"parameter_longname" : "live.text[7]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -1311,7 +1341,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 498.666681528091431, 445.333346605300903, 119.400003433227539, 24.5 ],
+					"patching_rect" : [ 496.0, 445.500006079673767, 119.400003433227539, 24.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 315.0, 103.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
@@ -1377,7 +1407,6 @@
 							"parameter_longname" : "live.text[6]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -1404,7 +1433,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1734,15 +1763,10 @@
 								}
 
 							}
- ],
-						"originid" : "pat-158"
+ ]
 					}
 ,
 					"patching_rect" : [ 124.000003695487976, 313.333342671394348, 56.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"globalpatchername" : ""
-					}
-,
 					"text" : "p display"
 				}
 
@@ -1778,7 +1802,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.666681528091431, 624.00001859664917, 204.0, 22.0 ],
+					"patching_rect" : [ 496.0, 624.500006079673767, 204.0, 22.0 ],
 					"text" : "\"gtm.markov~ vst~ example.maxpat\""
 				}
 
@@ -1790,7 +1814,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.666681528091431, 573.333350419998169, 178.0, 22.0 ],
+					"patching_rect" : [ 496.0, 573.500006079673767, 178.0, 22.0 ],
 					"text" : "\"gtm.markov~ example.maxpat\""
 				}
 
@@ -1802,7 +1826,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.666681528091431, 522.666682243347168, 206.0, 22.0 ],
+					"patching_rect" : [ 496.0, 523.500006079673767, 206.0, 22.0 ],
 					"text" : "\"gtm.markov BEAP example.maxpat\""
 				}
 
@@ -1814,7 +1838,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 498.666681528091431, 658.666686296463013, 115.0, 22.0 ],
+					"patching_rect" : [ 496.0, 659.500006079673767, 115.0, 22.0 ],
 					"text" : "prepend loadunique"
 				}
 
@@ -1903,7 +1927,7 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1978,12 +2002,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-13",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1149.400000095367432, 374.333334296941757, 79.0, 37.0 ],
+									"patching_rect" : [ 1149.400000095367432, 374.333334296941757, 80.0, 23.0 ],
 									"rnbo_classname" : "r",
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "r_obj-13",
@@ -2022,7 +2045,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
+									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tlet chanIndex: Int; //Empty variable used to return channel index corresponding to incoming note pair,\r\n\t\t\t\t\t\t//or a random channel index when there is no match with incoming note pair.\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\tchanIndex = chan; //Return channel number if true.\r\n\t\t\t//post(\"chanIndex =\", chanIndex)\r\n\t\t\treturn chanIndex;\r\n\t\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n\tchanIndex = round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN! chanIndex =\", chanIndex);\r\n\treturn chanIndex;\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tlet sampCount: Int; //Empty variable used to return sample count at end of for loop.\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\tsampCount = sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t//post(\"sampCount =\", sampCount);\r\n\t\t\treturn sampCount;\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\t\r\n\tsampCount = dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\t\r\n\t//post(\"total sampCount =\", sampCount);\r\n\treturn sampCount; //Return sample count after being updated by if/else if statement inside for loop.\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -2034,9 +2057,10 @@
 									"patching_rect" : [ 1030.400000095367432, 453.0, 858.0, 616.0 ],
 									"rnbo_classname" : "codebox~",
 									"rnbo_extra_attributes" : 									{
-										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
+										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0; //LastTwoNotes param moved over from codebox for signal-based version.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0; //NoteOut state moved over from codebox for signal-based version.\r\n\r\n@state Trigger = new delta(); //Delta operator used for detecting input triggers for next note/value.\r\n\r\n//@state Delay = new delay(); //Delay operator used to delay input signal by a single sample vector.\r\n\r\n//vectorSize var (derived from vectorsize() operator) is used to delay input signal by a single sample vector\r\n//for sync with note/value generation on output.\r\n//let vectorSize = vectorsize();\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tlet chanIndex: Int; //Empty variable used to return channel index corresponding to incoming note pair,\r\n\t\t\t\t\t\t//or a random channel index when there is no match with incoming note pair.\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\tchanIndex = chan; //Return channel number if true.\r\n\t\t\t//post(\"chanIndex =\", chanIndex)\r\n\t\t\treturn chanIndex;\r\n\t\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n\tchanIndex = round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN! chanIndex =\", chanIndex);\r\n\treturn chanIndex;\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tlet sampCount: Int; //Empty variable used to return sample count at end of for loop.\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\tsampCount = sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t//post(\"sampCount =\", sampCount);\r\n\t\t\treturn sampCount;\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\t\r\n\tsampCount = dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\t\r\n\t//post(\"total sampCount =\", sampCount);\r\n\treturn sampCount; //Return sample count after being updated by if/else if statement inside for loop.\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction trigCheck(trig) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t/*Unlike the event-based version, the signal-based version introduces a new if statement that must be true in order for a new note to be generated.\r\n\tThis is necessary because new notes/values are generated on phase reset of a phasor/ramp input signal, rather than bangs.\r\n\tAt the bottom of the code block, this function (trigCheck) is called every sample vector and the value of the global @state Trigger delta() operator,\r\n\twith in1 as its argument (i.e., Trigger delta() is contantly receiving and assessing the signal arriving at in1), is fed into it as its trig argument,\r\n\twhich is then used to determine whether or not a new note should be generated in the current sample vector call.*/\r\n\tif (trig < -0.5) {\r\n\t\r\n\t\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\t\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t\t} else {\r\n\t\t\t\r\n\t\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t\t}\r\n\r\n\t}\r\n\r\n}\r\n\r\n//trigCheck function called every sample vector (see comments inside and at top of function for explanation of functionality).\r\ntrigCheck(Trigger.next(in1));\r\n\r\nout1 = ActiveChans; //Output ActiveChans param for reference.\r\nout2 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\nout3 = NoteOut; //Output newly generated note.\r\n//out4 = Delay.next(in1, vectorSize); //Input signal delayed by a single sample vector so it can be used for triggering notes with mc.midiplayer MSP object.",
+										"safemath" : 1,
 										"expr" : "",
-										"safemath" : 1
+										"nocache" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2052,6 +2076,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bang"
 											}
 ,
@@ -2064,6 +2089,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number"
 											}
@@ -2076,6 +2102,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "signal"
 											}
@@ -2088,6 +2115,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "signal"
 											}
@@ -2100,6 +2128,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "signal"
 											}
@@ -2113,6 +2142,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -2126,6 +2156,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -2140,6 +2171,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -2152,8 +2184,23 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"defaultValue" : "true"
+											}
+,
+											"nocache" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Do not use parsing cache. This is only useful with very very big code sizes. Code generation will then take a looooong time.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "bool",
+												"defaultValue" : "false"
 											}
 
 										}
@@ -2189,7 +2236,7 @@
 										"aliasOf" : "expr~",
 										"classname" : "codebox~",
 										"operator" : 0,
-										"versionId" : -1615758737,
+										"versionId" : 527839773,
 										"changesPatcherIO" : 0
 									}
 
@@ -2202,8 +2249,8 @@
 									"id" : "obj-64",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 978.400000095367432, 1094.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -2244,6 +2291,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -2269,7 +2317,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -2293,8 +2341,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"displaymode" : "first",
-										"initialMode" : "monitor"
+										"initialMode" : "monitor",
+										"displaymode" : "first"
 									}
 ,
 									"rnbo_serial" : 1,
@@ -2319,8 +2367,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"displaymode" : "first",
-										"initialMode" : "monitor"
+										"initialMode" : "monitor",
+										"displaymode" : "first"
 									}
 ,
 									"rnbo_serial" : 2,
@@ -2345,8 +2393,8 @@
 									"rnbo_classname" : "number~",
 									"rnbo_extra_attributes" : 									{
 										"interval" : 100.0,
-										"displaymode" : "first",
-										"initialMode" : "monitor"
+										"initialMode" : "monitor",
+										"displaymode" : "first"
 									}
 ,
 									"rnbo_serial" : 3,
@@ -2713,6 +2761,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "signal"
 											}
@@ -2727,6 +2776,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -2740,6 +2790,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -2752,6 +2803,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -2774,7 +2826,7 @@
 										"aliasOf" : "out~",
 										"classname" : "out~",
 										"operator" : 0,
-										"versionId" : 374499139,
+										"versionId" : 1989326771,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -2808,6 +2860,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "signal"
 											}
@@ -2822,6 +2875,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -2835,6 +2889,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -2847,6 +2902,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -2869,7 +2925,7 @@
 										"aliasOf" : "out~",
 										"classname" : "out~",
 										"operator" : 0,
-										"versionId" : 374499139,
+										"versionId" : 1989326771,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -2883,8 +2939,8 @@
 									"id" : "obj-37",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 225.900000095367432, 235.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -2924,6 +2980,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -2938,6 +2995,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -2963,7 +3021,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -2999,6 +3057,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -3012,6 +3071,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -3024,6 +3084,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -3045,7 +3106,7 @@
 										"aliasOf" : "in",
 										"classname" : "in",
 										"operator" : 0,
-										"versionId" : 1219109108,
+										"versionId" : 475235762,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -3069,8 +3130,7 @@
 									}
 ,
 									"rnbo_serial" : 1,
-									"rnbo_uniqueid" : "toggle_obj-30",
-									"svg" : ""
+									"rnbo_uniqueid" : "toggle_obj-30"
 								}
 
 							}
@@ -3100,6 +3160,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "signal"
 											}
@@ -3114,6 +3175,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -3127,6 +3189,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -3139,6 +3202,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -3161,7 +3225,7 @@
 										"aliasOf" : "out~",
 										"classname" : "out~",
 										"operator" : 0,
-										"versionId" : 374499139,
+										"versionId" : 1989326771,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -3197,6 +3261,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "signal"
 											}
@@ -3211,6 +3276,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -3224,6 +3290,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -3236,6 +3303,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -3257,7 +3325,7 @@
 										"aliasOf" : "in~",
 										"classname" : "in~",
 										"operator" : 0,
-										"versionId" : -176007711,
+										"versionId" : -1654556303,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -3289,6 +3357,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -3304,6 +3373,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "1"
 											}
@@ -3336,7 +3406,7 @@
 										"aliasOf" : "gate",
 										"classname" : "gate",
 										"operator" : 0,
-										"versionId" : 1220277655,
+										"versionId" : -1253073831,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -3372,6 +3442,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -3385,6 +3456,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -3397,6 +3469,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -3419,7 +3492,7 @@
 										"aliasOf" : "out",
 										"classname" : "out",
 										"operator" : 0,
-										"versionId" : -735743983,
+										"versionId" : 1131826829,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -3450,6 +3523,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -3463,6 +3537,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -3477,6 +3552,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -3509,7 +3585,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -3523,8 +3599,8 @@
 									"id" : "obj-97",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 440.066666762034117, 1129.5, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -3547,8 +3623,8 @@
 									"id" : "obj-94",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 139.400000095367432, 1094.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -3588,6 +3664,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "list"
 											}
@@ -3601,6 +3678,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -3615,6 +3693,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -3647,7 +3726,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -3678,6 +3757,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -3691,6 +3771,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -3705,6 +3786,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -3737,7 +3819,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -3751,8 +3833,8 @@
 									"id" : "obj-56",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 151.400000095367488, 301.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -3796,6 +3878,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"enum" : [ "numeric", "bang" ],
 												"type" : "enum",
 												"defaultValue" : "numeric"
@@ -3810,6 +3893,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "bang"
 											}
@@ -3823,6 +3907,37 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"resetnext" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset Counter to Number on Next Clock",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"resetnow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset Counter to Number Immediately",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -3838,6 +3953,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number",
 												"defaultValue" : "9999999"
@@ -3852,9 +3968,38 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
+											}
+,
+											"underflow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Underflow (Counter Hit Minimum)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"overflow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Overflow (Counter Hit Maximum)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"outlet" : 1,
+												"type" : "number"
 											}
 ,
 											"carry" : 											{
@@ -3866,6 +4011,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -3880,6 +4026,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -3893,6 +4040,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "1"
 											}
@@ -3962,7 +4110,7 @@
 										"aliasOf" : "counter",
 										"classname" : "counter",
 										"operator" : 0,
-										"versionId" : -1448073941,
+										"versionId" : -784425294,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -4096,6 +4244,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -4109,6 +4258,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -4121,6 +4271,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -4142,7 +4293,7 @@
 										"aliasOf" : "in",
 										"classname" : "in",
 										"operator" : 0,
-										"versionId" : 1219109108,
+										"versionId" : 475235762,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -4159,10 +4310,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 215.400000095367432, 136.0, 42.0, 23.0 ],
 									"rnbo_classname" : "list.len",
-									"rnbo_extra_attributes" : 									{
-										"hot" : 0
-									}
-,
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "list.len_obj-2",
 									"text" : "list.len"
@@ -4193,6 +4340,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -4218,7 +4366,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -4249,6 +4397,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "list"
 											}
@@ -4262,6 +4411,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "list"
 											}
@@ -4275,6 +4425,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -4288,6 +4439,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -4301,6 +4453,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -4314,6 +4467,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -4328,6 +4482,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -4388,7 +4543,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -4399,12 +4554,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 747.733333428700803, 1094.0, 76.0, 37.0 ],
+									"patching_rect" : [ 747.733333428700803, 1094.0, 77.0, 23.0 ],
 									"rnbo_classname" : "r",
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "r_obj-5",
@@ -4435,6 +4589,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -4448,6 +4603,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -4462,6 +4618,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -4494,7 +4651,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -4526,6 +4683,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -4551,7 +4709,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -4630,10 +4788,12 @@
 									"patching_rect" : [ 698.733333428700803, 1203.5, 183.0, 23.0 ],
 									"rnbo_classname" : "data",
 									"rnbo_extra_attributes" : 									{
-										"fill" : "",
 										"type" : "",
+										"samplerate" : 0.0,
+										"meta" : "",
+										"fill" : "",
 										"file" : "",
-										"samplerate" : 0.0
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -4650,6 +4810,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "bang"
 											}
@@ -4664,6 +4825,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -4677,6 +4839,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -4690,6 +4853,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -4705,6 +4869,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -4720,6 +4885,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -4733,6 +4899,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -4747,6 +4914,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -4759,6 +4927,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bang"
 											}
 ,
@@ -4771,6 +4940,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0.995"
 											}
@@ -4785,6 +4955,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "1"
 											}
@@ -4799,6 +4970,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -4812,19 +4984,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
-												"type" : "symbol"
-											}
-,
-											"url" : 											{
-												"attrOrProp" : 2,
-												"digest" : "The name of an audio file to load",
-												"isalias" : 1,
-												"aliasOf" : "file",
-												"aliases" : [  ],
-												"settable" : 1,
-												"attachable" : 0,
-												"isparam" : 0,
-												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -4837,6 +4997,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -4850,6 +5011,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -4863,6 +5025,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -4875,8 +5038,40 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"doNotShowInMaxInspector" : 1
+											}
+,
+											"preset" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Add this value to the preset.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "bool",
+												"defaultValue" : "false",
+												"label" : "Include In Preset",
+												"category" : "Preset"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata"
 											}
 
 										}
@@ -4913,7 +5108,7 @@
 										"aliasOf" : "data",
 										"classname" : "data",
 										"operator" : 0,
-										"versionId" : 51756089,
+										"versionId" : -72996304,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -4944,6 +5139,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -4957,6 +5153,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -4971,6 +5168,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -5003,7 +5201,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -5028,7 +5226,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\tout4 = ActiveChans; //For signal-based version, additional output reporting ActiveChans is added in order to update\r\n\t\t\t\t\t\t//the corresponding @param in codebox~ (used for generation).\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.",
+									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\tout4 = ActiveChans; //For signal-based version, additional output reporting ActiveChans is added in order to update\r\n\t\t\t\t\t\t//the corresponding @param in codebox~ (used for generation).\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as the argument.",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -5040,9 +5238,10 @@
 									"patching_rect" : [ 139.400000095367432, 453.0, 858.0, 616.0 ],
 									"rnbo_classname" : "codebox",
 									"rnbo_extra_attributes" : 									{
-										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\tout4 = ActiveChans; //For signal-based version, additional output reporting ActiveChans is added in order to update\r\n\t\t\t\t\t\t//the corresponding @param in codebox~ (used for generation).\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.",
+										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\tout4 = ActiveChans; //For signal-based version, additional output reporting ActiveChans is added in order to update\r\n\t\t\t\t\t\t//the corresponding @param in codebox~ (used for generation).\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as the argument.",
+										"safemath" : 1,
 										"hot" : 0,
-										"safemath" : 1
+										"nocache" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -5058,6 +5257,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bang"
 											}
 ,
@@ -5070,6 +5270,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "list"
 											}
@@ -5083,6 +5284,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -5096,6 +5298,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -5109,6 +5312,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -5122,6 +5326,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -5135,6 +5340,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -5149,6 +5355,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"doNotShowInMaxInspector" : 1
 											}
@@ -5162,6 +5369,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"defaultValue" : "false"
 											}
@@ -5175,8 +5383,23 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"defaultValue" : "true"
+											}
+,
+											"nocache" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Do not use parsing cache. This is only useful with very very big code sizes. Code generation will then take a looooong time.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "bool",
+												"defaultValue" : "false"
 											}
 
 										}
@@ -5218,7 +5441,7 @@
 										"aliasOf" : "expr",
 										"classname" : "codebox",
 										"operator" : 0,
-										"versionId" : 634514463,
+										"versionId" : 835263063,
 										"changesPatcherIO" : 0
 									}
 
@@ -5263,6 +5486,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -5288,7 +5512,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -5320,6 +5544,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -5345,7 +5570,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -5728,7 +5953,6 @@
 
 							}
  ],
-						"originid" : "pat-160",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -5774,20 +5998,19 @@
 
 					}
 ,
-					"patching_rect" : [ 521.000002980232239, 211.500006079673767, 147.0, 22.0 ],
+					"patching_rect" : [ 518.0, 211.500006079673767, 147.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.000000417232513, 419.800000667572021, 147.0, 22.0 ],
 					"rnboattrcache" : 					{
 
 					}
 ,
-					"rnboversion" : "1.3.4-beta.2",
+					"rnboversion" : "1.4.1",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~[1]",
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "rnbo~",
 							"parameter_type" : 3
 						}
@@ -5830,10 +6053,10 @@
 ,
 									"fileref" : 									{
 										"name" : "untitled",
-										"filename" : "untitled_20241028.maxsnap",
+										"filename" : "untitled_20250806_2.maxsnap",
 										"filepath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 										"filepos" : -1,
-										"snapshotfileid" : "fca82b4a3fae87c533ebe2496390f7c6"
+										"snapshotfileid" : "ecb304b6531f4e0b5b5afc8c45fa9d13"
 									}
 
 								}
@@ -5874,10 +6097,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.333333492279053, 204.000006079673767, 92.0, 37.0 ],
+					"patching_rect" : [ 6.000002980232239, 204.500006318092346, 92.0, 37.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 170.400002539157867, 254.79999977350235, 66.0, 51.0 ],
+					"presentation_rect" : [ 177.79999914765358, 255.5, 66.0, 51.0 ],
 					"saved_attribute_attributes" : 					{
 						"bgcolor" : 						{
 							"expression" : "themecolor.theme_clearcolor"
@@ -5991,13 +6214,13 @@
 						"appversion" : 						{
 							"major" : 9,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 7,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 111.0, 100.0, 1255.0, 983.0 ],
+						"rect" : [ 119.0, 100.0, 1224.0, 983.0 ],
 						"default_fontname" : "Lato",
 						"gridsize" : [ 15.0, 15.0 ],
 						"title" : "gtm.markov",
@@ -6024,6 +6247,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -6038,6 +6262,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -6063,7 +6288,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -6451,6 +6676,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -6464,6 +6690,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -6476,6 +6703,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -6498,7 +6726,7 @@
 										"aliasOf" : "out",
 										"classname" : "out",
 										"operator" : 0,
-										"versionId" : -735743983,
+										"versionId" : 1131826829,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -6534,6 +6762,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -6547,6 +6776,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -6559,6 +6789,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -6581,7 +6812,7 @@
 										"aliasOf" : "out",
 										"classname" : "out",
 										"operator" : 0,
-										"versionId" : -735743983,
+										"versionId" : 1131826829,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -6595,8 +6826,8 @@
 									"id" : "obj-9",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 1003.400000095367432, 1139.5, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -6619,8 +6850,8 @@
 									"id" : "obj-37",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 250.900000095367432, 245.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -6660,6 +6891,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -6674,6 +6906,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -6699,7 +6932,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -6735,6 +6968,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -6748,6 +6982,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -6760,6 +6995,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -6781,7 +7017,7 @@
 										"aliasOf" : "in",
 										"classname" : "in",
 										"operator" : 0,
-										"versionId" : 1219109108,
+										"versionId" : 475235762,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -6805,8 +7041,7 @@
 									}
 ,
 									"rnbo_serial" : 1,
-									"rnbo_uniqueid" : "toggle_obj-30",
-									"svg" : ""
+									"rnbo_uniqueid" : "toggle_obj-30"
 								}
 
 							}
@@ -6837,6 +7072,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -6850,6 +7086,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -6862,6 +7099,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -6884,7 +7122,7 @@
 										"aliasOf" : "out",
 										"classname" : "out",
 										"operator" : 0,
-										"versionId" : -735743983,
+										"versionId" : 1131826829,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -6921,6 +7159,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -6934,6 +7173,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -6946,6 +7186,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -6967,7 +7208,7 @@
 										"aliasOf" : "in",
 										"classname" : "in",
 										"operator" : 0,
-										"versionId" : 1219109108,
+										"versionId" : 475235762,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -6999,6 +7240,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -7014,6 +7256,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "1"
 											}
@@ -7046,7 +7289,7 @@
 										"aliasOf" : "gate",
 										"classname" : "gate",
 										"operator" : 0,
-										"versionId" : 1220277655,
+										"versionId" : -1253073831,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -7082,6 +7325,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -7095,6 +7339,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -7107,6 +7352,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -7129,7 +7375,7 @@
 										"aliasOf" : "out",
 										"classname" : "out",
 										"operator" : 0,
-										"versionId" : -735743983,
+										"versionId" : 1131826829,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -7160,6 +7406,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -7173,6 +7420,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -7187,6 +7435,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -7219,7 +7468,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -7233,8 +7482,8 @@
 									"id" : "obj-104",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 835.600000095367477, 1104.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -7257,8 +7506,8 @@
 									"id" : "obj-102",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 667.800000095367409, 1104.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -7281,8 +7530,8 @@
 									"id" : "obj-97",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 353.200000095367443, 1139.5, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -7305,8 +7554,8 @@
 									"id" : "obj-94",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 164.400000095367432, 1104.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -7346,6 +7595,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "list"
 											}
@@ -7359,6 +7609,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -7373,6 +7624,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -7405,7 +7657,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -7436,6 +7688,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -7449,6 +7702,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -7463,6 +7717,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -7495,7 +7750,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -7509,8 +7764,8 @@
 									"id" : "obj-56",
 									"maxclass" : "number",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 176.400000095367488, 311.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
@@ -7554,6 +7809,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"enum" : [ "numeric", "bang" ],
 												"type" : "enum",
 												"defaultValue" : "numeric"
@@ -7568,6 +7824,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "bang"
 											}
@@ -7581,6 +7838,37 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"resetnext" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset Counter to Number on Next Clock",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"resetnow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset Counter to Number Immediately",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -7596,6 +7884,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number",
 												"defaultValue" : "9999999"
@@ -7610,9 +7899,38 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
+											}
+,
+											"underflow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Underflow (Counter Hit Minimum)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"overflow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Overflow (Counter Hit Maximum)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"outlet" : 1,
+												"type" : "number"
 											}
 ,
 											"carry" : 											{
@@ -7624,6 +7942,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -7638,6 +7957,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -7651,6 +7971,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "1"
 											}
@@ -7720,7 +8041,7 @@
 										"aliasOf" : "counter",
 										"classname" : "counter",
 										"operator" : 0,
-										"versionId" : -1448073941,
+										"versionId" : -784425294,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -7854,6 +8175,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"mandatory" : 1
 											}
@@ -7867,6 +8189,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -7879,6 +8202,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"defaultValue" : "",
 												"label" : "Metadata",
@@ -7900,7 +8224,7 @@
 										"aliasOf" : "in",
 										"classname" : "in",
 										"operator" : 0,
-										"versionId" : 1219109108,
+										"versionId" : 475235762,
 										"changesPatcherIO" : 1
 									}
 ,
@@ -7917,10 +8241,6 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 240.400000095367432, 146.0, 42.0, 23.0 ],
 									"rnbo_classname" : "list.len",
-									"rnbo_extra_attributes" : 									{
-										"hot" : 0
-									}
-,
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "list.len_obj-2",
 									"text" : "list.len"
@@ -7951,6 +8271,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -7976,7 +8297,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -8007,6 +8328,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "list"
 											}
@@ -8020,6 +8342,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "list"
 											}
@@ -8033,6 +8356,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8046,6 +8370,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8059,6 +8384,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -8072,6 +8398,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -8086,6 +8413,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -8146,7 +8474,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -8157,12 +8485,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 549.000000095367454, 1104.0, 76.0, 23.0 ],
+									"patching_rect" : [ 549.000000095367454, 1104.0, 77.0, 23.0 ],
 									"rnbo_classname" : "r",
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "r_obj-5",
@@ -8193,6 +8520,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "bang"
 											}
@@ -8206,6 +8534,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8220,6 +8549,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -8252,7 +8582,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -8284,6 +8614,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -8309,7 +8640,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -8388,10 +8719,12 @@
 									"patching_rect" : [ 500.000000095367454, 1213.5, 183.0, 23.0 ],
 									"rnbo_classname" : "data",
 									"rnbo_extra_attributes" : 									{
-										"fill" : "",
 										"type" : "",
+										"samplerate" : 0.0,
+										"meta" : "",
+										"fill" : "",
 										"file" : "",
-										"samplerate" : 0.0
+										"preset" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -8408,6 +8741,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "bang"
 											}
@@ -8422,6 +8756,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -8435,6 +8770,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -8448,6 +8784,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number",
 												"defaultValue" : "0"
@@ -8463,6 +8800,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8478,6 +8816,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8491,6 +8830,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8505,6 +8845,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8517,6 +8858,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bang"
 											}
 ,
@@ -8529,6 +8871,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0.995"
 											}
@@ -8543,6 +8886,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "1"
 											}
@@ -8557,6 +8901,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -8570,19 +8915,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
-												"type" : "symbol"
-											}
-,
-											"url" : 											{
-												"attrOrProp" : 2,
-												"digest" : "The name of an audio file to load",
-												"isalias" : 1,
-												"aliasOf" : "file",
-												"aliases" : [  ],
-												"settable" : 1,
-												"attachable" : 0,
-												"isparam" : 0,
-												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -8595,6 +8928,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -8608,6 +8942,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8621,6 +8956,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol"
 											}
 ,
@@ -8633,8 +8969,40 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"doNotShowInMaxInspector" : 1
+											}
+,
+											"preset" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Add this value to the preset.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "bool",
+												"defaultValue" : "false",
+												"label" : "Include In Preset",
+												"category" : "Preset"
+											}
+,
+											"meta" : 											{
+												"attrOrProp" : 2,
+												"digest" : "A JSON formatted string containing metadata for use by the exported code",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "symbol",
+												"defaultValue" : "",
+												"label" : "Metadata"
 											}
 
 										}
@@ -8671,7 +9039,7 @@
 										"aliasOf" : "data",
 										"classname" : "data",
 										"operator" : 0,
-										"versionId" : 51756089,
+										"versionId" : -72996304,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -8702,6 +9070,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8715,6 +9084,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8729,6 +9099,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "list"
 											}
 
@@ -8761,7 +9132,7 @@
 										"aliasOf" : "trigger",
 										"classname" : "t",
 										"operator" : 0,
-										"versionId" : -1133428571,
+										"versionId" : 1624904035,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -8786,7 +9157,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0;\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0;\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//Iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction in2(bang) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t\r\n\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t} else {\r\n\t\t\r\n\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t}\r\n\t\r\n\tout4 = ActiveChans; //Output ActiveChans param for reference.\r\n\tout5 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\n\tout6 = NoteOut; //Output newly generated note and send to sound generator.\r\n\r\n}",
+									"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0;\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0;\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//Iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tlet chanIndex: Int; //Empty variable used to return channel index corresponding to incoming note pair,\r\n\t\t\t\t\t\t//or a random channel index when there is no match with incoming note pair.\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\tchanIndex = chan; //Return channel number if true.\r\n\t\t\t//post(\"chanIndex =\", chanIndex)\r\n\t\t\treturn chanIndex;\r\n\t\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n\tchanIndex = round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN! chanIndex =\", chanIndex);\r\n\treturn chanIndex;\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tlet sampCount: Int; //Empty variable used to return sample count at end of for loop.\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\tsampCount = sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t//post(\"sampCount =\", sampCount);\r\n\t\t\treturn sampCount;\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\t\r\n\tsampCount = dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\t\r\n\t//post(\"total sampCount =\", sampCount);\r\n\treturn sampCount; //Return sample count after being updated by if/else if statement inside for loop.\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction in2(bang) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t\r\n\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t} else {\r\n\t\t\r\n\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t}\r\n\t\r\n\tout4 = ActiveChans; //Output ActiveChans param for reference.\r\n\tout5 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\n\tout6 = NoteOut; //Output newly generated note and send to sound generator.\r\n\r\n}",
 									"fontface" : 0,
 									"fontname" : "<Monospaced>",
 									"fontsize" : 12.0,
@@ -8798,9 +9169,10 @@
 									"patching_rect" : [ 164.400000095367432, 463.0, 858.0, 616.0 ],
 									"rnbo_classname" : "codebox",
 									"rnbo_extra_attributes" : 									{
-										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0;\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0;\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//Iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\treturn chan; //Return channel number if true.\r\n\t\t\t\r\n\t\t} else if (chan == ActiveChans - 1) { //COULD POSSIBLY CHANGE THIS TO JUST ELSE NOT ELSE IF.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN!\");\r\n\t\t\treturn round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\treturn sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t\r\n\t\t} else if (sample == dim(TransMat) - 1) {\r\n\t\t\t\r\n\t\t\treturn dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction in2(bang) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t\r\n\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t} else {\r\n\t\t\r\n\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t}\r\n\t\r\n\tout4 = ActiveChans; //Output ActiveChans param for reference.\r\n\tout5 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\n\tout6 = NoteOut; //Output newly generated note and send to sound generator.\r\n\r\n}",
+										"code" : "@param({min: 0, max: 128}) ActiveChans = 0; //Used for counting number of notepairs in transition matrix.\r\n@param LastTwoNotes = 0;\r\n\r\n@state TransMat = new data(\"TransMat\"); //Data object to store transition matrix.\r\n@state NoteOut = 0;\r\n\r\n//@state MyArray = new FixedIntArray(20);\r\n\r\n/*Function for encoding previous two notes into a single integer value by bit shifting the first of the two\r\nnotes by 8 bits to the left (<< 8 OR * 256) and adding the second of the two notes to the resulting value.\r\nThis system is used in place of concatenation, as with concatenation it is more difficult to decode the two\r\nnotes from the pair if they have differing numbers of digits, as the value of the wrap operator used to\r\ndecode them needs to change to either 10, 100, 1000, etc. accordingly, which in turn necessitates storing\r\nand recalling all of the first notes only of the pairs separately from the note pairs themselves (i.e., in\r\nanother data object).*/\r\nfunction encode(a, b) {\r\n\t\r\n\tlet encodedNotePair: Int = (a << 8) + b; //Shifting a value by 8 bits to the left is equivalent to * 256.\r\n\treturn encodedNotePair;\r\n\r\n}\r\n\r\nfunction getFirst(encodedNotePair) {\r\n\t\r\n\tlet firstNote: Int = encodedNotePair >> 8; //Shifting a value by 8 bits to the right is equivalent to / 256. However, if / 256 it is also \r\n\t\t\t\t\t\t\t\t\t\t\t\t//necessary to use trunc or floor (trunc(encodedNotePair / 256), as bit shifting works\r\n\t\t\t\t\t\t\t\t\t\t\t\t//only with ints and so will not return a float, but / 256 would return a float.\r\n\t//post(\"gtm.markov: first encoded note =\", firstNote);\r\n\treturn firstNote;\r\n\t\t\r\n}\r\n\r\nfunction getSecond(encodedNotePair) {\r\n\t\r\n\tlet secondNote: Int = encodedNotePair - (getFirst(encodedNotePair) << 8); //Shifting a by 8 bits to the left is equivalent to * 256.\r\n\t//post(\"gtm.markov: second encoded note =\", secondNote);\r\n\treturn secondNote;\r\n\t\r\n}\r\n\r\n//Compile transition matrix inside TransMat data object.\r\nfunction compileMatrix(noteList: list) {\r\n\t\r\n\tlet TransMatSize: Int = dim(TransMat); //Sample size of global TransMat data object.\r\n\tlet TransMatChans: Int = channels(TransMat); //Chan count of global TransMat data object.\r\n\t\r\n\tlet currentNote: Int = noteList.pop(); //Last note of three note list arriving at listin1.\r\n\t\r\n\tlet precedingTwoNotes: Int = encode(noteList[0], noteList[1]);\r\n\t//post(\"gtm.markov: precedingTwoNotes (encoded) =\", precedingTwoNotes); //Post preceding two notes to Max console.\r\n\t\r\n\t//Iterate through all channels in TransMat data object to check value of first sample in each.\r\n\tfor (let chan: Int = 0; chan < TransMatChans; chan++) {\r\n\t\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\t//post(\"gtm.markov: sampleZero at channel\", chan, \"=\", sampleZero);\r\n\t\t\r\n\t\t//If value stored at sample 0 of current channel == precedingTwoNotes derived from listin1:\r\n\t\tif (precedingTwoNotes == sampleZero) {\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: MATCHING PAIR FOUND!\");\r\n\t\t\t\r\n\t\t\t//Iterate through all samples in current channel in order to check currently stored value.\r\n\t\t\tfor (let sample: Int = 1; sample < TransMatSize; sample++) {\r\n\t\t\t\t\r\n\t\t\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan]; //Value changes each iteration of loop to reflect\r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//value stored at current sample index.\r\n\t\t\t\t\r\n\t\t\t\tlet finalSampleVal: Int = peek(TransMat, TransMatSize - 1, {\"channels\": 128})[chan]; //Value of last sample in current channel.\r\n\t\t\t\r\n\t\t\t\t/*If a sample is located with a value of zero, the current note value is stored at that\r\n\t\t\t\tsample index. This is so that, if a different channel contains more note values preceded\r\n\t\t\t\tby the note pair stored at sample index zero of that channel, the current note preceded by\r\n\t\t\t\tthe sample pair stored at sample index zero of this channel isn't stored in the final sample\r\n\t\t\t\tof the current channel, thus leaving zeros at the indices between the last most recently stored\r\n\t\t\t\tnote of this channel and the note currently being stored in the channel.*/\r\n\t\t\t\tif (sampleVal == 0) {\t\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, sample, chan);\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", sample, \"=\", currentNote);\r\n\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\r\n\t\t\t\t/*Otherwise, the note value stored at the final sample in the channel is confirmed to be non-zero,\r\n\t\t\t\tin which case the sample size of the TransMat data object is increased by one and the current note\r\n\t\t\t\tis stored in the last sample index. It is necessary to perform this operation in response to confirming\r\n\t\t\t\tthe non-zero value of the final sample index as, if we just increase the TransMat data sample size\r\n\t\t\t\timmediately if there are no empty sample indices in the channel, the loop will run indefinitely given\r\n\t\t\t\tthat the value of the final sample after inreasing the size of the data object will always be zero.*/\r\n\t\t\t\t} else if (finalSampleVal != 0) {\r\n\t\t\t\t\t\r\n\t\t\t\t\tTransMatSize += 1; //Var containing samps size for TransMat incremented by 1.\r\n\t\t\t\t\t//post(\"gtm.markov: ALL INDICES FULL! TransMatSize increased by 1\");\r\n\t\t\t\t\t//post(\"gtm.markov: TransMatSize =\", TransMatSize);\r\n\t\t\t\r\n\t\t\t\t\tout3 = TransMatSize; //New size in samps outputted from out3 in order to resize TransMat data object in the RNBO patch,\r\n\t\t\t\t\t\t\t\t\t\t//as I don't think it is possible to perform this operation inside codebox.\r\n\t\t\t\r\n\t\t\t\t\tpoke(TransMat, currentNote, TransMatSize - 1, chan); //currentNote value stored in last sample of the current channel.\r\n\t\t\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index\", TransMatSize - 1, \"=\", currentNote);\r\n\t\t\t\t\t\r\n\t\t\t\t\tbreak;\r\n\t\t\t\t\t\r\n\t\t\t\t\t}\r\n\t\t\t\t\t\r\n\t\t\t\t//post(\"gtm.markov: sampleVal at index\", sample, \"=\", sampleVal);\r\n\t\t\t\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t/*Or else, if the value of the first sample index of the current channel == 0 (i.e., no note pair stored here, which\r\n\t\tis either because the TransMat data object is empty and the currently-processed note pair is the first to be inputted,\r\n\t\tor because, of all the already stored note pairs in the TransMat data object, there has not been a match with the\r\n\t\tincoming note pair currently being processed), the encoded preceding two notes value is stored in sample zero of the\r\n\t\tcurrent channel and the current note value is stored at sample index one.*/\r\n\t\t} else if (sampleZero == 0) {\r\n\t\t\r\n\t\t\t//post(\"gtm.markov: NO MATCH!\");\r\n\t\t\tpoke(TransMat, precedingTwoNotes, 0, chan); //Preceding two notes stored in sample 0 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new note pair stored at channel\", chan, \"index 0 =\", precedingTwoNotes);\r\n\t\t\tpoke(TransMat, currentNote, 1, chan); //Current note stored in sample 1 of new channel in TransMat data object.\r\n\t\t\t//post(\"gtm.markov: new sampleVal stored at channel\", chan, \"index 1 =\", currentNote);\r\n\t\t\t\r\n\t\t\tActiveChans += 1; //Increment ActiveChans param by 1.\r\n\t\t\t\r\n\t\t\t//post(\"gtm.markov: ActiveChans =\", ActiveChans);\r\n\t\t\t\t\r\n\t\t\tbreak;\r\n\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\r\n//Every time the transition matrix is updated, the preceding note pair and current note are outputted for reference.\r\n\tout1 = precedingTwoNotes;\r\n\tout2 = currentNote;\r\n\t\r\n}\r\n\r\ncompileMatrix(listin1); //Call compileMatrix function on every call to codebox through in1, feeding listin1 as te argument.\r\n\r\n//Function to check whether previously generated note pair corresponds with a note pair stored in TransMat.\r\nfunction notePairCheck(notePair) {\r\n\t\r\n\tlet chanIndex: Int; //Empty variable used to return channel index corresponding to incoming note pair,\r\n\t\t\t\t\t\t//or a random channel index when there is no match with incoming note pair.\r\n\t\r\n\tfor (let chan: Int = 0; chan < ActiveChans; chan++) {\r\n\t\r\n\t\tlet sampleZero: Int = peek(TransMat, 0, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleZero == notePair) {\r\n\t\t\t\r\n\t\t\tchanIndex = chan; //Return channel number if true.\r\n\t\t\t//post(\"chanIndex =\", chanIndex)\r\n\t\t\treturn chanIndex;\r\n\t\t\t\r\n\t\t}\r\n\t\t\t\t\r\n\t}\r\n\t\r\n\tchanIndex = round(random(0, ActiveChans - 1)); //Return random channel number if false.\r\n\t//post(\"gtm.markov: NO MATCHING NOTE PAIR; RANDOM CHAN CHOSEN! chanIndex =\", chanIndex);\r\n\treturn chanIndex;\r\n\t\r\n}\r\n\r\n//Function to check number of notes associated with a note pair inside TransMat.\r\nfunction sampCheck(chan) {\r\n\t\r\n\tlet sampCount: Int; //Empty variable used to return sample count at end of for loop.\r\n\t\r\n\tfor (let sample: Int = 1; sample < dim(TransMat); sample++) {\r\n\t\t\r\n\t\tlet sampleVal: Int = peek(TransMat, sample, {\"channels\": 128})[chan];\r\n\t\t\r\n\t\tif (sampleVal == 0) {\r\n\t\t\t\r\n\t\t\tsampCount = sample - 1; //Return sample count when a sample index value == 0.\r\n\t\t\t//post(\"sampCount =\", sampCount);\r\n\t\t\treturn sampCount;\r\n\t\t\t\r\n\t\t}\r\n\t\t\r\n\t}\r\n\t\r\n\tsampCount = dim(TransMat) - 1; //Return TransMat sample size (from 0) if all sample indices are filled with valid note values.\t\r\n\t//post(\"total sampCount =\", sampCount);\r\n\treturn sampCount; //Return sample count after being updated by if/else if statement inside for loop.\r\n\r\n}\r\n\r\n//Output chans value when bang received at in2.\r\nfunction in2(bang) {\r\n\t\r\n\tlet chan: Int;\r\n\tlet sampleCount: Int;\r\n\tlet sample: Int;\r\n\tlet lastNote: Int;\r\n\t\r\n\t//If LastTwoNotes == 0, randomly choose a channel (note pair) in TransMat and then randomly choose a sample index (associated note) in that channel.\r\n\tif (LastTwoNotes == 0) {\r\n\t\t\r\n\t\tchan = round(random(0, ActiveChans - 1)); //Random channel in range determined by ActiveChans param.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Returns number of samples in which valid note values are stored in the current channel.\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\tlet firstTwoNotes: Int = peek(TransMat, 0, {\"channels\": 128})[chan]; //Returns first two notes in the channel.\r\n\t\t//post(\"gtm.markov: firstTwoNotes (encoded) =\", firstTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(firstTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\t\r\n\t\t\r\n\t//If NoteOut != 0 (i.e., valid note has been generated in previous call to codebox):\r\n\t} else {\r\n\t\t\r\n\t\tchan = notePairCheck(LastTwoNotes); //Return either channel number of current note pair or a random channel if no match.\r\n\t\t//post(\"gtm.markov: chan =\", chan);\r\n\t\t\r\n\t\tsampleCount = sampCheck(chan); //Ascertain number of valid note values associated with note pair (chan).\r\n\t\t//post(\"gtm.markov: sampleCount =\", sampleCount);\r\n\t\t\r\n\t\t//post(\"gtm.markov: LastTwoNotes (encoded) =\", LastTwoNotes);\r\n\t\t\r\n\t\tlastNote = getSecond(LastTwoNotes); //Second note of preceding note pair (i.e., immediately preceding note to the currently generated note).\r\n\t\t//post(\"gtm.markov: lastNote =\", lastNote);\r\n\t\t\r\n\t\tsample = round(random(1, sampleCount)); //Random note value associated with note pair for current channel.\r\n\t\t\r\n\t\tNoteOut = peek(TransMat, sample, {\"channels\": 128})[chan]; //Update value of NoteOut param to reflect pitch of currently generated note.\r\n\t\t//post(\"gtm.markov: NoteOut =\", NoteOut);\r\n\t\r\n\t\tLastTwoNotes = encode(lastNote, NoteOut); //Create new preceding note pair by encoding lastNote and NoteOut.\r\n\t\r\n\t}\r\n\t\r\n\tout4 = ActiveChans; //Output ActiveChans param for reference.\r\n\tout5 = LastTwoNotes; //Output updated LastTwoNotes for reference - actually next note pair for next call to codebox.\r\n\tout6 = NoteOut; //Output newly generated note and send to sound generator.\r\n\r\n}",
+										"safemath" : 1,
 										"hot" : 0,
-										"safemath" : 1
+										"nocache" : 0
 									}
 ,
 									"rnbo_serial" : 1,
@@ -8816,6 +9188,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bang"
 											}
 ,
@@ -8828,6 +9201,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "list"
 											}
@@ -8841,6 +9215,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"inlet" : 1,
 												"type" : "number"
 											}
@@ -8854,6 +9229,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8867,6 +9243,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8880,6 +9257,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8893,6 +9271,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8906,6 +9285,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8919,6 +9299,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"outlet" : 1,
 												"type" : "number"
 											}
@@ -8932,6 +9313,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8945,6 +9327,7 @@
 												"attachable" : 1,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "number",
 												"defaultValue" : "0"
 											}
@@ -8959,6 +9342,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"doNotShowInMaxInspector" : 1
 											}
@@ -8972,6 +9356,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"defaultValue" : "false"
 											}
@@ -8985,8 +9370,23 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "bool",
 												"defaultValue" : "true"
+											}
+,
+											"nocache" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Do not use parsing cache. This is only useful with very very big code sizes. Code generation will then take a looooong time.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"touched" : 0,
+												"type" : "bool",
+												"defaultValue" : "false"
 											}
 
 										}
@@ -9046,7 +9446,7 @@
 										"aliasOf" : "expr",
 										"classname" : "codebox",
 										"operator" : 0,
-										"versionId" : 634514463,
+										"versionId" : 835263063,
 										"changesPatcherIO" : 0
 									}
 
@@ -9091,6 +9491,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -9116,7 +9517,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -9148,6 +9549,7 @@
 												"attachable" : 0,
 												"isparam" : 0,
 												"deprecated" : 0,
+												"touched" : 0,
 												"type" : "symbol",
 												"mandatory" : 1
 											}
@@ -9173,7 +9575,7 @@
 										"aliasOf" : "set",
 										"classname" : "set",
 										"operator" : 0,
-										"versionId" : 2121358407,
+										"versionId" : 1197449671,
 										"changesPatcherIO" : 0
 									}
 ,
@@ -9523,7 +9925,6 @@
 
 							}
  ],
-						"originid" : "pat-162",
 						"saved_attribute_attributes" : 						{
 							"editing_bgcolor" : 							{
 								"expression" : "themecolor.theme_editing_bgcolor"
@@ -9569,20 +9970,19 @@
 
 					}
 ,
-					"patching_rect" : [ 100.000002980232239, 212.000006318092346, 143.0, 22.0 ],
+					"patching_rect" : [ 100.0, 212.000006318092346, 140.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.000000417232513, 270.0, 140.0, 22.0 ],
 					"rnboattrcache" : 					{
 
 					}
 ,
-					"rnboversion" : "1.3.4-beta.2",
+					"rnboversion" : "1.4.1",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "rnbo~",
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "rnbo~",
 							"parameter_type" : 3
 						}
@@ -9625,10 +10025,10 @@
 ,
 									"fileref" : 									{
 										"name" : "untitled",
-										"filename" : "untitled_20241028_1.maxsnap",
+										"filename" : "untitled_20250808.maxsnap",
 										"filepath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 										"filepos" : -1,
-										"snapshotfileid" : "c278c9e0fdd0716c0bf4ee1c916f786c"
+										"snapshotfileid" : "d267ba3f1fad1e85c72fb468456e27e8"
 									}
 
 								}
@@ -9684,7 +10084,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 498.666681528091431, 494.666681408882141, 119.400003433227539, 24.5 ],
+					"patching_rect" : [ 496.0, 495.500006079673767, 119.400003433227539, 24.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 140.0, 315.0, 103.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
@@ -9750,7 +10150,6 @@
 							"parameter_longname" : "live.text[1]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -9794,7 +10193,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 353.000002980232239, 203.500006079673767, 72.0, 37.0 ],
+					"patching_rect" : [ 350.0, 203.500006079673767, 72.0, 37.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 100.000001490116119, 217.799999892711639, 72.0, 37.0 ],
@@ -9845,7 +10244,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 705.000002980232239, 312.500006079673767, 78.0, 22.0 ],
+					"patching_rect" : [ 702.0, 312.500006079673767, 78.0, 22.0 ],
 					"text" : "gtm.markov~"
 				}
 
@@ -9860,7 +10259,7 @@
 					"outlettype" : [ "bang", "bang", "", "int" ],
 					"parameter_enable" : 0,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 705.000002980232239, 211.500006079673767, 78.0, 22.0 ],
+					"patching_rect" : [ 702.0, 211.500006079673767, 78.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.000000417232513, 375.0, 78.0, 22.0 ]
 				}
@@ -9873,7 +10272,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 500.000014901161194, 692.000020623207092, 51.0, 22.0 ],
+					"patching_rect" : [ 496.0, 692.0, 51.0, 22.0 ],
 					"text" : "pcontrol"
 				}
 
@@ -9885,7 +10284,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 500.000014901161194, 353.333343863487244, 79.0, 22.0 ],
+					"patching_rect" : [ 497.0, 353.500006079673767, 79.0, 22.0 ],
 					"text" : "prepend help"
 				}
 
@@ -9897,7 +10296,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 280.000002980232239, 313.333342671394348, 71.0, 22.0 ],
+					"patching_rect" : [ 277.0, 313.500006079673767, 71.0, 22.0 ],
 					"text" : "gtm.markov"
 				}
 
@@ -9912,7 +10311,7 @@
 					"outlettype" : [ "bang", "bang", "", "int" ],
 					"parameter_enable" : 0,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 280.000002980232239, 211.500006079673767, 71.0, 22.0 ],
+					"patching_rect" : [ 277.0, 211.500006079673767, 71.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 27.200000405311584, 225.0, 71.0, 22.0 ]
 				}
@@ -9978,7 +10377,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 9,
 					"outlettype" : [ "int", "int", "float", "float", "float", "", "int", "float", "" ],
-					"patching_rect" : [ 162.000002980232239, 107.0, 274.0, 22.0 ],
+					"patching_rect" : [ 160.5, 107.0, 274.0, 22.0 ],
 					"text" : "transport @tempo 120 @name gtm.markov-home"
 				}
 
@@ -9990,7 +10389,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 585.000002980232239, 144.500006079673767, 279.0, 22.0 ],
+					"patching_rect" : [ 582.0, 144.500006079673767, 279.0, 22.0 ],
 					"text" : "phasor~ 4n @lock 1 @transport gtm.markov-home"
 				}
 
@@ -10007,7 +10406,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 280.000002980232239, 246.500006079673767, 26.0, 22.0 ],
+					"patching_rect" : [ 277.0, 246.500006079673767, 26.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 225.0, 26.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
@@ -10029,7 +10428,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1021.0, 211.000006079673767, 58.0, 22.0 ],
+					"patching_rect" : [ 1018.0, 211.500006079673767, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -10041,7 +10440,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 162.000002980232239, 144.500006079673767, 353.0, 22.0 ],
+					"patching_rect" : [ 160.5, 144.500006079673767, 353.0, 22.0 ],
 					"text" : "metro 4n @quantize 4n @active 1 @transport gtm.markov-home"
 				}
 
@@ -10053,7 +10452,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 1021.0, 280.500006079673767, 86.0, 22.0 ],
+					"patching_rect" : [ 1018.0, 280.500006079673767, 86.0, 22.0 ],
 					"text" : "bangbang"
 				}
 
@@ -10066,7 +10465,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1043.0, 312.500006079673767, 50.0, 22.0 ]
+					"patching_rect" : [ 1040.0, 312.500006079673767, 50.0, 22.0 ]
 				}
 
 			}
@@ -10077,7 +10476,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1088.0, 383.500006079673767, 43.0, 22.0 ],
+					"patching_rect" : [ 1085.0, 383.500006079673767, 43.0, 22.0 ],
 					"text" : "zlclear"
 				}
 
@@ -10089,7 +10488,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1021.0, 418.500006079673767, 122.0, 22.0 ],
+					"patching_rect" : [ 1018.0, 418.500006079673767, 122.0, 22.0 ],
 					"text" : "zl stream 32"
 				}
 
@@ -10101,7 +10500,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1021.0, 383.500006079673767, 59.0, 22.0 ],
+					"patching_rect" : [ 1018.0, 383.500006079673767, 59.0, 22.0 ],
 					"text" : "drunk 9 3"
 				}
 
@@ -10113,7 +10512,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 1021.0, 348.500006079673767, 41.0, 22.0 ],
+					"patching_rect" : [ 1018.0, 348.500006079673767, 41.0, 22.0 ],
 					"text" : "uzi 32"
 				}
 
@@ -10139,7 +10538,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 834.0, 418.500006079673767, 127.0, 22.0 ],
+					"patching_rect" : [ 831.0, 418.500006079673767, 127.0, 22.0 ],
 					"text" : "loadmess startwindow"
 				}
 
@@ -10151,7 +10550,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 834.0, 442.500006079673767, 45.0, 45.0 ]
+					"patching_rect" : [ 831.0, 442.500006079673767, 45.0, 45.0 ]
 				}
 
 			}
@@ -10246,7 +10645,6 @@
 							"parameter_longname" : "live.text",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_osc_name" : "<default>",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2
 						}
@@ -10318,7 +10716,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "signal", "" ],
-					"patching_rect" : [ 705.000002980232239, 211.500006079673767, 78.0, 22.0 ],
+					"patching_rect" : [ 702.0, 211.500006079673767, 78.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.000000417232513, 375.0, 78.0, 22.0 ],
 					"saved_object_attributes" : 					{
@@ -10338,7 +10736,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 280.000002980232239, 211.500006079673767, 71.0, 22.0 ],
+					"patching_rect" : [ 277.0, 211.500006079673767, 71.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 27.200000405311584, 225.0, 71.0, 22.0 ],
 					"saved_object_attributes" : 					{
@@ -10462,7 +10860,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-107", 1 ],
+					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-102", 0 ]
 				}
 
@@ -10476,7 +10874,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-106", 1 ],
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-104", 0 ]
 				}
 
@@ -10497,7 +10895,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-108", 1 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-107", 0 ]
 				}
 
@@ -10511,8 +10909,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-106", 1 ],
+					"source" : [ "obj-11", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-106", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"midpoints" : [ 714.500002980232239, 346.000016331672668, 509.500014901161194, 346.000016331672668 ],
+					"midpoints" : [ 711.5, 346.166679739952087, 506.5, 346.166679739952087 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -10535,6 +10947,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
 					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-107", 1 ],
+					"source" : [ "obj-17", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-107", 0 ],
+					"source" : [ "obj-17", 0 ]
 				}
 
 			}
@@ -10627,7 +11053,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-19", 1 ],
-					"midpoints" : [ 171.500002980232239, 206.33333945274353, 315.500002980232239, 206.33333945274353 ],
+					"midpoints" : [ 170.0, 206.33333945274353, 312.5, 206.33333945274353 ],
 					"order" : 0,
 					"source" : [ "obj-32", 0 ]
 				}
@@ -10652,7 +11078,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
-					"midpoints" : [ 1052.5, 343.16666579246521, 1133.5, 343.16666579246521 ],
+					"midpoints" : [ 1049.5, 343.333329200744629, 1130.5, 343.333329200744629 ],
 					"order" : 0,
 					"source" : [ "obj-33", 0 ]
 				}
@@ -10661,7 +11087,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"midpoints" : [ 1097.5, 411.16666579246521, 1030.5, 411.16666579246521 ],
+					"midpoints" : [ 1094.5, 411.333329200744629, 1027.5, 411.333329200744629 ],
 					"source" : [ "obj-34", 0 ]
 				}
 
@@ -10712,7 +11138,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-218", 1 ],
-					"midpoints" : [ 289.500002980232239, 308.342455625534058, 170.500003695487976, 308.342455625534058 ],
+					"midpoints" : [ 286.5, 308.342455625534058, 170.500003695487976, 308.342455625534058 ],
 					"source" : [ "obj-42", 0 ]
 				}
 
@@ -10720,7 +11146,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 1 ],
-					"midpoints" : [ 594.500002980232239, 203.916671276092529, 744.000002980232239, 203.916671276092529 ],
+					"midpoints" : [ 591.5, 204.083334684371948, 741.0, 204.083334684371948 ],
 					"order" : 0,
 					"source" : [ "obj-44", 0 ]
 				}
@@ -10877,6 +11303,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-108", 1 ],
+					"source" : [ "obj-7", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-108", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-76", 0 ],
 					"source" : [ "obj-70", 0 ]
 				}
@@ -10962,7 +11402,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"midpoints" : [ 289.500002980232239, 346.000016331672668, 509.500014901161194, 346.000016331672668 ],
+					"midpoints" : [ 286.5, 346.166679739952087, 506.5, 346.166679739952087 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -10989,7 +11429,6 @@
 
 			}
  ],
-		"originid" : "pat-156",
 		"parameters" : 		{
 			"obj-25" : [ "live.text", "live.text", 0 ],
 			"obj-28" : [ "live.text[8]", "live.text", 0 ],
@@ -11044,14 +11483,14 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "untitled_20241028.maxsnap",
+				"name" : "untitled_20250806_2.maxsnap",
 				"bootpath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 				"patcherrelativepath" : "../data",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "untitled_20241028_1.maxsnap",
+				"name" : "untitled_20250808.maxsnap",
 				"bootpath" : "~/Music/Max 9/Projects/gtm.markov-dev/data",
 				"patcherrelativepath" : "../data",
 				"type" : "mx@s",
@@ -11070,16 +11509,16 @@
 				"boxes" : [ "obj-27", "obj-6" ]
 			}
 , 			{
-				"boxes" : [ "obj-8", "obj-31" ]
-			}
-, 			{
 				"boxes" : [ "obj-19", "obj-1", "obj-42" ]
 			}
 , 			{
-				"boxes" : [ "obj-84", "obj-86", "obj-36" ]
+				"boxes" : [ "obj-20", "obj-15", "obj-88", "obj-83" ]
 			}
 , 			{
-				"boxes" : [ "obj-20", "obj-15", "obj-88", "obj-83" ]
+				"boxes" : [ "obj-8", "obj-31" ]
+			}
+, 			{
+				"boxes" : [ "obj-36", "obj-86", "obj-84" ]
 			}
  ],
 		"toolbaradditions" : [ "audiomute" ],
